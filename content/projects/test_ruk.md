@@ -9,7 +9,7 @@ params:
     button:
         icon: "icon-arrow-right"
         btnText: "RYUK MYUK"
-        URL: "https://www.adrianmoreno.info"
+        URL: "https://www.youtube.com/"
     image:
         src: "images/works/robo-advisor.jpg"
         scale: 0.5

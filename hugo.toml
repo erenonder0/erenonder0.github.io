@@ -134,8 +134,8 @@ name = "Home"
 URL = "/"
 weight = 1
 [[languages.en.menus.header]]
-name = 'About'
-URL = '#about'
+name = 'Experiences'
+URL = '#experience-list-shortcode'
 weight = 2
 [[languages.en.menus.header]]
 name = 'Portfolio'
@@ -146,10 +146,10 @@ weight = 3
 #  URL = "#experience"
 #  weight = 4
 
-[[languages.en.menus.header]]
-name = "How to"
-URL = "/blog"
-weight = 5
+# [[languages.en.menus.header]]
+# name = "How to"
+# URL = "/blog"
+# weight = 5
 
 [[languages.en.menus.header]]
 pre = "email"

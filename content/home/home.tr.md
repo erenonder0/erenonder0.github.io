@@ -4,7 +4,7 @@ type = "home"
 draft = false
 +++
 
-{{< spacer size="small" >}}
+
 
 {{< showcase-section
 title="Hello, I'm Adrián."
@@ -17,8 +17,8 @@ imgScale="0.8"
 >}}
 
     {{< platform-links >}}
-        {{< link icon="linkedin" url="https://www.linkedin.com/in/adrianmoreno/" >}}
-        {{< link icon="square-github" url="https://github.com/zetxek" >}}
+        {{< link icon="linkedin" url="https://www.linkedin.com/in/erenonder0/" >}}
+        {{< link icon="square-github" url="https://github.com/erenonder0" >}}
         {{< link icon="youtube" url="#" >}}
     {{< /platform-links >}}
 
