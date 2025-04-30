@@ -6,6 +6,72 @@
   <component name="ChangeListManager">
     <list default="true" id="16ee4c35-fb70-4d7a-bc90-dc4b29a10335" name="Changes" comment="hugo publish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/force-ssl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/force-ssl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/markdown_syntax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/markdown_syntax/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog/post_3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/blog/post_3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/diam-aliqua/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/diam-aliqua/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/fringilla/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/fringilla/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/syntax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/syntax/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/themes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/themes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/contributions/deploy-triggers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/contributions/deploy-triggers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/contributions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/contributions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/contributions/schema-org/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/contributions/schema-org/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/contributions/shields-docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/contributions/shields-docker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/creations/bosh-agents/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/creations/bosh-agents/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/creations/docker-marketplace/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/creations/docker-marketplace/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/creations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/creations/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/creations/marketplace/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/creations/marketplace/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/publications/alldaydevops/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/publications/alldaydevops/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/publications/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/publications/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/search/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/agile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/agile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/apache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/apache/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/atlassian-developer-ecosystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/atlassian-developer-ecosystem/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/atlassian-ecosystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/atlassian-ecosystem/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/bamboo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/bamboo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/bash/shell/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/bash/shell/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/bitbucket/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/bitbucket/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/bosh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/bosh/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/ci/cd-pipelines/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/ci/cd-pipelines/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/confluence/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/confluence/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/continuous-delivery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/continuous-delivery/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/continuous-integration/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/continuous-integration/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/css/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/culture/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/culture/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/devops/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/devops/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/docker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/java/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/java/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/jira/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/jira/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/jquery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/jquery/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/json/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/json/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/laoreet/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/laoreet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/markdown/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/maven/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/maven/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/mollis-urna/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/mollis-urna/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/monit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/monit/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/node.js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/node.js/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/notes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/notes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/page/2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/page/3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/page/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/page/4/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/redirect/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/redirect/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/rest-apis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/rest-apis/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/rewrite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/rewrite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/spring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/spring/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/ssl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/ssl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/themes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/themes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/web-development/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/web-development/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/xml/xslt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/xml/xslt/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +94,12 @@
     &quot;assignee&quot;: &quot;cmlonder&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/erenonder0/erenonder0.github.io.git",
-    "accountId": "0eb83397-08a6-41d4-981e-93af8e816edd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/erenonder0/erenonder0.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;0eb83397-08a6-41d4-981e-93af8e816edd&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -42,25 +108,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.GoLinterPluginOnboarding": "true",
-    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/cemal.onder/Dev/cemal/cv/static/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginOnboarding&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cemal.onder/Dev/cemal/cv/static/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/images" />
