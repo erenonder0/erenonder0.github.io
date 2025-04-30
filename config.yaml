@@ -69,7 +69,7 @@ params:
   aboutme:
     title: About Me
     icon: fas fa-user
-    description: This is a demo of the `aafu` theme. It has `light` and `dark` theme.
+    description: asdasdsa
   experience:
     title: Experiences
     icon: fas fa-briefcase
