@@ -7,11 +7,12 @@ draft = false
 
 
 {{< showcase-section
-title="Hello, I'm Adrián."
-subtitle="VP of Engineering"
-button_text="Contact me"
+title="Merhaba, Ben Eren ÖNDER."
+subtitle=" "
+button_text="İletişime Geç"
 button_icon="icon-email"
-description="Based in Copenhagen 🇩🇰, I work at <a target='_blank' href='https://www.sumup.com/'>SumUp</a>, a fintech company empowering small businesses. Our vision is to build a world where anyone can create a thriving business through accessible tools and technology. <br/>A specialized generalist at heart, I bring a unique blend of expertise across backend systems, mobile development, and infrastructure. Over my career, I've led teams of all sizes—from hands-on coding to scaling engineering groups—always anchored in the 3P framework: <strong>People, Product, Process</strong>.<br/>I'm driven by cultivating high-performing teams that embrace iterative improvement, psychological safety, and purpose-driven work. Whether refining agile workflows or mentoring future leaders, my goal is to build environments where both products <em>and</em> people thrive."
+button_url="mailto:eerenonder0@gmail.com"
+description="Adım Eren ÖNDER. Adli Bilişim Mühendisliği 3. sınıf öğrencisiyim ve siber güvenlik alanında aktif olarak çalışmalar yürütüyorum. CTF yarışmacısı, eğitmen, organizatör ve araştırmacı olarak hem teknik derinliği yüksek hem de topluluğa katkı sağlayan bir kariyer planıyla ilerliyorum. <br/>Farklı düzeylerde CTF yarışmalarına katılarak ödüller kazandım, hackathon'lara katıldım, yarışmalar düzenledim ve teknik eğitimler verdim. Akademik tarafta ise siber güvenlik alanında projeler yürütüyor, bu çalışmaları seminerler ve ulusal projelerle destekliyorum. <br/> Kariyer hedefim, siber saldırı ve savunma mekanizmalarında teknik altyapısı güçlü bir güvenlik uzmanı olmak. Hem akademik hem de sosyal anlamda sürekli öğrenmeyi ve üretmeyi amaçlıyorum."
 imgSrc="images/about/user-picture.jpeg"
 imgScale="0.8"
 >}}
@@ -19,13 +20,13 @@ imgScale="0.8"
     {{< platform-links >}}
         {{< link icon="linkedin" url="https://www.linkedin.com/in/erenonder0/" >}}
         {{< link icon="square-github" url="https://github.com/erenonder0" >}}
-        {{< link icon="youtube" url="#" >}}
+        {{< link icon="youtube" url="https://www.youtube.com/@erenonder0" >}}
     {{< /platform-links >}}
 
 {{< /showcase-section >}}
 
 {{< education-list
-title="Formal Education (education-list)" >}}
+title="Eğitim Bilgisi" >}}
 
 {{< experience-list
 title="Experience (as list)"
