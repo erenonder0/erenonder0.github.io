@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/es/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Puesto #3</title>
+      <link>http://localhost:1313/es/experience/job-3/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/es/experience/job-3/</guid>
+      <description>&lt;h2 id=&#34;3rd-job-gerente-general&#34;&gt;3rd job: Gerente General&lt;/h2&gt;&#xA;&lt;p&gt;Con una traducción al español, se puede llegar a cualquier parte.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trabajo #2</title>
+      <link>http://localhost:1313/es/experience/job-2/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/es/experience/job-2/</guid>
+      <description>&lt;h2 id=&#34;arreglando-el-mundo-un-byte-a-la-vez&#34;&gt;Arreglando el mundo, un byte a la vez&lt;/h2&gt;&#xA;&lt;p&gt;Continuando la misión.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trabajo #1</title>
+      <link>http://localhost:1313/es/experience/job-1/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/es/experience/job-1/</guid>
+      <description>&lt;h2 id=&#34;arreglando-el-mundo-un-byte-a-la-vez&#34;&gt;Arreglando el mundo, un byte a la vez&lt;/h2&gt;&#xA;&lt;p&gt;El comienzo de una gran carrera.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Footer</title>
+      <link>http://localhost:1313/es/footer/footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/footer/footer/</guid>
+      <description>&lt;section  id=&#34;contacto&#34; class=&#34;section section--contact pt-0&#34;&gt;&#xA;    &lt;div class=&#34;container&#34;&gt;&#xA;        &lt;div class=&#34;contact w-100&#34;&gt;&#xA;            &lt;h2&gt;Contáctame&lt;/h2&gt;&#xA;&#xA;            &lt;div class=&#34;row pt-2&#34;&gt;&#xA;                &lt;div class=&#34;col-12 col-lg-7&#34;&gt;&#xA;                    &lt;form action=&#34;https://formspree.io/f/mail@example.com&#34; method=&#34;POST&#34;&gt;&#xA;                        &lt;div class=&#34;row&#34;&gt;&#xA;                            &lt;div class=&#34;col-12 col-sm-6&#34;&gt;&#xA;                                &lt;input type=&#34;text&#34; name=&#34;full_name&#34; class=&#34;form-control&#34; &gt;&#xA;                            &lt;/div&gt;&#xA;                            &lt;div class=&#34;col-12 col-sm-6&#34;&gt;&#xA;                                &lt;input type=&#34;email&#34; name=&#34;email&#34; class=&#34;form-control&#34; &gt;&#xA;                            &lt;/div&gt;&#xA;                        &lt;/div&gt;&#xA;                        &lt;div class=&#34;row pt-4&#34;&gt;&#xA;                            &lt;div class=&#34;col-12&#34;&gt;&#xA;                                &lt;input type=&#34;text&#34; name=&#34;phone&#34; class=&#34;form-control&#34; &gt;&#xA;                            &lt;/div&gt;&#xA;                        &lt;/div&gt;&#xA;                        &lt;div class=&#34;row pt-4&#34;&gt;&#xA;                            &lt;div class=&#34;col-12&#34;&gt;&#xA;                                &lt;textarea name=&#34;message&#34; class=&#34;form-control&#34; rows=&#34;6&#34; &gt;&lt;/textarea&gt;&#xA;                            &lt;/div&gt;&#xA;                        &lt;/div&gt;&#xA;                        &lt;div class=&#34;row pt-4&#34;&gt;&#xA;                            &lt;div class=&#34;col-12&#34;&gt;&#xA;                                &lt;button type=&#34;submit&#34; class=&#34;btn btn-primary&#34;&gt;&lt;/button&gt;&#xA;                            &lt;/div&gt;&#xA;                        &lt;/div&gt;&#xA;                    &lt;/form&gt;&#xA;                &lt;/div&gt;&#xA;                &lt;div class=&#34;col-12 col-lg-5 contact__info&#34;&gt;&#xA;                    &#xA;&#xA;                    &#xA;                    &#xA;                    &#xA;                &lt;/div&gt;&#xA;            &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;section  id=&#34;newsletter&#34; class=&#34;section section--cta&#34;&gt;&#xA;  &lt;div class=&#34;container d-flex justify-content-center align-items-center&#34;&gt;&#xA;    &lt;div class=&#34;row&#34;&gt;&#xA;      &lt;div class=&#34;col-12 text-center&#34;&gt;&#xA;        &lt;h2&gt;&#xA;           &#xA;            Subscríbete &#xA;          &#xA;        &lt;/h2&gt;&#xA;        &lt;div class=&#34;rad-subscription-group&#34;&gt;&#xA;          &lt;form&#xA;            id=&#34;rad-subscription&#34;&#xA;            action=&#34;http://localhost:1313/&#34;&#xA;            method=&#34;POST&#34;&#xA;          &gt;&#xA;            &lt;input&#xA;              id=&#34;rad-subscription-email&#34;&#xA;              type=&#34;email&#34;&#xA;              class=&#34;form-control&#34;&#xA;              aria-describedby=&#34;emailHelp&#34;&#xA;              placeholder=&#39; Tu correo &#39;&#xA;              aria-label=&#39; Tu correo &#39;&#xA;            &gt;&#xA;            &lt;button type=&#34;submit&#34; id=&#34;rad-subscription-submit&#34; class=&#34;btn btn-light btn-rounded&#34;&gt;&#xA;               &#xA;                Subscríbete &#xA;              &#xA;            &lt;/button&gt;&#xA;          &lt;/form&gt;&#xA;          &lt;div id=&#34;rad-subscription-success&#34; class=&#34;d-none&#34;&gt;&#xA;            &lt;p class=&#34;lead&#34;&gt;&#xA;               &#xA;                Gracias por suscribirte! &#xA;              &#xA;            &lt;/p&gt;&#xA;          &lt;/div&gt;&#xA;          &lt;div id=&#34;rad-subscription-fail&#34; class=&#34;d-none&#34;&gt;&#xA;            &lt;p&gt;&#xA;               &#xA;                Algo ha fallado, por favor inténtalo de nuevo. &#xA;              &#xA;            &lt;/p&gt;&#xA;          &lt;/div&gt;&#xA;          &lt;script src=&#39;http://localhost:1313/js/subscription.js&#39;&gt;&lt;/script&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;small id=&#34;emailHelp&#34; class=&#34;form-text text-muted&#34;&gt;&#xA;           &#xA;            Respetamos tu privacidad. &#xA;          &#xA;        &lt;/small&gt;&#xA;      &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;    &#xA;    &#xA;&#xA;&#xA;&#xA;    &#xA;    &#xA;&#xA;&#xA;&lt;section  class=&#34;section section--border-bottom rad-animation-group section--padding&#34;&gt;&#xA;    &lt;div class=&#34;container d-flex justify-content-center align-items-center&#34;&gt;&#xA;        &lt;div class=&#34;row rad-fade-down&#34;&gt;&#xA;            &lt;div class=&#34;col-12 text-center&#34;&gt;&#xA;                &#xA;                &lt;h2 class=&#34;section__title&#34;&gt;Contenido extra&lt;/h2&gt;&#xA;                &#xA;                &#xA;                &lt;div class=&#34;text-section__content&#34;&gt;&#xA;                    &lt;p&gt;Puedes añadir contenido adicional después de los bloques de &lt;code&gt;section&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Aquí puedes ser creativo, utilizar otros shortcodes, &amp;hellip; O dejarlo vacío.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

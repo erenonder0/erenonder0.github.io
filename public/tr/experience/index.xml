@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deneyim on </title>
+    <link>http://localhost:1313/tr/experience/</link>
+    <description>Recent content in Deneyim on </description>
+    <generator>Hugo</generator>
+    <language>tr</language>
+    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tr/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Job #1</title>
+      <link>http://localhost:1313/tr/experience/job-1/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-1/</guid>
+      <description>&lt;h2 id=&#34;1st-job-junior-intern&#34;&gt;1st job: Junior Intern&lt;/h2&gt;&#xA;&lt;p&gt;The beginning of a great career. As a Junior Intern at Internet Affairs Inc., I had the opportunity to work on various projects that helped me develop my technical and professional skills. Working alongside experienced developers, I contributed to the company&amp;rsquo;s core web applications and learned industry best practices in software development.&lt;/p&gt;&#xA;&lt;p&gt;During my internship, I took the initiative to create an internal documentation wiki that improved knowledge sharing across teams. This project taught me valuable lessons in technical writing and collaboration. I also participated in code reviews and daily stand-ups, gaining firsthand experience in agile development methodologies.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

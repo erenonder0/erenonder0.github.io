@@ -1,5 +1,6 @@
 # Temanın dökümantasyonu
-https://github.com/darshanbaral/aafu
+https://github.com/zetxek/adritian-free-hugo-theme/tree/main
+https://www.adrianmoreno.info/
 
 # İlk sefer bağımlılıkları yüklemek için
 npm install
@@ -8,5 +9,6 @@ npm install
 hugo server
 
 # İşin bittikten sonra
-hugo && npx -y pagefind --site public
+git add .
+git commit -m "mesajın"
 git push
