@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spring on My New Hugo Site</title>
-    <link>https://example.org/tags/spring/</link>
-    <description>Recent content in Spring on My New Hugo Site</description>
+    <title>Spring on </title>
+    <link>https://aafu.pages.dev/tags/spring/</link>
+    <description>Recent content in Spring on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aafu.pages.dev/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Atlassian Marketplace Plugins</title>
-      <link>https://example.org/projects/creations/marketplace/</link>
+      <link>https://aafu.pages.dev/projects/creations/marketplace/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/projects/creations/marketplace/</guid>
+      <guid>https://aafu.pages.dev/projects/creations/marketplace/</guid>
       <description>&lt;p&gt;Multiple plugins used by thousands of teams that provide enhanced functionality of Atlassian’s core products (primarily JIRA and Bamboo) to enrich CI/CD capabilities, DevOps automation, or productivity. Functionality spans user interface, web services and persistence.&lt;/p&gt;</description>
     </item>
   </channel>
