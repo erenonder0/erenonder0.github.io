@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16ee4c35-fb70-4d7a-bc90-dc4b29a10335" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.hugo_build.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/cv.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archetypes/default.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/blog/force-ssl.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/contributions/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/contributions/deploy-triggers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/contributions/schema-org.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/contributions/shields-docker.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/creations/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/creations/bosh-agents.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/creations/docker-marketplace.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/projects/creations/marketplace.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/publications/AllDayDevOps.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/publications/_index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/search.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/boards.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certifications.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/education.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/experience.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/skills.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hugo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/.well-known/google-verify.etc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/cms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/templates/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/TechChat-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/TechChat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/TechChat.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/aafb-agent-ids-match-bamboo-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/aafb-agent-ids-match-bamboo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/aafb-agent-ids-match-bamboo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/cakephp-acls-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/cakephp-acls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/cakephp-acls.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/deploysonly.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/docker-pipelines-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/docker-pipelines.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/docker-pipelines.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/marketplace-summary-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/marketplace-summary.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/marketplace-summary.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/organicdevops-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/organicdevops.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/organicdevops.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/profile3-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/profile3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/profile3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/schema-org-thumb.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/schema-org.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/schema-org.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/aafu" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/.asdf/installs/golang/1.22.12/packages/pkg/mod/golang.org/toolchain@v0.0.1-go1.23.7.darwin-arm64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cmlonder&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:erenonder0/cv.git",
+    "accountId": "0eb83397-08a6-41d4-981e-93af8e816edd"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2wSOQHW3yZ3xhACejk9zTdXVZW5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboarding": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/cemal.onder/Dev/cemal/cv/static/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-3b128438d3f6-34ac7aa8f6ab-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-251.23774.430" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-GO-251.23774.430" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16ee4c35-fb70-4d7a-bc90-dc4b29a10335" name="Changes" comment="" />
+      <created>1746031490630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746031490630</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

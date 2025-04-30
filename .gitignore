@@ -1,0 +1,9 @@
+/resources/_gen/
+/node_modules
+hugo_stats.json
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+.vscode/
