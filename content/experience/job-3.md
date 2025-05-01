@@ -1,19 +1,17 @@
 ---
-date: 2024-12-01T00:00:00+01:00
+date: 2023-08-01T00:00:00+01:00
 draft: false
-title: "Job #3"
-jobTitle: "CIO"
-company: "Internet Affairs Inc. "
-location: "Stavanger, Norway"
-duration: "2024-now"
-
+title: ""
+jobTitle: "Event and Organization Coordinator"
+company: "Google Developer Student Club"
+location: "Firat University, Turkey"
+duration: "08/2023 - 12/2023"
+companyLogo: "images/experience/gdsc-logo.png"
 ---
-## 3rd job: CIO
+## Google Developer Student Club - Event and Organization Coordinator
 
-As Chief Information Officer at Internet Affairs Inc., I lead the strategic transformation of our digital infrastructure and cybersecurity initiatives. My team of 150+ IT professionals works tirelessly to protect and optimize our global network spanning 23 countries.
+I served as the event and organization coordinator at the Google Developer Student Club (GDSC), which represents Google in Elazığ, and played an active role in organizing various events related to technology, artificial intelligence, cybersecurity, and Google products.
 
-During my tenure, I've spearheaded the implementation of a revolutionary blockchain-based verification system that reduced fraudulent transactions by 87% while improving processing speeds by 300%. This initiative saved the company $12M annually and earned us the prestigious "Digital Innovation Award 2024".
+In this role, I brought together students interested in technology and software development by organizing various technical events, seminars, and workshops. I was actively involved in the planning process of the events, including content planning, inviting speakers, and time management.
 
-I'm particularly proud of our "Green Computing" program which has successfully migrated 75% of our data centers to renewable energy sources. This environmental initiative not only reduced our carbon footprint by 45% but also resulted in a 30% reduction in operational costs.
-
-In my role, I also serve as a member of the executive board, helping shape the company's long-term technology vision and ensuring our IT strategy aligns perfectly with our business objectives. Currently leading an ambitious AI integration project that promises to revolutionize our customer service capabilities.
+During this process, I improved my organizational skills and gained experience in team collaboration, problem-solving, and community communication. I also had the opportunity to contribute to the development of students who wanted to learn about technology. This role enhanced my competence in organizing sustainable and impactful events under a community-led structure.

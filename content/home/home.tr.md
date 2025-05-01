@@ -7,7 +7,7 @@ draft = false
 
 
 {{< showcase-section
-title="Merhaba, Ben Eren ÖNDER."
+title="Merhaba, Ben Eren."
 subtitle=" "
 button_text="İletişime Geç"
 button_icon="icon-email"

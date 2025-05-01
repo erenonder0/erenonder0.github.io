@@ -194,7 +194,7 @@ weight = 0
 [languages.tr.menus]
 [[languages.tr.menus.header]]
 name = "Ana Sayfa"
-URL = "/"
+URL = "/tr"
 weight = 1
 [[languages.tr.menus.header]]
 name = 'Hakkımda'

@@ -7,11 +7,12 @@ draft = false
 
 
 {{< showcase-section
-title="Hello, I'm Adrián."
-subtitle="VP of Engineering"
+title="Hello, I'm Eren."
+subtitle=" "
 button_text="Contact me"
 button_icon="icon-email"
-description="Based in Copenhagen 🇩🇰, I work at <a target='_blank' href='https://www.sumup.com/'>SumUp</a>, a fintech company empowering small businesses. Our vision is to build a world where anyone can create a thriving business through accessible tools and technology. <br/>A specialized generalist at heart, I bring a unique blend of expertise across backend systems, mobile development, and infrastructure. Over my career, I've led teams of all sizes—from hands-on coding to scaling engineering groups—always anchored in the 3P framework: <strong>People, Product, Process</strong>.<br/>I'm driven by cultivating high-performing teams that embrace iterative improvement, psychological safety, and purpose-driven work. Whether refining agile workflows or mentoring future leaders, my goal is to build environments where both products <em>and</em> people thrive."
+button_url="mailto:eerenonder0@gmail.com"
+description="My name is Eren ONDER. I am a 3rd-year Digital Forensic Engineering student and I actively work in the field of cybersecurity. As a CTF competitor, instructor, organizer, and researcher, I am pursuing a career path that is both technically deep and contributes to the community.</br>I have participated in CTF competitions at various levels and won awards, joined hackathons, organized competitions, and delivered technical training sessions. On the academic side, I carry out projects in the field of cybersecurity and support these studies through seminars and national projects.</br>My career goal is to become a security expert with a strong technical background in cyber attack and defense mechanisms. I aim to continuously learn and produce in both academic and social contexts."
 imgSrc="images/about/user-picture.jpeg"
 imgScale="0.8"
 >}}
@@ -19,17 +20,17 @@ imgScale="0.8"
     {{< platform-links >}}
         {{< link icon="linkedin" url="https://www.linkedin.com/in/erenonder0/" >}}
         {{< link icon="square-github" url="https://github.com/erenonder0" >}}
-        {{< link icon="youtube" url="#" >}}
+        {{< link icon="youtube" url="https://www.youtube.com/@erenonder0" >}}
     {{< /platform-links >}}
 
 {{< /showcase-section >}}
 
 
 {{< education-list
-    title="Formal Education (education-list)" >}}
+    title="Formal Education" >}}
 
 {{< experience-list
-    title="Experience (as list)"
+    title="Experience"
     padding="false" >}}
 
 {{< client-and-work-section

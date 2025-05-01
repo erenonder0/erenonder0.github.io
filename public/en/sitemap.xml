@@ -46,32 +46,6 @@
     <loc>http://localhost:1313/blog/other-installation-methods/</loc>
     <lastmod>2025-02-11T14:38:33+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/</loc>
-    <lastmod>2024-12-01T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/experience/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/experience/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/experience/job-3/</loc>
-    <lastmod>2024-12-01T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/experience/job-3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/experience/job-3/"
-                />
-  </url><url>
     <loc>http://localhost:1313/testimonial/graziella-nutella/</loc>
     <lastmod>2024-11-25T21:53:18+01:00</lastmod>
   </url><url>
@@ -118,21 +92,8 @@
                 href="http://localhost:1313/education/"
                 />
   </url><url>
-    <loc>http://localhost:1313/education/high-school/</loc>
-    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/projects/"
-                />
   </url><url>
     <loc>http://localhost:1313/projects/radity-finance-uikit/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
@@ -141,6 +102,9 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/swiss-fintech/</loc>
+    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/test_ruk/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/education/firat-university/</loc>
@@ -156,9 +120,6 @@
                 href="http://localhost:1313/education/firat-university/"
                 />
   </url><url>
-    <loc>http://localhost:1313/education/university-of-life/</loc>
-    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/sample-3/</loc>
     <lastmod>2024-06-24T14:38:33+02:00</lastmod>
   </url><url>
@@ -170,6 +131,32 @@
   </url><url>
     <loc>http://localhost:1313/blog/sample/</loc>
     <lastmod>2024-06-21T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/experience/job-1/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/experience/job-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/experience/job-1/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/experience/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/experience/"
+                />
   </url><url>
     <loc>http://localhost:1313/experience/job-2/</loc>
     <lastmod>2023-12-01T00:00:00+01:00</lastmod>
@@ -184,24 +171,21 @@
                 href="http://localhost:1313/experience/job-2/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/experience/job-1/</loc>
-    <lastmod>2022-12-01T00:00:00+01:00</lastmod>
+    <loc>http://localhost:1313/experience/job-3/</loc>
+    <lastmod>2023-08-01T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://localhost:1313/tr/experience/job-1/"
+                href="http://localhost:1313/tr/experience/job-3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/experience/job-1/"
+                href="http://localhost:1313/experience/job-3/"
                 />
   </url><url>
-    <loc>http://localhost:1313/experience/job-4/</loc>
-    <lastmod>2022-12-01T00:00:00+01:00</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
