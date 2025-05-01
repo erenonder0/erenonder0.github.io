@@ -75,6 +75,7 @@ sections = [
   "about",
   "education",
   "experience",
+  "activity",
   "client-and-work",
   "testimonial",
   "contact",
@@ -84,6 +85,7 @@ sections = [
 # logo = '/img/hugo.svg'
 
 homepageExperienceCount = 6
+homepageActivityCount=6
 
 [params.analytics]
 ## Analytics parameters.
@@ -137,10 +139,16 @@ weight = 1
 name = 'Experiences'
 URL = '#experience-list-shortcode'
 weight = 2
+
 [[languages.en.menus.header]]
-name = 'Portfolio'
-URL = '#portfolio'
+name = "Activities"
+URL = '#activity-list-shortcode'
 weight = 3
+
+#[[languages.en.menus.header]]
+#name = 'Portfolio'
+#URL = '#portfolio'
+#weight = 3
 #  [[languages.en.menus.header]]
 #  name = "Experience"
 #  URL = "#experience"
@@ -173,10 +181,11 @@ name = "About"
 URL = "#about"
 weight = 2
 
-[[languages.en.menus.footer]]
-name = "Portfolio"
-URL = "#portfolio"
-weight = 3
+#[[languages.en.menus.footer]]
+#name = "Portfolio"
+#URL = "#portfolio"
+#weight = 3
+
 
 [[languages.en.menus.footer]]
 name = "Contact"
@@ -196,19 +205,26 @@ weight = 0
 name = "Ana Sayfa"
 URL = "/tr"
 weight = 1
-[[languages.tr.menus.header]]
-name = 'Hakkımda'
-URL = '#about'
-weight = 2
-[[languages.tr.menus.header]]
-name = 'Portfolyo'
-URL = '#portfolio'
-weight = 3
+
+#[[languages.tr.menus.header]]
+#name = 'Hakkımda'
+#URL = '#about'
+#weight = 2
+
+#[[languages.tr.menus.header]]
+#name = 'Portfolyo'
+#URL = '#portfolio'
+#weight = 3
+
 [[languages.tr.menus.header]]
 name = "Deneyimler"
 URL = "/tr#experience-list-shortcode"
-weight = 4
+weight = 2
 
+[[languages.tr.menus.header]]
+name = 'Aktiviteler'
+URL = '/tr#activity-list-shortcode'
+weight = 4
 #[[languages.tr.menus.header]]
 #name = "How to"
 #URL = "/blog"

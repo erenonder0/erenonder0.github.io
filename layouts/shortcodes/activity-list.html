@@ -1,0 +1,60 @@
+{{/*
+    sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used. */}}
+    
+    {{ $style := resources.Get "scss/eren.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    
+
+  {{ $sectionId := "activity-list-shortcode" }}
+  {{ with .Get "sectionId" }}
+    {{ $sectionId = . }}
+  {{ end }}
+  
+  {{ $padding := .Get "padding" }}
+  {{ $title := .Get "title" | default "" }}
+  {{ $containerClass := "" }}
+  {{ if eq $padding "true" }}
+      {{ $containerClass = "container" }}
+  {{ end }}
+  
+  <section {{if $sectionId}} id="{{ $sectionId }}"{{end}} class="section-activity section section--border-bottom rad-animation-group flex-grow-1 {{ $containerClass }}">
+      <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="activity-list col-12 mt-5 mt-sm-0">
+              {{ if $title }}
+              <h2 class="section__title mb-4">{{ $title }}</h2>
+              {{ end }}
+              
+              {{ $xp := (where .Site.RegularPages.ByDate "Type" "activity") }}
+  
+              {{ $xpCount := len $xp }}
+  
+              {{ range $index, $element := first $xpCount (sort $xp "Date" "desc") }}
+              <div class="activity row">
+                  <div class="activity__header col-12 col-md-3 d-flex align-items-start">
+                      {{ $img := resources.Get .Params.companyLogo }}
+                      {{ with $img }}
+                      {{ $imgWebp := $img.Resize (printf "%dx%d webp q75 Lanczos picture" $img.Width $img.Height) }}
+                      <img src="{{ $imgWebp.RelPermalink }}" alt="{{ .Params.company }} logo"
+                          class="activity__company-logo" loading="lazy">
+                      {{ end }}
+                      
+                      <div class="activity__meta">
+                          <div class="activity__date">{{ .Params.duration }}</div>
+                          <div class="activity__title">{{ .Params.jobTitle }}</div>
+                          <div class="activity__company">{{ .Params.company }}. <span class="activity__location">
+                                  {{ .Params.location }}</span></div>
+                      </div>
+                  </div>
+                  <div class="activity__description d-print-block col-12 col-md-9 mt-3 mt-md-0">
+                      <h1>{{ .Params.title }}</h1>
+                      {{ .Content | safeHTML }}
+                  </div>
+              </div>
+              {{ if ne $index (sub $xpCount 1) }}
+              <!-- Separator between activitys for mobile -->
+              <hr class="d-block d-md-none my-4">
+              {{ end }}
+              {{ end }}
+          </div>
+      </div>
+  </section>

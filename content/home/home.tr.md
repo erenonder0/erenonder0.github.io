@@ -4,7 +4,9 @@ type = "home"
 draft = false
 +++
 
-
+<head>
+  <link href="/css/style.css" rel="stylesheet">
+</head>
 
 {{< showcase-section
 title="Merhaba, Ben Eren."
@@ -31,6 +33,11 @@ title="Eğitim Bilgisi" >}}
 {{< experience-list
 title="Deneyimler"
 padding="false" >}}
+
+
+{{< activity-list
+    title="Aktivite"
+    padding="false" >}}
 
 {{< client-and-work-section
 title="A selection of my work" >}}

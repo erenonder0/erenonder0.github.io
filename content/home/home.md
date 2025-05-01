@@ -6,6 +6,9 @@ draft = false
 
 
 
+<head>
+  <link href="/css/style.css" rel="stylesheet">
+</head>
 {{< showcase-section
 title="Hello, I'm Eren."
 subtitle=" "
@@ -31,6 +34,10 @@ imgScale="0.8"
 
 {{< experience-list
     title="Experience"
+    padding="false" >}}
+
+{{< activity-list
+    title="Activity"
     padding="false" >}}
 
 {{< client-and-work-section

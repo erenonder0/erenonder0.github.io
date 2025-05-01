@@ -11162,11 +11162,11 @@ body.home div.experience {
   [data-bs-theme="dark"] h6,
   [data-bs-theme="dark"] .h1 {
     color: black !important; }
-  .experience__meta {
+  .activity__meta {
     flex: 0 0 200px; }
-  .experience__description {
+  .activity__description {
     flex: 1 1 400px; }
-  .experience__list {
+  .activity__list {
     display: flex;
     flex-wrap: wrap; }
   h1, .h1,
@@ -11191,7 +11191,7 @@ body.home div.experience {
     break-inside: avoid; }
   header {
     display: none; }
-  .section-experience {
+  .section-activity {
     background: none !important;
     box-shadow: none !important;
     border: none !important;
@@ -11200,25 +11200,25 @@ body.home div.experience {
     margin: 0 !important;
     display: block !important;
     page-break-inside: avoid; }
-    .section-experience .experience {
+    .section-activity .activity {
       width: 100%;
       page-break-inside: avoid;
       border: none !important;
       padding: 0.5cm 0 !important; }
-      .section-experience .experience a {
+      .section-activity .activity a {
         color: inherit !important;
         text-decoration: none !important;
         padding: 0 !important;
         background: none !important; }
-      .section-experience .experience__company-logo {
+      .section-activity .activity__company-logo {
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact; }
-      .section-experience .experience__meta {
+      .section-activity .activity__meta {
         color: #000 !important; }
-      .section-experience .experience__company, .section-experience .experience__location, .section-experience .experience__date, .section-experience .experience__title {
+      .section-activity .activity__company, .section-activity .activity__location, .section-activity .activity__date, .section-activity .activity__title {
         color: #000 !important; }
-    .section-experience .btn,
-    .section-experience .all-experience-container {
+    .section-activity .btn,
+    .section-activity .all-activity-container {
       display: none !important; }
   .job-card {
     background: none !important;
