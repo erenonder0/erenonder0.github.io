@@ -29,7 +29,7 @@ imgScale="0.8"
 title="Eğitim Bilgisi" >}}
 
 {{< experience-list
-title="Experience (as list)"
+title="Deneyimler"
 padding="false" >}}
 
 {{< client-and-work-section

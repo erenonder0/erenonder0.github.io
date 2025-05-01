@@ -29,12 +29,5 @@
       <guid>http://localhost:1313/projects/swiss-fintech/</guid>
       <description>&lt;p&gt;Here you can add additional context, description, links, etc.&#xA;The content you see here comes from the contents of the &lt;code&gt;content/projects&lt;/code&gt; folder.&lt;/p&gt;&#xA;&lt;p&gt;This project is in the file &lt;code&gt;projects/swiss-fintech.md&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In the markdown file frontmatter you can also define additional parameters, such as the link:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;link: &amp;#34;https://www.adrianmoreno.info&amp;#34; # optional URL to link the logo to&#xD;&#xA;&#xD;&#xA;params:&#xD;&#xA;    button:&#xD;&#xA;        icon: &amp;#34;icon-arrow-right&amp;#34;&#xD;&#xA;        btnText: &amp;#34;Case Study&amp;#34;&#xD;&#xA;        URL: &amp;#34;https://www.adrianmoreno.info&amp;#34;&#xD;&#xA;    image:  &#xD;&#xA;        src: &amp;#34;images/works/swissfintech.jpg&amp;#34;&#xD;&#xA;        scale: 0.5&#xD;&#xA;        &#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    <item>
-      <title>Test Ryuk</title>
-      <link>http://localhost:1313/projects/test_ruk/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/test_ruk/</guid>
-      <description>&lt;p&gt;Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

@@ -13,7 +13,7 @@
 ## Header
 
 - id: "logo_alt"
-  translation: "Adritian logo"
+  translation: "Eren logo"
 
 - id: "logo_text1"
   translation: "Eren"
@@ -33,7 +33,7 @@
   translation: "© Adritian. Free Hugo theme by Adrián Moreno Peña."
 
 - id: "language"
-  translation: "Language"
+  translation: "Dil"
 
 - id: "toggle_theme"
   translation: "Toggle theme"
@@ -47,7 +47,7 @@
 
 ## Homepage head title
 - id: "head_title"
-  translation: "Demo site for Adritian - a high performance hugo theme by Adrián Moreno"
+  translation: "Eren ONDER"
 
 - id: "head_description"
   translation: "This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications."

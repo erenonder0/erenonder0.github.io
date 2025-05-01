@@ -204,15 +204,15 @@ weight = 2
 name = 'Portfolyo'
 URL = '#portfolio'
 weight = 3
-#  [[languages.tr.menus.header]]
-#  name = "Deneyim"
-#  URL = "#experience"
-#  weight = 4
-
 [[languages.tr.menus.header]]
-name = "How to"
-URL = "/blog"
-weight = 5
+name = "Deneyimler"
+URL = "/tr#experience-list-shortcode"
+weight = 4
+
+#[[languages.tr.menus.header]]
+#name = "How to"
+#URL = "/blog"
+#weight = 5
 
 [[languages.tr.menus.header]]
 pre = "email"

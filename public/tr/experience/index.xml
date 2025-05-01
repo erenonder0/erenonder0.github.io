@@ -6,14 +6,28 @@
     <description>Recent content in Deneyim on </description>
     <generator>Hugo</generator>
     <language>tr</language>
-    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tr/experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Job #1</title>
+      <title></title>
+      <link>http://localhost:1313/tr/experience/job-3/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-3/</guid>
+      <description>&lt;h2 id=&#34;google-developer-student-club---etkinlik-organizasyon-sorumlusu&#34;&gt;Google Developer Student Club - Etkinlik Organizasyon Sorumlusu&lt;/h2&gt;&#xA;&lt;p&gt;İÇERİK DOLDURULACAK&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/tr/experience/job-1/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0100</pubDate>
       <guid>http://localhost:1313/tr/experience/job-1/</guid>
-      <description>&lt;h2 id=&#34;1st-job-junior-intern&#34;&gt;1st job: Junior Intern&lt;/h2&gt;&#xA;&lt;p&gt;The beginning of a great career. As a Junior Intern at Internet Affairs Inc., I had the opportunity to work on various projects that helped me develop my technical and professional skills. Working alongside experienced developers, I contributed to the company&amp;rsquo;s core web applications and learned industry best practices in software development.&lt;/p&gt;&#xA;&lt;p&gt;During my internship, I took the initiative to create an internal documentation wiki that improved knowledge sharing across teams. This project taught me valuable lessons in technical writing and collaboration. I also participated in code reviews and daily stand-ups, gaining firsthand experience in agile development methodologies.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;siber-güvenlik-topluluğu---başkan&#34;&gt;Siber Güvenlik Topluluğu - Başkan&lt;/h2&gt;&#xA;&lt;p&gt;Üniversitenin en aktif teknik topluluklarından birinin başkanlığını yaptım. 500&amp;rsquo;ün üzerinde aktif üyesi bulunan bu topluluğun liderliğini üstlenerek, 20 kişilik bir yönetim ekibiyle birlikte çok sayıda teknik, sosyal ve kariyer odaklı etkinlik düzenledim.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Öne Çıkan Katkılarım&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Etkinlik planlama, ekip yönetimi, takım çalışması ve dış paydaşlarla iletişim konularında aktif rol üstlendim&lt;/li&gt;&#xA;&lt;li&gt;Siber güvenliğin çeşitli alanlarında eğitimler, farkındalık etkinlikleri ve CTF yarışmaları düzenledim&lt;/li&gt;&#xA;&lt;li&gt;Sektörün önde gelen uzmanlarıyla kariyer sohbetleri ve teknik konferanslar gerçekleştirdim&lt;/li&gt;&#xA;&lt;li&gt;Öğrencilerin bilgi paylaşımında bulunduğu ve birlikte kodladığı Code Night geceleri düzenledim&lt;/li&gt;&#xA;&lt;li&gt;Kulübün vizyonunu geliştirerek, hem teknik hem sosyal yönü güçlü bir topluluk yapısı oluşturdum&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/experience/job-2/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-2/</guid>
+      <description>&lt;h2 id=&#34;siber-anadolu-toplulukları---etkinlik-ve-organizasyon-sorumlusu&#34;&gt;Siber Anadolu Toplulukları - Etkinlik ve Organizasyon Sorumlusu&lt;/h2&gt;&#xA;&lt;p&gt;Siber Anadolu Toplulukları çatısı altında etkinlik organizasyon sorumlusu olarak görev aldım. Türkiye genelinde 35&amp;rsquo;ten fazla üniversite kulübünü ve 17 binden fazla öğrenciyi bir araya getiren bu oluşum, öğrenciler arasında siber güvenlik farkındalığını artırmayı, bilgi ve deneyim paylaşımını teşvik etmeyi, bireylerin teknik becerilerini geliştirmeyi ve sektöre bilinçli bireyler kazandırmayı amaçlayan gönüllü bir topluluktur.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Bu kapsamda birçok kış kampı, çevrim içi etkinlik ve Türkiye ile İngiltere arasında düzenlenen uluslararası CTF gibi organizasyonların planlama süreçlerinde aktif rol aldım. Etkinliklerin içerik oluşturma, zamanlama, iletişim ve koordinasyon gibi çeşitli aşamalarında görev alarak organizasyonel planlama, zaman yönetimi, takım içi koordinasyon ve çok paydaşlı iletişim alanlarında önemli deneyimler edindim. Bu süreç aynı zamanda büyük ölçekli bir öğrenci topluluğuyla çalışma, sorumluluk alma ve siber güvenlik ekosistemine katkıda bulunma becerilerimi de geliştirdi.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
