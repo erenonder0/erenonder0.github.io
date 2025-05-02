@@ -451,5 +451,133 @@ footer_links .nav-item .nav-link::after {
     background-color: $base-color;
   }
 }
-
 /* end dark mode */
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 50%; /* Daha küçük alan */
+  padding: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #007bff;
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 30px 0;
+}
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+/* Timeline dot - daha büyük ve 3D etki */
+/* Timeline dot - daha büyük ve 3D etki */
+.timeline-dot {
+  position: relative;
+  min-width: 60px;
+  padding: 6px 12px; // içerideki yazıya nefes aldırır
+  height: auto;
+  background-color: #007bff;
+  border-radius: 12px; // kareye yakın ama yumuşak köşeler
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 1;
+  margin: 0 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px #e0e0e0;
+  white-space: nowrap; // tarihin tek satırda kalmasını sağlar
+}
+
+
+
+/* Hover efekti ile dot etkileşimi */
+.timeline-dot:hover {
+  transform: translateY(0);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Timeline content */
+.timeline-content {
+  width: 40%;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 14px;
+}
+/* Title */
+.timeline-title {
+  font-size: 16px; /* Başlık boyutunu küçülttük */
+  font-weight: 600;
+  margin-bottom: 8px; /* Boşluğu azalttık */
+}
+
+/* Description */
+.timeline-description {
+  font-size: 14px; /* Açıklama yazısının boyutunu küçülttük */
+  margin-top: 8px; /* Daha az boşluk */
+}
+
+/* Mobile düzenlemeleri */
+@media (max-width: 768px) {
+  .timeline {
+    margin-left: 10px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 60px; /* Aralığı artırdık */
+    display: flex;
+    align-items: center;
+  }
+
+  .timeline-dot {
+    left: -25px; /* Mobilde biraz daha sola hizalama */
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .timeline-content {
+    margin-left: 60px;
+  }
+}
+
+/* Dark Mode ayarları */
+@include color-mode(dark) {
+  /* Timeline içeriği arka plan rengini koyu yapalım */
+  .timeline-content {
+    background-color: #2d2d2d; /* Dark mode'da koyu gri arka plan */
+    color: #f5f5f5; /* Beyaz yazı */
+  }
+
+  /* Dark mode'da timeline dot */
+  .timeline-dot {
+    background-color: #1e90ff; /* Dot rengi mavi */
+  }
+
+  /* Linkler için renk */
+  .timeline-content a {
+    color: #1e90ff; /* Daha belirgin mavi linkler */
+  }
+}

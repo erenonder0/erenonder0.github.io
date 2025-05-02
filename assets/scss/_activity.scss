@@ -132,3 +132,31 @@ body.home div.activity {
 .company-logo {
     object-fit: contain;
 }
+/* Activity Content Yazı Rengi */
+.activity__title {
+    color: #333; /* Koyu gri başlık yazısı */
+  }
+  
+  .activity__company {
+    color: #007bff; /* Şirket adı rengi */
+  }
+  
+  .activity__date {
+    color: #666; /* Tarih rengi için açık gri */
+  }
+  
+  /* Dark Mode */
+  @include color-mode(dark) {
+    .activity__title {
+      color: #f5f5f5; /* Beyaz renkli başlık */
+    }
+  
+    .activity__company {
+      color: #007bff; /* Aynı mavi renk */
+    }
+  
+    .activity__date {
+      color: #ccc; /* Açık gri tarih rengi */
+    }
+  }
+  

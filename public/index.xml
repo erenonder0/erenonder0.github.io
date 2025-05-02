@@ -150,24 +150,101 @@
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/activity/experience-1-copy/</link>
-      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/activity/experience-1-copy/</guid>
-      <description>&lt;h2 id=&#34;cybersecurity-community---president&#34;&gt;Cybersecurity Community - President&lt;/h2&gt;&#xA;&lt;p&gt;I served as the chairman of one of the most active technical communities at Firat University who name is &amp;ldquo;Siber Güvenlik Topluluğu&amp;rdquo;. Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Contributions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Took an active role in event planning, team management, collaboration, and communication with external stakeholders&lt;/li&gt;&#xA;&lt;li&gt;Organized trainings, awareness activities, and CTF competitions in various areas of cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;Hosted career talks and technical conferences with leading industry experts&lt;/li&gt;&#xA;&lt;li&gt;Arranged Code Night events where students could collaborate, share knowledge, and code together&lt;/li&gt;&#xA;&lt;li&gt;Enhanced the club&amp;rsquo;s vision and built a community structure strong in both technical and social aspects&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/activity/experience-1/</link>
-      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/activity/experience-1/</guid>
-      <description>&lt;h2 id=&#34;cybersecurity-community---president&#34;&gt;Cybersecurity Community - President&lt;/h2&gt;&#xA;&lt;p&gt;I served as the chairman of one of the most active technical communities at Firat University who name is &amp;ldquo;Siber Güvenlik Topluluğu&amp;rdquo;. Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Contributions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Took an active role in event planning, team management, collaboration, and communication with external stakeholders&lt;/li&gt;&#xA;&lt;li&gt;Organized trainings, awareness activities, and CTF competitions in various areas of cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;Hosted career talks and technical conferences with leading industry experts&lt;/li&gt;&#xA;&lt;li&gt;Arranged Code Night events where students could collaborate, share knowledge, and code together&lt;/li&gt;&#xA;&lt;li&gt;Enhanced the club&amp;rsquo;s vision and built a community structure strong in both technical and social aspects&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
       <link>http://localhost:1313/experience/job-1/</link>
       <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
       <guid>http://localhost:1313/experience/job-1/</guid>
       <description>&lt;h2 id=&#34;cybersecurity-community---president&#34;&gt;Cybersecurity Community - President&lt;/h2&gt;&#xA;&lt;p&gt;I served as the chairman of one of the most active technical communities at Firat University who name is &amp;ldquo;Siber Güvenlik Topluluğu&amp;rdquo;. Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Contributions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Took an active role in event planning, team management, collaboration, and communication with external stakeholders&lt;/li&gt;&#xA;&lt;li&gt;Organized trainings, awareness activities, and CTF competitions in various areas of cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;Hosted career talks and technical conferences with leading industry experts&lt;/li&gt;&#xA;&lt;li&gt;Arranged Code Night events where students could collaborate, share knowledge, and code together&lt;/li&gt;&#xA;&lt;li&gt;Enhanced the club&amp;rsquo;s vision and built a community structure strong in both technical and social aspects&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>1st Place, HacktorX CTF</title>
+      <link>http://localhost:1313/activity/experience-3/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-3/</guid>
+      <description>&lt;p&gt;Led our team to victory in the HacktorX CTF competition by solving challenges in cryptography, network, web, OSINT, and reverse engineering.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2nd Place, ABMCTF</title>
+      <link>http://localhost:1313/activity/experience-12/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-12/</guid>
+      <description>&lt;p&gt;Secured 2nd place in the 2nd ABMCTF Capture The Flag competition by solving challenges across various cybersecurity domains.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3rd Place, ABMCTF</title>
+      <link>http://localhost:1313/activity/experience-5/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-5/</guid>
+      <description>&lt;p&gt;Competed in the 3rd ABMCTF Capture The Flag contest, solving complex cybersecurity challenges with our team “Black Team.”&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3rd Place, HAVELSAN Hackathon (HAVELSAN EKSPRES)</title>
+      <link>http://localhost:1313/activity/experience-8/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-8/</guid>
+      <description>&lt;p&gt;Developed an AI-based Intrusion Detection System “Cyber MAIN” during a 4-day hackathon train journey. Awarded 3rd place among 26 university teams.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CTF Organizer, ABMCTF</title>
+      <link>http://localhost:1313/activity/experience-1-copy/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-1-copy/</guid>
+      <description>&lt;p&gt;Served as an organizer for the ABMCTF competition. Designed 30+ cybersecurity challenges across five categories to educate and challenge participants.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CTF Organizer, ABMCTF</title>
+      <link>http://localhost:1313/activity/experience-1/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-1/</guid>
+      <description>&lt;p&gt;Served as an organizer for the ABMCTF competition. Designed 30+ cybersecurity challenges across five categories to educate and challenge participants.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CTF Training Instructor, Code Night Event</title>
+      <link>http://localhost:1313/activity/experience-6/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-6/</guid>
+      <description>&lt;p&gt;Provided hands-on CTF training on Cryptology, Web, Network, and OSINT during a night-long event for students and cybersecurity enthusiasts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cybercrime Awareness Conference, Fırat University</title>
+      <link>http://localhost:1313/activity/experience-9/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-9/</guid>
+      <description>&lt;p&gt;Organized a seminar in collaboration with the Cyber Crimes Unit, focusing on social engineering, phishing, and safe internet use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cybersecurity Awareness Seminar, Yöntemim Schools</title>
+      <link>http://localhost:1313/activity/experience-10/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-10/</guid>
+      <description>&lt;p&gt;Held an engaging seminar on digital forensics and cybersecurity for high school students, including live demonstrations of cyber attack scenarios.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cybersecurity Seminar, Ahmet Kabaklı Science High School</title>
+      <link>http://localhost:1313/activity/experience-2/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-2/</guid>
+      <description>&lt;p&gt;Delivered a seminar on cybersecurity and digital forensics engineering to high school students, focusing on raising awareness about digital threats.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Published Paper, IIC2024 Conference</title>
+      <link>http://localhost:1313/activity/experience-7/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-7/</guid>
+      <description>&lt;p&gt;Presented and published a paper titled &amp;ldquo;Real-Time Human Recognition With Random Forest Algorithm Using Gait Biometrics Images&amp;rdquo; at the 3rd International Informatics Congress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Red Team Bootcamp &amp; CTF Training, Fırat University</title>
+      <link>http://localhost:1313/activity/experience-4/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-4/</guid>
+      <description>&lt;p&gt;Organized and instructed advanced-level CTF training, covering multiple categories and hosting a mini competition.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TÜBİTAK 2209-A Project Recipient</title>
+      <link>http://localhost:1313/activity/experience-11/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/activity/experience-11/</guid>
+      <description>&lt;p&gt;Received national support for a project titled “AI-based Gait Biometrics for Person Identification in Forensic Cases.” Reached the semi-final stage in the 2023/2 term.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
