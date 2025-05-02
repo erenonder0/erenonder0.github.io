@@ -145,6 +145,58 @@
                 href="http://localhost:1313/experience/job-1/"
                 />
   </url><url>
+    <loc>http://localhost:1313/activity/experience-3/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-3/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-12/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-12/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-12/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-5/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-5/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-5/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-8/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-8/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-8/"
+                />
+  </url><url>
     <loc>http://localhost:1313/activity/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
     <xhtml:link
@@ -171,8 +223,57 @@
                 href="http://localhost:1313/activity/experience-1/"
                 />
   </url><url>
+    <loc>http://localhost:1313/activity/experience-6/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-6/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-6/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-9/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-9/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-10/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-10/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-10/"
+                />
+  </url><url>
     <loc>http://localhost:1313/activity/experience-2/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-2/"
+                />
   </url><url>
     <loc>http://localhost:1313/experience/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
@@ -185,6 +286,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/experience/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-7/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-7/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-7/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-4/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-4/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/activity/experience-11/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/activity/experience-11/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/activity/experience-11/"
                 />
   </url><url>
     <loc>http://localhost:1313/experience/job-2/</loc>

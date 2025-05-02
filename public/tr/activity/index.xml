@@ -9,18 +9,88 @@
     <lastBuildDate>Sat, 02 Dec 2023 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tr/activity/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>1.lik, HacktorX CTF Yarışması</title>
+      <link>http://localhost:1313/tr/activity/experience-3/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-3/</guid>
+      <description>&lt;p&gt;Elazığ’da düzenlenen HacktorX CTF yarışmasında ekibimizle birlikte Kriptoloji, Ağ, Web, OSINT ve Tersine Mühendislik kategorilerindeki soruları başarıyla çözerek birincilik elde ettik.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.lik, ABMCTF</title>
+      <link>http://localhost:1313/tr/activity/experience-12/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-12/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 2. ABMCTF CTF yarışmasında “Black Team” olarak çeşitli kategorilerdeki zorlukları başarıyla çözerek ikinci olduk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.lük, ABMCTF</title>
+      <link>http://localhost:1313/tr/activity/experience-5/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-5/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 3. ABMCTF Capture The Flag yarışmasına “Black Team” adlı ekibimizle katıldık. Birçok zafiyetli makineyi başarıyla çözerek üçüncü olduk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.lük, HAVELSAN Hackathon (HAVELSAN EKSPRES)</title>
+      <link>http://localhost:1313/tr/activity/experience-8/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-8/</guid>
+      <description>&lt;p&gt;Ankara’dan Ahlat’a tren yolculuğu eşliğinde düzenlenen 4 günlük yapay zeka yarışmasında, “Cyber MAIN” adlı Yapay Zeka Tabanlı Saldırı Tespit Sistemini geliştirdik. 26 üniversite takımı arasından “Ana Fikir ve Uygulama” kategorisinde üçüncülük elde ettik.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ABMCTF CTF Yarışması Organizasyonu</title>
       <link>http://localhost:1313/tr/activity/experience-1/</link>
       <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
       <guid>http://localhost:1313/tr/activity/experience-1/</guid>
-      <description>&lt;h2 id=&#34;cybersecurity-community---president&#34;&gt;Cybersecurity Community - President&lt;/h2&gt;&#xA;&lt;p&gt;I served as the chairman of one of the most active technical communities at Firat University who name is &amp;ldquo;Siber Güvenlik Topluluğu&amp;rdquo;. Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Contributions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Took an active role in event planning, team management, collaboration, and communication with external stakeholders&lt;/li&gt;&#xA;&lt;li&gt;Organized trainings, awareness activities, and CTF competitions in various areas of cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;Hosted career talks and technical conferences with leading industry experts&lt;/li&gt;&#xA;&lt;li&gt;Arranged Code Night events where students could collaborate, share knowledge, and code together&lt;/li&gt;&#xA;&lt;li&gt;Enhanced the club&amp;rsquo;s vision and built a community structure strong in both technical and social aspects&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Her yıl yarışmacı olarak katıldığım ABMCTF CTF yarışmasına bu yıl yarışmacı olarak değil, organizatör olarak katıldım. Ekibimizle birlikte, katılımcıları hem eğlenmeye hem de öğrenmeye teşvik etmek amacıyla Kriptoloji, Web, Network, OSINT, Reverse Engineering kategorilerinde yaklaşık 30 soru hazırladık.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/tr/activity/experience-2./</link>
+      <title>Ahmet Kabaklı Fen Lisesi&#39;nde Siber Güvenlik Semineri</title>
+      <link>http://localhost:1313/tr/activity/experience-2/</link>
       <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/tr/activity/experience-2./</guid>
-      <description>&lt;p&gt;Served as an organizer for the ABMCTF competition. Designed 30+ cybersecurity challenges across five categories to educate and challenge participants.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/tr/activity/experience-2/</guid>
+      <description>&lt;p&gt;Elazığ’daki Ahmet Kabaklı Fen Lisesi’nde öğrencilere yönelik dijital tehditler hakkında farkındalık kazandırmak amacıyla bir konferans verdim. Ele aldığım konular arasında “Siber Güvenlik Nedir?” ve “Adli Bilişim Mühendisliği Nedir?” yer aldı.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code Night CTF Eğitimi</title>
+      <link>http://localhost:1313/tr/activity/experience-6/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-6/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Mimarlık Fakültesi’nde düzenlenen “Code Night” etkinliğinde Kriptoloji, Ağ, Web ve OSINT konularında kapsamlı CTF eğitimi verdim. Katılımcıların bilgilerini pekiştirmesi amacıyla mini bir CTF yarışması da organize ettim.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elazığ Yöntemim Okulları’nda Siber Güvenlik Semineri</title>
+      <link>http://localhost:1313/tr/activity/experience-10/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-10/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Siber Güvenlik Kulübü ve HSD Kulübü ile birlikte “Adli Bilişim Mühendisliği ve Siber Güvenlik Nedir? Güncel Siber Tehditler” başlıklı semineri düzenledim. Gerçek zamanlı siber saldırı simülasyonuyla öğrencilere farkındalık kazandırdım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IIC2024 Konferansında Akademik Yayın</title>
+      <link>http://localhost:1313/tr/activity/experience-7/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-7/</guid>
+      <description>&lt;p&gt;“Real-Time Human Recognition With Random Forest Algorithm Using Gait Biometrics Images” başlıklı makalem, 3. Uluslararası Bilişim Kongresi’nde (IFEST2024) sunuldu ve yayımlandı. Kongrenin ana temaları dijital dönüşüm, siber güvenlik ve yapay zekaydı.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Red Team Bootcamp ve CTF Eğitimi</title>
+      <link>http://localhost:1313/tr/activity/experience-4/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-4/</guid>
+      <description>&lt;p&gt;Siber Güvenlik Kulübü Başkanı olarak bir Red Team Bootcamp etkinliği düzenledim. Katılımcılara başlangıç ve ileri seviye CTF eğitimi verdim. Ayrıca mini bir CTF yarışması düzenleyerek çözüm stratejilerini paylaştım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Siber Suç Farkındalık Konferansı</title>
+      <link>http://localhost:1313/tr/activity/experience-9/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-9/</guid>
+      <description>&lt;p&gt;Siber Suçlarla Mücadele Birimi ile iş birliği içinde, üniversite öğrencileri ve akademisyenlere yönelik bir farkındalık konferansı düzenledim. Sosyal mühendislik ve oltalama saldırıları gibi konularda gerçek hayat senaryolarıyla sunum yaptım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TÜBİTAK 2209-A Araştırma Projesi</title>
+      <link>http://localhost:1313/tr/activity/experience-11/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-11/</guid>
+      <description>&lt;p&gt;TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı (2023/2) kapsamında, “Adli Vakalarda Gözetim Görüntülerinden Yürüyüş Biyometrisi Kullanılarak Kişi Tespiti Algoritmalarının Geliştirilmesi” başlıklı yapay zeka tabanlı proje geliştirdim. Projem yarı finale kalmaya hak kazandı ve destek almaya layık görüldü.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

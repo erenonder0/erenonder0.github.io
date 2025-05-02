@@ -541,25 +541,43 @@ footer_links .nav-item .nav-link::after {
 /* Mobile düzenlemeleri */
 @media (max-width: 768px) {
   .timeline {
-    margin-left: 10px;
+    width: 100%; /* Mobilde tamamen genişlemesini sağladık */
+    margin-left: 0;
   }
 
   .timeline-item {
     position: relative;
     margin-bottom: 60px; /* Aralığı artırdık */
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Ortaya hizalama */
+    justify-content: center;
   }
 
   .timeline-dot {
-    left: -25px; /* Mobilde biraz daha sola hizalama */
-    width: 50px;
+    width: 100px;
     height: 50px;
     font-size: 12px;
+    margin-bottom: 15px; /* Dot ile içerik arasına boşluk */
+    margin-left: 0; /* Sağ veya sol kayma olmasın */
+    position: absolute; /* Dot'u sabitleyelim */
+    top: -50px; /* Dot'u kutunun üstüne daha yakın yapalım */
+    left: 50%; /* Ortalayalım */
+    transform: translateX(-50%); /* Tam ortada olmasını sağlarız */
+    z-index: 1;
+  }
+
+  .timeline::before {
+    left: 50%;
+    width: 4px;
+    background-color: #007bff;
+    transform: translateX(-50%); /* Çizgiyi tam ortalayalım */
   }
 
   .timeline-content {
-    margin-left: 60px;
+    width: 80%; /* İçeriği daha geniş tutalım */
+    margin-left: 0;
+    margin-top: 10px; /* Dot ile içerik arasına boşluk */
   }
 }
 
