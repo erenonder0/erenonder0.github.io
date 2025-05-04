@@ -40,12 +40,12 @@ imgScale="0.8"
     title="Activity"
     padding="false" >}}
 
-{{< client-and-work-section
-    title="A selection of my work" >}}
+<!-- {{< client-and-work-section
+    title="A selection of my work" >}} -->
 
-{{< spacer size="large" >}}
+<!-- {{< spacer size="large" >}} -->
 
-## Extra home content
+<!-- ## Extra home content
 
 Additional content added after the `section` blocks, in the `home.md` file. 
 
@@ -60,4 +60,4 @@ centered="true"
 
 You can also use the `text-section` shortcode to add centered texts
 
-{{< /text-section >}}
+{{< /text-section >}} -->

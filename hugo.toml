@@ -1,5 +1,5 @@
 baseURL = "https://adritian-demo.vercel.app/"
-title = "Adritian Demo"
+title = "Eren ONDER"
 languageCode = "en"
 
  
@@ -159,17 +159,17 @@ weight = 3
 # URL = "/blog"
 # weight = 5
 
-[[languages.en.menus.header]]
-pre = "email"
-name = "email"
-URL = "#contact"
-weight = 6
+#[[languages.en.menus.header]]
+#pre = "email"
+#name = "email"
+#URL = "#contact"
+#weight = 6
 
-[[languages.en.menus.header]]
-pre = "search"
-name = "Search"
-URL = "/search"
-weight = 7
+#[[languages.en.menus.header]]
+#pre = "search"
+#name = "Search"
+#URL = "/search"
+#weight = 7
 
 [[languages.en.menus.footer]]
 name = "Home"
@@ -187,10 +187,10 @@ weight = 2
 #weight = 3
 
 
-[[languages.en.menus.footer]]
-name = "Contact"
-URL = "#contact"
-weight = 4
+#[[languages.en.menus.footer]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 4
 
 [languages.tr]
 disabled = false
@@ -230,37 +230,37 @@ weight = 4
 #URL = "/blog"
 #weight = 5
 
-[[languages.tr.menus.header]]
-pre = "email"
-name = "email"
-URL = "#contact"
-weight = 6
+#[[languages.tr.menus.header]]
+#pre = "email"
+#name = "email"
+#URL = "#contact"
+#weight = 6
 
-[[languages.tr.menus.header]]
-pre = "search"
-name = "Search"
-URL = "/search"
-weight = 7
+#[[languages.tr.menus.header]]
+#pre = "search"
+#name = "Search"
+#URL = "/search"
+#weight = 7
 
 [[languages.tr.menus.footer]]
-name = "Home"
-URL = "/"
+name = "Ana Sayfa"
+URL = "/tr"
 weight = 1
 
 [[languages.tr.menus.footer]]
-name = "About"
-URL = "#about"
+name = "Deneyimler"
+URL = "/tr#experience-list-shortcode"
 weight = 2
 
 [[languages.tr.menus.footer]]
-name = "Portfolio"
-URL = "#portfolio"
+name = "Aktiviteler"
+URL = "/tr#activity-list-shortcode"
 weight = 3
 
-[[languages.tr.menus.footer]]
-name = "Contact"
-URL = "#contact"
-weight = 4
+#[[languages.tr.menus.footer]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 4
 
 
 [languages.es]

@@ -9,7 +9,7 @@ duration: "12/2023 - now"
 companyLogo: "images/experience/sgt-logo.png"
 ---
 
-## Cybersecurity Community - President
+## Cybersecurity Community - Chairman
 I served as the chairman of one of the most active technical communities at Firat University who name is "Siber Güvenlik Topluluğu". Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.
 
 ---

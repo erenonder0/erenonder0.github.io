@@ -39,10 +39,10 @@ padding="false" >}}
     title="Aktivite"
     padding="false" >}}
 
-{{< client-and-work-section
-title="A selection of my work" >}}
+<!-- {{< client-and-work-section
+title="A selection of my work" >}} -->
 
-{{< spacer size="large" >}}
+<!-- {{< spacer size="large" >}}
 
 ## Extra home content
 
@@ -59,4 +59,4 @@ centered="true"
 
 You can also use the `text-section` shortcode to add centered texts
 
-{{< /text-section >}}
+{{< /text-section >}} -->
