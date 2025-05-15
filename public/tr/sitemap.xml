@@ -41,6 +41,45 @@
                 href="http://localhost:1313/tr/education/firat-university/"
                 />
   </url><url>
+    <loc>http://localhost:1313/tr/projects/</loc>
+    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/projects/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tr/projects/ryuk-ransomware/</loc>
+    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/projects/ryuk-ransomware/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/projects/ryuk-ransomware/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</loc>
+    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/projects/web3.0-cryptocurrency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/projects/web3.0-cryptocurrency/"
+                />
+  </url><url>
     <loc>http://localhost:1313/tr/experience/job-1/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
     <xhtml:link

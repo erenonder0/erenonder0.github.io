@@ -145,10 +145,10 @@ name = "Activities"
 URL = '#activity-list-shortcode'
 weight = 3
 
-#[[languages.en.menus.header]]
-#name = 'Portfolio'
-#URL = '#portfolio'
-#weight = 3
+[[languages.en.menus.header]]
+name = 'Projects'
+URL = '#projects'
+weight = 3
 #  [[languages.en.menus.header]]
 #  name = "Experience"
 #  URL = "#experience"
@@ -211,10 +211,10 @@ weight = 1
 #URL = '#about'
 #weight = 2
 
-#[[languages.tr.menus.header]]
-#name = 'Portfolyo'
-#URL = '#portfolio'
-#weight = 3
+[[languages.tr.menus.header]]
+name = 'Projeler'
+URL = '/tr#projects'
+weight = 4
 
 [[languages.tr.menus.header]]
 name = "Deneyimler"

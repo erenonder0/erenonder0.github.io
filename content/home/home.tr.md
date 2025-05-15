@@ -39,8 +39,9 @@ padding="false" >}}
     title="Aktivite"
     padding="false" >}}
 
-<!-- {{< client-and-work-section
-title="A selection of my work" >}} -->
+{{< client-and-work-section
+    title="Projelerim"
+    sectionId="projects" >}}
 
 <!-- {{< spacer size="large" >}}
 

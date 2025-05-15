@@ -16,6 +16,20 @@
       <description></description>
     </item>
     <item>
+      <title>Ryuk Ransomware</title>
+      <link>http://localhost:1313/tr/projects/ryuk-ransomware/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/projects/ryuk-ransomware/</guid>
+      <description>&lt;p&gt;Bu proje, gerçek fidye yazılımlarının nasıl çalıştığını güvenli bir ortamda test edebilmek için geliştirildi.&#xA;C# ile kodladığım bu simülasyon, AES şifreleme ile dosyaları şifreleyerek kendini başlangıca yerleştiriyor bu sayede gerçek hayattaki Ransomware virüslerini birebir modelleyerek bizlere test ortamı sunuyor.&lt;/p&gt;&#xA;&lt;p&gt;Not: Bu proje yalnızca akademik ve eğitim amaçlı yapılmıştır ve hiçbir zaman gerçek sistemlerde çalıştırılmamalıdır.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web 3.0 Kripto Para Transferi Sitesi</title>
+      <link>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</guid>
+      <description>&lt;p&gt;Web 3.0 teknolojilerini kullanarak, kullanıcıların MetaMask cüzdanlarıyla Ethereum ağı üzerinde güvenli ve hızlı kripto para transferi yapmasını sağlayan bir uygulama geliştirdim. Kullanıcı dostu arayüzü ile blok zincirini deneyimlemenizi sağlıyor.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title></title>
       <link>http://localhost:1313/tr/experience/job-1/</link>
       <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>

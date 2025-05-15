@@ -40,10 +40,11 @@ imgScale="0.8"
     title="Activity"
     padding="false" >}}
 
-<!-- {{< client-and-work-section
-    title="A selection of my work" >}} -->
+{{< client-and-work-section
+    title="A selection of my work"
+    sectionId="projects" >}}
 
-<!-- {{< spacer size="large" >}} -->
+{{< spacer size="large" >}}
 
 <!-- ## Extra home content
 

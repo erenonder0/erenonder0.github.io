@@ -58,74 +58,11 @@
       <description>&lt;p&gt;Working with this colleague has been an absolute pleasure. Their dedication, professionalism, and positive attitude make them an invaluable asset to our team. They consistently go above and beyond to ensure that projects are completed on time and to the highest standard. Their ability to collaborate effectively and support their colleagues is truly commendable. I am continually impressed by their innovative thinking and problem-solving skills. This colleague is not just a team member but a true inspiration and a driving force behind our team’s success.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ztos</title>
-      <link>http://localhost:1313/client-work/ztos/</link>
-      <pubDate>Sun, 25 Aug 2024 10:23:39 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/ztos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Zoo</title>
-      <link>http://localhost:1313/client-work/zoo/</link>
-      <pubDate>Sun, 25 Aug 2024 10:23:08 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/zoo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kanba</title>
-      <link>http://localhost:1313/client-work/kanba/</link>
-      <pubDate>Sun, 25 Aug 2024 10:22:34 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/kanba/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Goldline</title>
-      <link>http://localhost:1313/client-work/goldline/</link>
-      <pubDate>Sun, 25 Aug 2024 10:21:48 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/goldline/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Earth 2.0</title>
-      <link>http://localhost:1313/client-work/earth2.0/</link>
-      <pubDate>Sun, 25 Aug 2024 10:17:12 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/earth2.0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Asgardia</title>
-      <link>http://localhost:1313/client-work/asgardia/</link>
+      <title>Ryuk Ransomware</title>
+      <link>http://localhost:1313/projects/ryuk-ransomware/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/asgardia/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Radity Finance - UI Kit</title>
-      <link>http://localhost:1313/projects/radity-finance-uikit/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/radity-finance-uikit/</guid>
-      <description>&lt;p&gt;We have been receiving a lot of requests for a Finance Kit recently due to the popularity of Fintech.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Robo Advisor</title>
-      <link>http://localhost:1313/projects/robo-advisor/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/robo-advisor/</guid>
-      <description>&lt;p&gt;Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Swiss Fintech Website</title>
-      <link>http://localhost:1313/projects/swiss-fintech/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/swiss-fintech/</guid>
-      <description>&lt;p&gt;Here you can add additional context, description, links, etc.&#xA;The content you see here comes from the contents of the &lt;code&gt;content/projects&lt;/code&gt; folder.&lt;/p&gt;&#xA;&lt;p&gt;This project is in the file &lt;code&gt;projects/swiss-fintech.md&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In the markdown file frontmatter you can also define additional parameters, such as the link:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;link: &amp;#34;https://www.adrianmoreno.info&amp;#34; # optional URL to link the logo to&#xD;&#xA;&#xD;&#xA;params:&#xD;&#xA;    button:&#xD;&#xA;        icon: &amp;#34;icon-arrow-right&amp;#34;&#xD;&#xA;        btnText: &amp;#34;Case Study&amp;#34;&#xD;&#xA;        URL: &amp;#34;https://www.adrianmoreno.info&amp;#34;&#xD;&#xA;    image:  &#xD;&#xA;        src: &amp;#34;images/works/swissfintech.jpg&amp;#34;&#xD;&#xA;        scale: 0.5&#xD;&#xA;        &#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
-      <title>Test Ryuk</title>
-      <link>http://localhost:1313/projects/test_ruk/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/test_ruk/</guid>
-      <description>&lt;p&gt;Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/projects/ryuk-ransomware/</guid>
+      <description>&lt;p&gt;This project was developed to safely simulate and analyze how real-world ransomware operates within a controlled environment.&#xA;Written in C#, this simulation uses AES encryption to lock files and places itself in system startup, accurately modeling the behavior of actual ransomware and providing a reliable test environment.&lt;/p&gt;&#xA;&lt;p&gt;Note: This project was created solely for academic and educational purposes and must never be executed on real systems.&lt;/p&gt;</description>
     </item>
     <item>
       <title>University of Firat</title>
@@ -133,6 +70,13 @@
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
       <guid>http://localhost:1313/education/firat-university/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Web 3.0 Cryptocurrency Transfer Site</title>
+      <link>http://localhost:1313/projects/web3.0-cryptocurrency/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/projects/web3.0-cryptocurrency/</guid>
+      <description>&lt;p&gt;I developed an application leveraging Web 3.0 technologies that enables users to securely and swiftly transfer cryptocurrency on the Ethereum network via their MetaMask wallets. Its user-friendly interface makes blockchain technology accessible to everyone.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sample content: featured image</title>
