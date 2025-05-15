@@ -177,20 +177,20 @@ URL = "/"
 weight = 1
 
 [[languages.en.menus.footer]]
-name = "About"
-URL = "#about"
+name = "Experiences"
+URL = "#experience-list-shortcode"
 weight = 2
 
-#[[languages.en.menus.footer]]
-#name = "Portfolio"
-#URL = "#portfolio"
-#weight = 3
+[[languages.en.menus.footer]]
+name = "Projects"
+URL = "#projects"
+weight = 4
 
 
-#[[languages.en.menus.footer]]
-#name = "Contact"
-#URL = "#contact"
-#weight = 4
+[[languages.en.menus.footer]]
+name = "Activities"
+URL = "#activity-list-shortcode"
+weight = 3
 
 [languages.tr]
 disabled = false
@@ -257,10 +257,10 @@ name = "Aktiviteler"
 URL = "/tr#activity-list-shortcode"
 weight = 3
 
-#[[languages.tr.menus.footer]]
-#name = "Contact"
-#URL = "#contact"
-#weight = 4
+[[languages.tr.menus.footer]]
+name = "Projeler"
+URL = "/tr#projects"
+weight = 4
 
 
 [languages.es]
