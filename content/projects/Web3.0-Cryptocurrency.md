@@ -10,7 +10,7 @@ params:
         btnText: "See Project"
         URL: "https://github.com/erenonder0/Web3.0-Cryptocurrency-Transfer"
     image:
-        src: "images/works/Web3.0.png"
+        src: "images/works/webcrypto.png"
         scale: 0.5
     
 
