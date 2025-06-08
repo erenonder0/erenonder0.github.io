@@ -10,23 +10,44 @@ public_folder: "/images/uploads"        # Site içinde resimlerin ulaşım yolu
 collections:
   - name: "blog_tr"
     label: "Blog Yazıları (Türkçe)"
-    folder: "content/blog/blog_tr"
+    folder: "content/blog_tr"
     create: true
     slug: "{{slug}}.tr"
+    extension: "md"
     fields:
-      - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Taslak?", name: "draft", widget: "boolean", default: false }
+      - { label: "Tür", name: "type", widget: "string", default: "blog" }
+      - { label: "Öne Çıkan Yazı mı?", name: "featured", widget: "boolean", default: false }
+      - { label: "Ağırlık (Sıralama)", name: "weight", widget: "number", default: 10 }
+      - { label: "Etiketler", name: "tags", widget: "list", allow_add: true }
+      - label: "Kapak Görseli"
+        name: "featured_image"
+        widget: "image"
+        choose_url: true
+      - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
   - name: "blog_en"
     label: "Blog Posts (English)"
-    folder: "content/blog/blog_en"
+    folder: "content/blog_en"
     create: true
     slug: "{{slug}}"
+    extension: "md"
     fields:
-      - { label: "Language", name: "language", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Draft?", name: "draft", widget: "boolean", default: false }
+      - { label: "Type", name: "type", widget: "string", default: "blog" }
+      - { label: "Featured?", name: "featured", widget: "boolean", default: false }
+      - { label: "Weight (Order)", name: "weight", widget: "number", default: 10 }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true }
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        choose_url: true
+      - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - { label: "Content", name: "body", widget: "markdown" }
+
 
