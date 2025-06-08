@@ -20,13 +20,13 @@ collections:
       - { label: "Taslak?", name: "draft", widget: "boolean", default: false }
       - { label: "Tür", name: "type", widget: "string", default: "blog" }
       - { label: "Öne Çıkan Yazı mı?", name: "featured", widget: "boolean", default: false }
-      - { label: "Ağırlık (Sıralama)", name: "weight", widget: "number", default: 10 }
       - { label: "Etiketler", name: "tags", widget: "list", allow_add: true }
       - label: "Kapak Görseli"
         name: "featured_image"
         widget: "image"
         choose_url: true
       - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
+      - { label: "Type", name: "type", widget: "hidden", default: "blog" }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
   - name: "blog_en"
@@ -41,13 +41,13 @@ collections:
       - { label: "Draft?", name: "draft", widget: "boolean", default: false }
       - { label: "Type", name: "type", widget: "string", default: "blog" }
       - { label: "Featured?", name: "featured", widget: "boolean", default: false }
-      - { label: "Weight (Order)", name: "weight", widget: "number", default: 10 }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true }
       - label: "Featured Image"
         name: "featured_image"
         widget: "image"
         choose_url: true
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - { label: "Type", name: "type", widget: "hidden", default: "blog" }
       - { label: "Content", name: "body", widget: "markdown" }
 
 
