@@ -1,19 +1,21 @@
 backend:
   name: git-gateway
-  branch: main  # veya default kullandığın branch adı
-identity:
-  enabled: true
+  branch: main
 
-media_folder: "static/images/uploads"   # Upload edilen resimler burada tutulur
-public_folder: "/images/uploads"        # Site içinde resimlerin ulaşım yolu
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
     label: "Blog Yazıları"
-    folder: "content/blog"     # Hugo blog yazılarının olduğu klasör
+    folder: "content/blog"
     create: true
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
-      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
-      - { label: "Yazı", name: "body", widget: "markdown" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Dil", name: "lang", widget: "select", options: ["tr", "en"], default: "tr" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+    meta: { path: { widget: "string", label: "Yol", name: "path" } }
+    path: "{{slug}}{{#if (eq lang 'tr')}}.tr{{/if}}.md"
