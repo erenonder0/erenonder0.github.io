@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on </title>
+    <link>http://localhost:1313/tr/tags/security/</link>
+    <description>Recent content in Security on </description>
+    <generator>Hugo</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 08 Jun 2025 19:56:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tr/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST</title>
+      <link>http://localhost:1313/tr/blog/blog_tr/test/</link>
+      <pubDate>Sun, 08 Jun 2025 19:56:47 +0000</pubDate>
+      <guid>http://localhost:1313/tr/blog/blog_tr/test/</guid>
+      <description>&lt;p&gt;&lt;em&gt;a﻿sdasd&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;a﻿dadas&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;d﻿asdasdasd&lt;/code&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;code&gt;d﻿skdskfskdfkdsfkdsf&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;adasdasdsa&#34;&gt;&lt;code&gt;a﻿dasdasdsa&lt;/code&gt;&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>
