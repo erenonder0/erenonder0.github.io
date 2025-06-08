@@ -12,10 +12,11 @@ collections:
     label: "Blog Yazıları (Türkçe)"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
-    extension: "tr.md"
-    format: "md"
+    slug: "{{slug}}.tr"
+    extension: "md"       # sadece md yazın
+    format: "md"          # format da md
     fields:
+      - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Tarih", name: "date", widget: "datetime" }
       - { label: "İçerik", name: "body", widget: "markdown" }
@@ -28,6 +29,7 @@ collections:
     extension: "md"
     format: "md"  
     fields:
+      - { label: "Language", name: "language", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
