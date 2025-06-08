@@ -26,7 +26,6 @@ collections:
         widget: "image"
         choose_url: true
       - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
-      - { label: "Type", name: "type", widget: "hidden", default: "blog" }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
   - name: "blog_en"
@@ -47,7 +46,6 @@ collections:
         widget: "image"
         choose_url: true
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
-      - { label: "Type", name: "type", widget: "hidden", default: "blog" }
       - { label: "Content", name: "body", widget: "markdown" }
 
 
