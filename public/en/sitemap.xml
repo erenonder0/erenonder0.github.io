@@ -74,6 +74,19 @@
                 href="http://localhost:1313/education/"
                 />
   </url><url>
+    <loc>http://localhost:1313/projects/fakeextensionbuilder/</loc>
+    <lastmod>2024-08-25T09:53:42+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/projects/fakeextensionbuilder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/projects/fakeextensionbuilder/"
+                />
+  </url><url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link

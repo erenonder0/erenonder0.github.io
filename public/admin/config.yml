@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main  # veya default kullandığın branch adı
+
+media_folder: "static/images/uploads"   # Upload edilen resimler burada tutulur
+public_folder: "/images/uploads"        # Site içinde resimlerin ulaşım yolu
+
+collections:
+  - name: "blog"
+    label: "Blog Yazıları"
+    folder: "content/blog"     # Hugo blog yazılarının olduğu klasör
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
+      - { label: "Yazı", name: "body", widget: "markdown" }
