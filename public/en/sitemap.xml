@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog_en/test/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/getting-started/</loc>
     <lastmod>2025-02-11T14:38:33+02:00</lastmod>
   </url><url>
@@ -9,7 +12,7 @@
     <lastmod>2025-02-28T08:05:05+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-28T08:05:05+01:00</lastmod>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -21,14 +24,14 @@
                 href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/adritian/</loc>
-    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+    <loc>http://localhost:1313/blog_en/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/guide/</loc>
-    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -39,6 +42,31 @@
                 hreflang="en"
                 href="http://localhost:1313/tags/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/tags/test/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/test/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/test2/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/test3/</loc>
+    <lastmod>2025-06-08T19:28:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/adritian/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/guide/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/shortcodes/</loc>
     <lastmod>2025-02-14T14:38:33+02:00</lastmod>
