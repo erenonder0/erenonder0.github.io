@@ -13,8 +13,6 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{slug}}.tr"
-    extension: "md"       # sadece md yazın
-    format: "md"          # format da md
     fields:
       - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
       - { label: "Başlık", name: "title", widget: "string" }
@@ -26,8 +24,6 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
-    extension: "md"
-    format: "md"  
     fields:
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
       - { label: "Title", name: "title", widget: "string" }
