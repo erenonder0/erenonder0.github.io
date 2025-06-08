@@ -10,7 +10,7 @@ public_folder: "/images/uploads"        # Site içinde resimlerin ulaşım yolu
 collections:
   - name: "blog_tr"
     label: "Blog Yazıları (Türkçe)"
-    folder: "content/blog"
+    folder: "content/blog/blog_tr"
     create: true
     slug: "{{slug}}.tr"
     fields:
@@ -21,7 +21,7 @@ collections:
 
   - name: "blog_en"
     label: "Blog Posts (English)"
-    folder: "content/blog"
+    folder: "content/blog/blog_en"
     create: true
     slug: "{{slug}}"
     fields:
