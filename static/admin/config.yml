@@ -21,10 +21,11 @@ collections:
       - { label: "Tür", name: "type", widget: "string", default: "blog" }
       - { label: "Öne Çıkan Yazı mı?", name: "featured", widget: "boolean", default: false }
       - { label: "Etiketler", name: "tags", widget: "list", allow_add: true }
-      - label: "Kapak Görseli"
-        name: "featured_image"
-        widget: "image"
-        choose_url: true
+      - label: "Görseller"
+        name: "images"
+        widget: "object"
+        fields:
+        - { label: "Kapak Görseli", name: "featured_image", widget: "image", required: false }
       - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
@@ -41,10 +42,11 @@ collections:
       - { label: "Type", name: "type", widget: "string", default: "blog" }
       - { label: "Featured?", name: "featured", widget: "boolean", default: false }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true }
-      - label: "Featured Image"
-        name: "featured_image"
-        widget: "image"
-        choose_url: true
+      - label: "Görseller"
+        name: "images"
+        widget: "object"
+        fields:
+        - { label: "Kapak Görseli", name: "featured_image", widget: "image", required: false }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
       - { label: "Content", name: "body", widget: "markdown" }
 
