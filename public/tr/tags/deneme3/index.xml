@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on </title>
-    <link>http://localhost:1313/tr/blog/</link>
-    <description>Recent content in Blogs on </description>
+    <title>Deneme3 on </title>
+    <link>http://localhost:1313/tr/tags/deneme3/</link>
+    <description>Recent content in Deneme3 on </description>
     <generator>Hugo</generator>
     <language>tr</language>
     <lastBuildDate>Sun, 08 Jun 2025 20:05:54 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tr/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tr/tags/deneme3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TEST</title>
       <link>http://localhost:1313/tr/blog/blog_tr/test/</link>
