@@ -58,6 +58,13 @@
       <description>&lt;p&gt;Working with this colleague has been an absolute pleasure. Their dedication, professionalism, and positive attitude make them an invaluable asset to our team. They consistently go above and beyond to ensure that projects are completed on time and to the highest standard. Their ability to collaborate effectively and support their colleagues is truly commendable. I am continually impressed by their innovative thinking and problem-solving skills. This colleague is not just a team member but a true inspiration and a driving force behind our team’s success.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Fake Extension Builder</title>
+      <link>http://localhost:1313/projects/fakeextensionbuilder/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/projects/fakeextensionbuilder/</guid>
+      <description>&lt;p&gt;This project is a lightweight utility developed to obfuscate &lt;span class=&#34;inline-code&#34;&gt;.exe&lt;/span&gt; file extensions by inserting the Braille Pattern Blank character (Unicode U+2800) just before the  &lt;span class=&#34;inline-code&#34;&gt;.exe&lt;/span&gt; suffix. The primary objective is to disguise the true nature of executable files in environments where basic file extension spoofing is relevant for educational, research, or cybersecurity awareness purposes.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Ryuk Ransomware</title>
       <link>http://localhost:1313/projects/ryuk-ransomware/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
