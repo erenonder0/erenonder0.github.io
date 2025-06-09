@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog/blog_en/getting-started/</loc>
+    <lastmod>2025-02-11T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/blog_en/icons/</loc>
+    <lastmod>2025-02-28T08:05:05+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-25T21:53:18+01:00</lastmod>
+    <lastmod>2025-02-28T08:05:05+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -14,6 +20,44 @@
                 hreflang="en"
                 href="http://localhost:1313/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-02-28T08:05:05+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/adritian/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/guide/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/blog/blog_en/shortcodes/</loc>
+    <lastmod>2025-02-14T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/blog_en/other-installation-methods/</loc>
+    <lastmod>2025-02-11T14:38:33+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/testimonial/graziella-nutella/</loc>
     <lastmod>2024-11-25T21:53:18+01:00</lastmod>
@@ -26,6 +70,9 @@
   </url><url>
     <loc>http://localhost:1313/testimonial/ferdinand-shermand/</loc>
     <lastmod>2024-11-25T21:30:46+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/client-work/</loc>
+    <lastmod>2024-08-25T10:23:39+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/education/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
@@ -104,6 +151,18 @@
                 hreflang="en"
                 href="http://localhost:1313/projects/web3.0-cryptocurrency/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/blog_en/sample-3/</loc>
+    <lastmod>2024-06-24T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/lorem-ipsum/</loc>
+    <lastmod>2024-06-21T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sample/</loc>
+    <lastmod>2024-06-21T14:38:33+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/blog_en/sample/</loc>
+    <lastmod>2024-06-21T14:38:33+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/experience/job-1/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
@@ -326,7 +385,8 @@
                 href="http://localhost:1313/experience/job-3/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/adritian/</loc>
+    <loc>http://localhost:1313/blog/blog_en/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
@@ -340,15 +400,9 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/client-work/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/cybersecurity/</loc>
-  </url><url>
     <loc>http://localhost:1313/footer/footer/</loc>
   </url><url>
     <loc>http://localhost:1313/footer/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/guide/</loc>
   </url><url>
     <loc>http://localhost:1313/home/home/</loc>
     <xhtml:link
@@ -374,40 +428,8 @@
                 href="http://localhost:1313/home/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/lorem-ipsum/</loc>
-  </url><url>
     <loc>http://localhost:1313/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/sample/</loc>
-  </url><url>
     <loc>http://localhost:1313/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/test/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/test/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/test2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/test3/</loc>
   </url>
 </urlset>

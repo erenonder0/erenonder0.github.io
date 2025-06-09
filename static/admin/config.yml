@@ -27,7 +27,7 @@ collections:
         fields:
         - { label: "Kapak Görseli", name: "featured_image", widget: "image", required: false }
       - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
-      - { label: "İçerik", name: "body", widget: "markdown" }
+      - { label: "İçerik", name: "body", widget: "markdown",  modes: [rich_text, raw]}
 
   - name: "blog_en"
     label: "Blog Posts (English)"
