@@ -154,10 +154,10 @@ weight = 3
 #  URL = "#experience"
 #  weight = 4
 
-# [[languages.en.menus.header]]
-# name = "How to"
-# URL = "/blog"
-# weight = 5
+[[languages.en.menus.header]]
+name = "Blogs"
+URL = "/blog"
+weight = 5
 
 #[[languages.en.menus.header]]
 #pre = "email"
@@ -225,10 +225,11 @@ weight = 2
 name = 'Aktiviteler'
 URL = '/tr#activity-list-shortcode'
 weight = 4
-#[[languages.tr.menus.header]]
-#name = "How to"
-#URL = "/blog"
-#weight = 5
+
+[[languages.tr.menus.header]]
+name = "Bloglar"
+URL = "/tr/blog"
+weight = 5
 
 #[[languages.tr.menus.header]]
 #pre = "email"
@@ -261,6 +262,11 @@ weight = 3
 name = "Projeler"
 URL = "/tr#projects"
 weight = 4
+
+[[languages.tr.menus.footer]]
+name = "Bloglar"
+URL = "/tr/blog"
+weight = 5
 
 
 [languages.es]
@@ -440,8 +446,8 @@ showCategories = true
 showRecentPosts = true
 recentPostCount = 5
 listStyle = "summary"  # options: simple, summary
-featured_sort_by_weight = true
-featured_sort_by_date = false
+featured_sort_by_weight = false
+featured_sort_by_date = true
 
 
 [params.experience]
