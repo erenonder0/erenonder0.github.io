@@ -2,7 +2,7 @@
 - id: "meta_title"
   translation: "Adritian - a high performance hugo theme by Adrián Moreno"
 - id: "meta_description"
-  translation: "This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications."
+  translation: ""
 - id: "meta_keywords"
   translation: "hugo, theme, bootstrap, adritian, adrian moreno, personal site, portfolio, single page application"
 - id: "meta_author"
@@ -203,13 +203,13 @@
 
 ## Blog
 - id: "read_more"
-  translation: "Read more"
+  translation: "Daha Fazla Oku"
 
 - id: "published_on"
-  translation: "Published on "
+  translation: "Yayınlanma Tarihi"
 
 - id: "continue_reading"
-  translation: "Continue reading"
+  translation: "Okumaya Devam Et"
 
 ## 404 Page
 - id: "404_title"

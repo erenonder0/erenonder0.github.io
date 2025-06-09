@@ -1,12 +1,12 @@
 ## Meta tags
 - id: "meta_title"
-  translation: "Adritian - a high performance hugo theme by Adrián Moreno"
+  translation: "Eren ÖNDER | Forensic Informatics and Cyber Security Student Portfolio"
 - id: "meta_description"
-  translation: "This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications."
+  translation: "Discover my projects and technical work in the field of cyber security."
 - id: "meta_keywords"
-  translation: "hugo, theme, bootstrap, adritian, adrian moreno, personal site, portfolio, single page application"
+  translation: "cybersecurity, forensic, eren, önder, eren önder, eren önder blog"
 - id: "meta_author"
-  translation: "Adrián Moreno Peña"
+  translation: "Eren ONDER"
 - id: "meta_image"
   translation: "/img/general/og-image.jpg"
 
@@ -50,7 +50,7 @@
   translation: "Eren ONDER"
 
 - id: "head_description"
-  translation: "This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications."
+  translation: "Discover my projects and technical work in the field of cyber security."
 
 ## Homepage showcase
 - id: "showcase_title"
