@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Volunteer-Works on </title>
+    <link>http://localhost:1313/volunteer-work/</link>
+    <description>Recent content in Volunteer-Works on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Dec 2023 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/volunteer-work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/volunteer-work/job-1/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/volunteer-work/job-1/</guid>
+      <description>&lt;h2 id=&#34;cybersecurity-community---chairman&#34;&gt;Cybersecurity Community - Chairman&lt;/h2&gt;&#xA;&lt;p&gt;I served as the chairman of one of the most active technical communities at Firat University who name is &amp;ldquo;Siber Güvenlik Topluluğu&amp;rdquo;. Leading a community with over 500 active members, I coordinated a management team of 20 and organized numerous technical, social, and career-oriented events.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Contributions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Took an active role in event planning, team management, collaboration, and communication with external stakeholders&lt;/li&gt;&#xA;&lt;li&gt;Organized trainings, awareness activities, and CTF competitions in various areas of cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;Hosted career talks and technical conferences with leading industry experts&lt;/li&gt;&#xA;&lt;li&gt;Arranged Code Night events where students could collaborate, share knowledge, and code together&lt;/li&gt;&#xA;&lt;li&gt;Enhanced the club&amp;rsquo;s vision and built a community structure strong in both technical and social aspects&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/volunteer-work/job-2/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/volunteer-work/job-2/</guid>
+      <description>&lt;h2 id=&#34;cyber-anatolia-communities---event-and-organization-coordinator&#34;&gt;Cyber Anatolia Communities - Event and Organization Coordinator&lt;/h2&gt;&#xA;&lt;p&gt;I have been serving as an event and organization coordinator under the umbrella of the Cyber Anatolia Communities. This volunteer-based initiative brings together more than 35 university clubs and over 17,000 students across Turkey, aiming to raise cybersecurity awareness among students, promote knowledge and experience sharing, enhance individuals&amp;rsquo; technical skills, and contribute to the development of conscious professionals in the field.&lt;/p&gt;&#xA;&lt;p&gt;As part of this role, I actively participated in the planning processes of various events such as winter camps, online activities, and an international CTF competition held between Turkey and the United Kingdom.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/volunteer-work/job-3/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/volunteer-work/job-3/</guid>
+      <description>&lt;h2 id=&#34;google-developer-student-club---event-and-organization-coordinator&#34;&gt;Google Developer Student Club - Event and Organization Coordinator&lt;/h2&gt;&#xA;&lt;p&gt;I served as the event and organization coordinator at the Google Developer Student Club (GDSC), which represents Google in Elazığ, and played an active role in organizing various events related to technology, artificial intelligence, cybersecurity, and Google products.&lt;/p&gt;&#xA;&lt;p&gt;In this role, I brought together students interested in technology and software development by organizing various technical events, seminars, and workshops. I was actively involved in the planning process of the events, including content planning, inviting speakers, and time management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

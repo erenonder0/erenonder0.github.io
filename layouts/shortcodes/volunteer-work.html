@@ -1,0 +1,133 @@
+{{/* layouts/shortcodes/volunteer-work.html */}}
+{{ $title      := .Get "title" }}
+{{ $sectionId  := .Get "sectionId" | default "volunteer-work" }}
+{{ $padding    := .Get "padding" | default "true" }}
+{{ $limit      := .Get "limit" | default 0 }}         {{/* 0 = sınırsız */}}
+{{ $order      := .Get "order" | default "weight" }}  {{/* weight|date|title */}}
+{{ $reverse    := .Get "reverse" | default "false" }} {{/* "true" ise ters sırala */}}
+{{ $isDebug    := eq (.Get "debug") "true" }}
+
+{{/* volunteer-work section'ındaki TR tekil sayfaları topla */}}
+{{ $pages := where site.Pages "Section" "volunteer-work" }}
+{{ $pages = where $pages "Kind" "page" }}
+{{ $pages = where $pages "Lang" .Site.Language.Lang }}
+{{ $pages = where $pages "Draft" false }}
+{{ $pages = where $pages "Date" "le" now }}
+
+{{/* Sıralama */}}
+{{ if eq $order "date" }}
+  {{ $pages = $pages.ByDate }}
+{{ else if eq $order "title" }}
+  {{ $pages = $pages.ByTitle }}
+{{ else }}
+  {{ $pages = $pages.ByWeight }}
+{{ end }}
+{{ if eq ($reverse | lower) "true" }}
+  {{ $pages = $pages.Reverse }}
+{{ end }}
+{{ if gt $limit 0 }}
+  {{ $pages = first $limit $pages }}
+{{ end }}
+
+<section id="{{ $sectionId }}" class="volunteer-work-section {{ if eq $padding "false" }}no-pad{{ end }}">
+  {{ if $title }}<h2>{{ $title }}</h2>{{ end }}
+
+  {{ if $pages }}
+    <div class="volunteer-work-grid">
+      {{ range $pages }}
+
+        {{/* LOGO ÇÖZÜMLEME (assets → bundle → static) */}}
+        {{ $raw := .Params.companyLogo | default "" }}
+        {{ $val := trim $raw " " }}
+        {{ $logoURL := "" }}
+        {{ $why := "" }}
+
+        {{ if $val }}
+          {{ if or (hasPrefix $val "http://") (hasPrefix $val "https://") }}
+            {{ $logoURL = $val }}{{ $why = "abs-url" }}
+          {{ else }}
+            {{ $res := resources.Get $val }}
+            {{ if $res }}
+              {{ $logoURL = $res.RelPermalink }}{{ $why = "assets:resources.Get" }}
+            {{ else }}
+              {{ with .Resources.GetMatch $val }}
+                {{ $logoURL = .RelPermalink }}{{ $why = "page-bundle:.Resources.GetMatch" }}
+              {{ else }}
+                {{ if hasPrefix $val "/" }}
+                  {{ $logoURL = $val | absURL }}
+                {{ else }}
+                  {{ $logoURL = (printf "/%s" $val) | absURL }}
+                {{ end }}
+                {{ $why = "fallback:static-path" }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        <article class="volunteer-card">
+          {{/* ✅ Güvenli header (çökme yok) */}}
+          <header class="volunteer-head">
+            {{ with $logoURL }}<img class="logo" src="{{ . }}" alt="logo">{{ end }}
+
+            {{ $page := . }}
+            <div class="vol-left">
+              {{ with $page.Params.duration }}
+                <div class="vol-date">{{ . }}</div>
+              {{ end }}
+
+              <h3 class="vol-role">{{ or $page.Params.jobTitle $page.Title }}</h3>
+
+              <div class="vol-orgline">
+                {{ with $page.Params.company }}
+                  {{ $company := . }}
+                  {{ $url := $page.Params.companyUrl }}
+                  {{ if $url }}
+                    <a class="vol-company" href="{{ $url }}">{{ $company }}</a>
+                  {{ else }}
+                    <span class="vol-company">{{ $company }}</span>
+                  {{ end }}
+                {{ end }}
+                {{ with $page.Params.location }}
+                  <span class="vol-location">. {{ . }}</span>
+                {{ end }}
+              </div>
+            </div>
+          </header>
+
+          {{ if or .Params.summary .Summary .Content }}
+            <div class="volunteer-body">
+              {{ if .Params.summary }}
+                <p>{{ .Params.summary }}</p>
+              {{ else if .Summary }}
+                {{ .Summary }}
+              {{ else }}
+                {{ .Content }}
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ with .Params.link }}
+            <p class="volunteer-link"><a href="{{ .url }}">{{ .text | default "Detay" }}</a></p>
+          {{ end }}
+
+          {{ if $isDebug }}
+            <small style="opacity:.6;display:block;margin-top:.5rem">
+              logo raw="{{ $raw }}" → "{{ $logoURL }}" ({{ $why }})
+            </small>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>Henüz içerik eklenmedi.</p>
+  {{ end }}
+
+  {{ if $isDebug }}
+    <pre style="font-size:12px;opacity:.7;margin-top:1rem">
+Found {{ len $pages }} TR pages in "volunteer-work".
+{{ range (where site.Pages "Section" "volunteer-work") -}}
+- {{ .File.Path }} (lang={{ .Lang }}, draft={{ .Draft }}, date={{ .Date }})
+{{- end }}
+    </pre>
+  {{ end }}
+</section>

@@ -1,0 +1,108 @@
+/* ---- Volunteer Work Section ---- */
+:root{
+  --vw-gap: 28px;
+  --vw-border: rgba(255,255,255,0.08);
+  --vw-muted: rgba(255,255,255,0.65);
+  --vw-accent: #22c55e; /* şirket yeşili */
+  --vw-title-max: 980px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --vw-border: rgba(0,0,0,0.08);
+    --vw-muted: rgba(0,0,0,0.6);
+  }
+}
+
+.volunteer-work-section{
+  margin: 2.5rem 0;
+}
+
+.volunteer-card{
+  display: grid;
+  grid-template-columns: 300px minmax(0,1fr); /* sol meta | sağ içerik */
+  gap: var(--vw-gap);
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--vw-border);
+}
+
+/* sol sütun */
+.volunteer-head{
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.volunteer-head .logo{
+  width: 56px; height: 56px;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.25));
+}
+
+.vol-left{ display:flex; flex-direction:column; gap:4px; }
+.vol-date{
+  font-size: .92rem;
+  color: var(--vw-muted);
+}
+.vol-role{
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.25rem; /* solda küçük kalın başlık */
+  line-height: 1.2;
+}
+.vol-orgline{ line-height: 1.35; }
+.vol-company{
+  color: var(--vw-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.vol-company:hover{ text-decoration: underline; }
+.vol-location{
+  color: var(--vw-muted);
+  margin-left: 2px;
+}
+
+/* sağ sütun (içerik/başlık) */
+.volunteer-body{
+  max-width: var(--vw-title-max);
+}
+.volunteer-body h1{
+  margin: 0 0 .75rem 0;
+  font-weight: 900;
+  font-size: clamp(2rem, 4.2vw, 3rem); /* büyük başlık */
+  line-height: 1.1;
+}
+.volunteer-body h2{
+  margin: 0 0 .75rem 0;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.15;
+}
+.volunteer-body p{
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+  opacity: .95;
+}
+.volunteer-body hr{
+  border: 0;
+  border-top: 1px solid var(--vw-border);
+  margin: 1.25rem 0;
+}
+.volunteer-body ul{
+  margin: .5rem 0 0 1.25rem;
+  padding: 0;
+}
+.volunteer-body li{
+  margin: .4rem 0;
+  line-height: 1.65;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .volunteer-card{ grid-template-columns: 1fr; gap: 18px; }
+  .volunteer-head{ grid-template-columns: 48px 1fr; }
+  .volunteer-head .logo{ width:48px;height:48px; }
+  .vol-role{ font-size: 1.1rem; }
+  .volunteer-body h1{ font-size: clamp(1.6rem, 5.2vw, 2.3rem); }
+}

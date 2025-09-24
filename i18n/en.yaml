@@ -123,16 +123,16 @@
   translation: "LinkedIn"
 
 - id: "experience_button_url"
-  translation: "https://www.linkedin.com/in/adrianmoreno/"
+  translation: "https://www.linkedin.com/in/erenonder0/"
 
 - id: "experience_button2"
-  translation: "Download resume"
+  translation: "Download"
 
 - id: "experience_button2_url"
-  translation: "/img/general/user-smile-fill.svg"
+  translation: "/img/general/ErenOnderCv.pdf"
 
 - id: "experience_button3"
-  translation: "View all"
+  translation: "View All"
 
 - id: "experience_button3_url"
   translation: "/experience"

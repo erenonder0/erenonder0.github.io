@@ -6,6 +6,7 @@ draft = false
 
 <head>
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/volunteer-work.css" rel="stylesheet">
 </head>
 
 {{< showcase-section
@@ -14,7 +15,7 @@ subtitle=" "
 button_text="İletişime Geç"
 button_icon="icon-email"
 button_url="mailto:eerenonder0@gmail.com"
-description="Adım Eren ÖNDER. Adli Bilişim Mühendisliği 3. sınıf öğrencisiyim ve siber güvenlik alanında aktif olarak çalışmalar yürütüyorum. CTF yarışmacısı, eğitmen, organizatör ve araştırmacı olarak hem teknik derinliği yüksek hem de topluluğa katkı sağlayan bir kariyer planıyla ilerliyorum. <br/>Farklı düzeylerde CTF yarışmalarına katılarak ödüller kazandım, hackathon'lara katıldım, yarışmalar düzenledim ve teknik eğitimler verdim. Akademik tarafta ise siber güvenlik alanında projeler yürütüyor, bu çalışmaları seminerler ve ulusal projelerle destekliyorum. <br/> Kariyer hedefim, siber saldırı ve savunma mekanizmalarında teknik altyapısı güçlü bir güvenlik uzmanı olmak. Hem akademik hem de sosyal anlamda sürekli öğrenmeyi ve üretmeyi amaçlıyorum."
+description="Adım Eren ÖNDER. Adli Bilişim Mühendisliği 4. sınıf öğrencisiyim ve siber güvenlik alanında aktif olarak çalışmalar yürütüyorum. CTF yarışmacısı, eğitmen, organizatör ve araştırmacı olarak hem teknik derinliği yüksek hem de topluluğa katkı sağlayan bir kariyer planıyla ilerliyorum. <br/>Farklı düzeylerde CTF yarışmalarına katılarak ödüller kazandım, hackathon'lara katıldım, yarışmalar düzenledim ve teknik eğitimler verdim. Akademik tarafta ise siber güvenlik alanında projeler yürütüyor, bu çalışmaları seminerler ve ulusal projelerle destekliyorum. <br/> Kariyer hedefim, siber saldırı ve savunma mekanizmalarında teknik altyapısı güçlü bir güvenlik uzmanı olmak. Hem akademik hem de sosyal anlamda sürekli öğrenmeyi ve üretmeyi amaçlıyorum."
 imgSrc="images/about/user-picture.jpeg"
 imgScale="0.8"
 >}}
@@ -30,10 +31,18 @@ imgScale="0.8"
 {{< education-list
 title="Eğitim Bilgisi" >}}
 
-{{< experience-list
+{{< experience-section
+intro_title=" "
 title="Deneyimler"
-padding="false" >}}
+padding="true"
+sectionId="experience-list-shortcode"
+hideButton3="true"
+>}}
 
+{{< volunteer-work
+    title="Gönüllü Çalışmalar"
+    sectionId="volunteer-work"
+>}}
 
 {{< activity-list
     title="Aktivite"
@@ -42,6 +51,14 @@ padding="false" >}}
 {{< client-and-work-section
     title="Projelerim"
     sectionId="projects" >}}
+
+
+
+
+
+
+
+
 
 <!-- {{< spacer size="large" >}}
 

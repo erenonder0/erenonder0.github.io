@@ -1,6 +1,6 @@
 ---
 date: 2023-08-01T00:00:00+01:00
-draft: false
+draft: true
 title: ""
 jobTitle: "Etkinlik ve Organizasyon Sorumlusu"
 company: "Google Developer Student Club"

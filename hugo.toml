@@ -135,20 +135,26 @@ weight = 0
 name = "Home"
 URL = "/"
 weight = 1
+
 [[languages.en.menus.header]]
-name = 'Experiences'
-URL = '#experience-list-shortcode'
+name = "Volunteer Works"
+URL = "#volunteer-work"
+weight = 3
+
+[[languages.en.menus.header]]
+name = "Experiences"
+URL = "#experience-list-shortcode"
 weight = 2
 
 [[languages.en.menus.header]]
 name = "Activities"
 URL = '#activity-list-shortcode'
-weight = 3
+weight = 4
 
 [[languages.en.menus.header]]
 name = 'Projects'
 URL = '#projects'
-weight = 3
+weight = 5
 #  [[languages.en.menus.header]]
 #  name = "Experience"
 #  URL = "#experience"
@@ -217,6 +223,11 @@ URL = '/tr#projects'
 weight = 4
 
 [[languages.tr.menus.header]]
+name = "Gönüllü Çalışmalar"
+URL = "/tr#volunteer-work"
+weight = 3
+
+[[languages.tr.menus.header]]
 name = "Deneyimler"
 URL = "/tr#experience-list-shortcode"
 weight = 2
@@ -249,6 +260,11 @@ URL = "/tr"
 weight = 1
 
 [[languages.tr.menus.footer]]
+name = "Gönüllü Çalışmalar"
+URL = "/tr#volunteer-work"
+weight = 3
+
+[[languages.tr.menus.footer]]
 name = "Deneyimler"
 URL = "/tr#experience-list-shortcode"
 weight = 2
@@ -256,17 +272,17 @@ weight = 2
 [[languages.tr.menus.footer]]
 name = "Aktiviteler"
 URL = "/tr#activity-list-shortcode"
-weight = 3
+weight = 4
 
 [[languages.tr.menus.footer]]
 name = "Projeler"
 URL = "/tr#projects"
-weight = 4
+weight = 5
 
 [[languages.tr.menus.footer]]
 name = "Bloglar"
 URL = "/tr/blog"
-weight = 5
+weight = 6
 
 
 [languages.es]
@@ -452,3 +468,5 @@ featured_sort_by_date = true
 
 [params.experience]
 showJobCard = true # Set to false to hide the job card
+
+

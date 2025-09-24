@@ -9,7 +9,7 @@
     <lastmod>2025-02-28T08:05:05+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-28T08:05:05+01:00</lastmod>
+    <lastmod>2025-09-01T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
@@ -19,6 +19,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/experience/job-2/</loc>
+    <lastmod>2025-09-01T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/experience/job-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/experience/job-2/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/experience/</loc>
+    <lastmod>2025-09-01T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/experience/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/experience/job-1/</loc>
+    <lastmod>2025-07-01T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/experience/job-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/experience/job-1/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
@@ -164,17 +203,17 @@
     <loc>http://localhost:1313/blog/blog_en/sample/</loc>
     <lastmod>2024-06-21T14:38:33+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experience/job-1/</loc>
+    <loc>http://localhost:1313/volunteer-work/job-1/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://localhost:1313/tr/experience/job-1/"
+                href="http://localhost:1313/tr/volunteer-work/job-1/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/experience/job-1/"
+                href="http://localhost:1313/volunteer-work/job-1/"
                 />
   </url><url>
     <loc>http://localhost:1313/activity/experience-3/</loc>
@@ -307,19 +346,6 @@
                 href="http://localhost:1313/activity/experience-2/"
                 />
   </url><url>
-    <loc>http://localhost:1313/experience/</loc>
-    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/experience/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/experience/"
-                />
-  </url><url>
     <loc>http://localhost:1313/activity/experience-7/</loc>
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
     <xhtml:link
@@ -359,30 +385,43 @@
                 href="http://localhost:1313/activity/experience-11/"
                 />
   </url><url>
-    <loc>http://localhost:1313/experience/job-2/</loc>
+    <loc>http://localhost:1313/volunteer-work/</loc>
+    <lastmod>2023-12-02T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/volunteer-work/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/volunteer-work/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/volunteer-work/job-2/</loc>
     <lastmod>2023-12-01T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://localhost:1313/tr/experience/job-2/"
+                href="http://localhost:1313/tr/volunteer-work/job-2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/experience/job-2/"
+                href="http://localhost:1313/volunteer-work/job-2/"
                 />
   </url><url>
-    <loc>http://localhost:1313/experience/job-3/</loc>
+    <loc>http://localhost:1313/volunteer-work/job-3/</loc>
     <lastmod>2023-08-01T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://localhost:1313/tr/experience/job-3/"
+                href="http://localhost:1313/tr/volunteer-work/job-3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/experience/job-3/"
+                href="http://localhost:1313/volunteer-work/job-3/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/blog_en/</loc>

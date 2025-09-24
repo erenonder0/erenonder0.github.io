@@ -8,6 +8,7 @@ draft = false
 
 <head>
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/volunteer-work.css" rel="stylesheet">
 </head>
 {{< showcase-section
 title="Hello, I'm Eren."
@@ -15,7 +16,7 @@ subtitle=" "
 button_text="Contact me"
 button_icon="icon-email"
 button_url="mailto:eerenonder0@gmail.com"
-description="My name is Eren ONDER. I am a 3rd-year Digital Forensic Engineering student and I actively work in the field of cybersecurity. As a CTF competitor, instructor, organizer, and researcher, I am pursuing a career path that is both technically deep and contributes to the community.</br>I have participated in CTF competitions at various levels and won awards, joined hackathons, organized competitions, and delivered technical training sessions. On the academic side, I carry out projects in the field of cybersecurity and support these studies through seminars and national projects.</br>My career goal is to become a security expert with a strong technical background in cyber attack and defense mechanisms. I aim to continuously learn and produce in both academic and social contexts."
+description="My name is Eren ONDER. I am a 4rd-year Digital Forensic Engineering student and I actively work in the field of cybersecurity. As a CTF competitor, instructor, organizer, and researcher, I am pursuing a career path that is both technically deep and contributes to the community.</br>I have participated in CTF competitions at various levels and won awards, joined hackathons, organized competitions, and delivered technical training sessions. On the academic side, I carry out projects in the field of cybersecurity and support these studies through seminars and national projects.</br>My career goal is to become a security expert with a strong technical background in cyber attack and defense mechanisms. I aim to continuously learn and produce in both academic and social contexts."
 imgSrc="images/about/user-picture.jpeg"
 imgScale="0.8"
 >}}
@@ -32,9 +33,18 @@ imgScale="0.8"
 {{< education-list
     title="Formal Education" >}}
 
-{{< experience-list
-    title="Experience"
-    padding="false" >}}
+{{< experience-section
+intro_title=" "
+title="Experience"
+padding="true" 
+hideButton3="true"
+>}}
+
+{{< volunteer-work
+    title="Volunteer Work"
+    sectionId="volunteer-work"
+>}}
+
 
 {{< activity-list
     title="Activity"
