@@ -11,6 +11,10 @@ companyLogo: "images/experience/thy-logo.png"
 
 ---
 ## Network Security - Stajyer
-Doldur
+- Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi
+
+- Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması
+
+- SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması
 
 ---

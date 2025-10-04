@@ -54,44 +54,6 @@
                 href="http://localhost:1313/tr/experience/job-1/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tr/tags/blog/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tr/blog/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/blog/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tr/tags/cemal/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tr/blog/blog_tr/eren/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tr/tags/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tr/tags/toto/</loc>
-    <lastmod>2025-06-09T07:35:04+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tr/education/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
@@ -391,6 +353,19 @@
                 href="http://localhost:1313/tr/volunteer-work/job-3/"
                 />
   </url><url>
+    <loc>http://localhost:1313/tr/blog/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/blog/"
+                />
+  </url><url>
     <loc>http://localhost:1313/tr/blog/blog_tr/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -428,6 +403,18 @@
                 rel="alternate"
                 hreflang="tr"
                 href="http://localhost:1313/tr/home/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tr/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/"
                 />
   </url>
 </urlset>

@@ -10,6 +10,13 @@ companyLogo: "images/experience/thy-logo.png"
 ---
 
 ## Network Management - Intern
-FILL
+
+- Analysis and evaluation of security architectures within Turkish Airlines’ corporate network infrastructure
+
+- Contribution to Proof of Concept (PoC) studies for the protection of critical systems
+
+- Detection, classification, and reporting of security incidents through SIEM solutions
+
+
 
 ---
