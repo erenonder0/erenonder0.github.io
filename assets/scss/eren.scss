@@ -685,3 +685,42 @@ footer_links .nav-item .nav-link::after {
   border-radius: 4px;
 }
 
+/* Activity bölümünün üst boşluğunu kısalt */
+#activity-list-shortcode.section-activity,
+#activity-single.section-activity {
+  padding-top: 24px;        /* isteğine göre 8–40px arası oynat */
+  padding-bottom: 32px;     /* altı da biraz kısalttım; istersen sil */
+}
+
+/* Desktop’ta biraz daha ferah olsun istersen */
+@media (min-width: 992px) {
+  #activity-list-shortcode.section-activity,
+  #activity-single.section-activity {
+    padding-top: 28px;      /* 28–40px arası deneyebilirsin */
+  }
+}
+
+/* Başlığın tepe marjını sıfırla */
+#activity-list-shortcode .section__title,
+#activity-single .section__title {
+  margin-top: 0;
+}
+
+/* Timeline ve satır için olası fazladan marjları düzle */
+#activity-list-shortcode .timeline,
+#activity-single .timeline {
+  margin-top: 6px;          /* 0–12px arası rahat */
+}
+
+#activity-list-shortcode .row.rad-fade-down,
+#activity-single .row.rad-fade-down {
+  margin-top: 0;
+}
+
+/* İlk kart gereksiz yüksekten başlıyorsa (dot yerleşimine göre) */
+#activity-list-shortcode .timeline-item:first-child,
+#activity-single .timeline-item:first-child {
+  margin-top: 0;
+}
+
+
