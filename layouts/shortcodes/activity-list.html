@@ -1,46 +1,108 @@
 {{/*
-    sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used. */}}
-    
-    {{ $style := resources.Get "scss/eren.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-    
-    
+  sectionId: Optional argument to override the default HTML id for this section. If not provided, the default id is used.
+*/}}
 
-  {{ $sectionId := "activity-list-shortcode" }}
-  {{ with .Get "sectionId" }}
-    {{ $sectionId = . }}
+{{/* SCSS (eren.scss) – fingerprint ile cache-safe */}}
+{{ $style := resources.Get "scss/eren.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{ $sectionId := "activity-list-shortcode" }}
+{{ with .Get "sectionId" }}
+  {{ $sectionId = . }}
+{{ end }}
+
+{{ $padding := .Get "padding" }}
+{{ $title := .Get "title" | default "" }}
+{{ $containerClass := "" }}
+{{ if eq $padding "true" }}
+  {{ $containerClass = "container" }}
+{{ end }}
+
+<section id="{{ $sectionId }}" class="section-activity section section--border-bottom rad-animation-group {{ $containerClass }}">
+  {{ if $title }}
+    <h2 class="section__title mb-4">{{ $title }}</h2>
   {{ end }}
-  
-  {{ $padding := .Get "padding" }}
-  {{ $title := .Get "title" | default "" }}
-  {{ $containerClass := "" }}
-  {{ if eq $padding "true" }}
-      {{ $containerClass = "container" }}
-  {{ end }}
-  
-  <section id="{{ $sectionId }}" class="section-activity section section--border-bottom rad-animation-group">
-    {{ if $title }}
-              <h2 class="section__title mb-4">{{ $title }}</h2>
-              {{ end }}
-    <div class="timeline">
-      {{ $xp := (where .Site.RegularPages.ByDate "Type" "activity") }}
-      {{ $xpCount := len $xp }}
-      {{ range $index, $element := first $xpCount (sort $xp "Date" "desc") }}
+
+  <div class="timeline">
+    {{ $xp := (where .Site.RegularPages.ByDate "Type" "activity") }}
+    {{ $xpCount := len $xp }}
+    {{ range $index, $element := first $xpCount (sort $xp "Date" "desc") }}
       <div class="timeline-item {{ if modBool $index 2 }}right{{ else }}left{{ end }}">
         <div class="timeline-icon">
           <span class="timeline-dot">{{ .Params.duration }}</span>
         </div>
         <div class="timeline-content">
           <h3 class="timeline-title">{{ .Params.jobTitle }}</h3>
-          <p class="timeline-company">{{ .Params.company }} <span class="timeline-location">{{ .Params.location }}</span></p>
+          <p class="timeline-company">
+            {{ .Params.company }}
+            <span class="timeline-location">{{ .Params.location }}</span>
+          </p>
           <div class="timeline-description">
             <h4>{{ .Params.title }}</h4>
             {{ .Content | safeHTML }}
           </div>
         </div>
       </div>
-      {{ end }}
-    </div>
-  </section>
-  
+    {{ end }}
+  </div>
 
+  <!-- Scroll-reveal init: bulunduğu section içinden çalışır -->
+<script>
+(function(){
+  function initOne(tl){
+    if (!tl) return;
+
+    tl.classList.add('js-reveal');
+
+    var items = Array.prototype.slice.call(tl.querySelectorAll('.timeline-item'));
+    if (!items.length) return;
+
+    // Mobil algısı
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    // Eski tarayıcı fallback
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var el = entry.target;
+        if (entry.isIntersecting) {
+          el.classList.add('is-visible');
+        } else {
+          el.classList.remove('is-visible'); // yukarı çıkınca gizle
+        }
+      });
+    }, {
+      // mobilde biraz daha erken görünür sayalım
+      threshold: isMobile ? [0, 0.15, 0.3] : [0, 0.1, 0.2, 0.6],
+      rootMargin: isMobile ? '0px 0px -15%' : '0px 0px -8%'
+    });
+
+    // “stagger” gecikmesini mobilde biraz kısalt
+    items.forEach(function(el, idx){
+      var delay = (isMobile ? 40 : 80) * idx; // ms
+      el.style.transitionDelay = Math.min(delay, 400) + 'ms';
+      io.observe(el);
+    });
+  }
+
+  function bootstrap(){
+    var section = document.currentScript ? document.currentScript.closest('section') : null;
+    var tl = section ? section.querySelector('.timeline') : document.querySelector('.timeline');
+    initOne(tl);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrap);
+  } else {
+    bootstrap();
+  }
+})();
+</script>
+
+
+
+</section>

@@ -459,6 +459,7 @@ footer_links .nav-item .nav-link::after {
   margin: 0 auto;
   width: 50%; /* Daha küçük alan */
   padding: 0;
+  --line-progress: 100%;
 }
 .timeline::before {
   content: "";
@@ -468,7 +469,34 @@ footer_links .nav-item .nav-link::after {
   left: 50%;
   width: 4px;
   background-color: #007bff;
-  transform: translateX(-50%);
+  transform: none;
+  height: 100%; /* varsayılan */
+}
+
+.timeline.js-reveal::before {
+  height: var(--line-progress, 0%);
+  transition: height .6s ease-out;
+}
+
+/* Başlangıç: öğeleri gizle ve tarafına göre kaydır */
+.timeline.js-reveal .timeline-item {
+  opacity: 0;
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.timeline.js-reveal .timeline-item.left {
+  transform: translateX(-22px);
+}
+
+.timeline.js-reveal .timeline-item.right {
+  transform: translateX(22px);
+}
+
+/* Göründüğünde */
+.timeline.js-reveal .timeline-item.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* Timeline item */
@@ -488,25 +516,34 @@ footer_links .nav-item .nav-link::after {
 /* Timeline dot - daha büyük ve 3D etki */
 /* Timeline dot - daha büyük ve 3D etki */
 .timeline-dot {
-  position: relative;
-  min-width: 60px;
-  padding: 6px 12px; // içerideki yazıya nefes aldırır
-  height: auto;
-  background-color: #007bff;
-  border-radius: 12px; // kareye yakın ama yumuşak köşeler
+   /* kutu */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-  z-index: 1;
-  margin: 0 10px;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 4px #e0e0e0;
-  white-space: nowrap; // tarihin tek satırda kalmasını sağlar
-}
+  padding: 8px 14px;              /* daha ferah iç boşluk */
+  min-height: 32px;
+  min-width: 80px;
+  max-width: 220px;               /* aşırı genişlemesin (masaüstü) */
+  border-radius: 9999px;          /* tam “pill” */
+  background: linear-gradient(180deg, #1e90ff, #0d6efd);
+  border: 1px solid white;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
 
+  /* metin */
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: center;
+
+  /* taşmalar */
+  white-space: normal;            /* ÖNEMLİ: artık satır kırılabilir */
+  overflow-wrap: anywhere;  
+}
+.timeline .timeline-item.is-visible .timeline-dot:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.45);
+}
 
 
 /* Hover efekti ile dot etkileşimi */
@@ -540,9 +577,54 @@ footer_links .nav-item .nav-link::after {
 
 /* Mobile düzenlemeleri */
 @media (max-width: 768px) {
+  .timeline .timeline-dot {
+    max-width: 160px;     /* mobilde daha dar */
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  /* Çizgi mobilde de her zaman tam boy */
   .timeline {
-    width: 100%; /* Mobilde tamamen genişlemesini sağladık */
-    margin-left: 0;
+    --line-progress: 100%;
+  }
+
+  .timeline::before {
+    height: 100% !important; /* çizgi hep tam boy */
+    transition: none !important;
+    left: 50%;
+    width: 4px;
+    background-color: #007bff;
+    transform: translateX(-50%);
+  }
+
+  /* Mobilde scroll reveal aktif */
+  .timeline.js-reveal .timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+
+  .timeline.js-reveal .timeline-item.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Dot animasyonu (görünür olunca pop, dokunmada tepki) */
+  .timeline .timeline-dot {
+    transform: scale(0.9);
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .timeline .timeline-item.is-visible .timeline-dot {
+    transform: scale(1);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
+  }
+
+  .timeline .timeline-dot:active,
+  .timeline .timeline-dot:focus-visible {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   }
 
   .timeline-item {
@@ -566,20 +648,14 @@ footer_links .nav-item .nav-link::after {
     transform: translateX(-50%); /* Tam ortada olmasını sağlarız */
     z-index: 1;
   }
-
-  .timeline::before {
-    left: 50%;
-    width: 4px;
-    background-color: #007bff;
-    transform: translateX(-50%); /* Çizgiyi tam ortalayalım */
-  }
-
+  
   .timeline-content {
     width: 80%; /* İçeriği daha geniş tutalım */
     margin-left: 0;
-    margin-top: 10px; /* Dot ile içerik arasına boşluk */
+    margin-top: 16px; /* Dot ile içerik arasına boşluk */
   }
 }
+
 
 /* Dark Mode ayarları */
 @include color-mode(dark) {
@@ -608,3 +684,4 @@ footer_links .nav-item .nav-link::after {
   font-size: 90%;
   border-radius: 4px;
 }
+
