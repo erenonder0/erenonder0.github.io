@@ -577,20 +577,17 @@ footer_links .nav-item .nav-link::after {
 
 /* Mobile düzenlemeleri */
 @media (max-width: 768px) {
-  .timeline .timeline-dot {
-    max-width: 160px;     /* mobilde daha dar */
-    padding: 8px 12px;
-    font-size: 12px;
-    line-height: 1.2;
-  }
 
-  /* Çizgi mobilde de her zaman tam boy */
+  /* Çizgi her zaman tam boy, ortalanmış */
   .timeline {
     --line-progress: 100%;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .timeline::before {
-    height: 100% !important; /* çizgi hep tam boy */
+    height: 100% !important;
     transition: none !important;
     left: 50%;
     width: 4px;
@@ -598,63 +595,89 @@ footer_links .nav-item .nav-link::after {
     transform: translateX(-50%);
   }
 
-  /* Mobilde scroll reveal aktif */
+  /* Kart (timeline-item’i kart gibi kullanıyoruz) */
+  .timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;                 /* tam genişlik */
+    justify-content: center;
+    width: clamp(320px, 92vw, 680px);     /* enine genişlet */
+    max-width: none !important;
+    margin: 56px auto 22px;               /* aralık ↓ */
+    padding: 14px 16px;                   /* boydan kısalt */
+    border-radius: 14px;
+    transform: translateX(-50%);          /* orta çizgiye hizala */
+    left: 50%;
+  }
+
+  /* Yazılar – daha az satıra sığsın */
+  .timeline-item h1,
+  .timeline-item h2,
+  .timeline-item h3,
+  .timeline-item .title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+
+  .timeline-item p,
+  .timeline-item .desc {
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 6px 0;
+    hyphens: auto;
+    word-break: keep-all;
+  }
+
+  /* Tarih baloncuğu çizgiye göre ortalanır */
+  .timeline .timeline-dot {
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 !important;
+    z-index: 2;
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.2;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* Scroll reveal */
   .timeline.js-reveal .timeline-item {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate(-50%, 18px);
     transition: opacity .6s ease, transform .6s ease;
   }
 
   .timeline.js-reveal .timeline-item.is-visible {
     opacity: 1;
-    transform: none;
-  }
-
-  /* Dot animasyonu (görünür olunca pop, dokunmada tepki) */
-  .timeline .timeline-dot {
-    transform: scale(0.9);
-    transition: transform .35s ease, box-shadow .35s ease;
+    transform: translate(-50%, 0);
   }
 
   .timeline .timeline-item.is-visible .timeline-dot {
-    transform: scale(1);
+    transform: translateX(-50%) scale(1);
     box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
   }
 
   .timeline .timeline-dot:active,
   .timeline .timeline-dot:focus-visible {
-    transform: scale(1.05) translateY(-2px);
+    transform: translateX(-50%) scale(1.05) translateY(-2px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   }
 
-  .timeline-item {
-    position: relative;
-    margin-bottom: 60px; /* Aralığı artırdık */
-    display: flex;
-    flex-direction: column; /* Dikey hizalama */
-    align-items: center; /* Ortaya hizalama */
-    justify-content: center;
-  }
-
-  .timeline-dot {
-    width: 100px;
-    height: 50px;
-    font-size: 12px;
-    margin-bottom: 15px; /* Dot ile içerik arasına boşluk */
-    margin-left: 0; /* Sağ veya sol kayma olmasın */
-    position: absolute; /* Dot'u sabitleyelim */
-    top: -50px; /* Dot'u kutunun üstüne daha yakın yapalım */
-    left: 50%; /* Ortalayalım */
-    transform: translateX(-50%); /* Tam ortada olmasını sağlarız */
-    z-index: 1;
-  }
-  
+  /* İçerik */
   .timeline-content {
-    width: 80%; /* İçeriği daha geniş tutalım */
-    margin-left: 0;
-    margin-top: 16px; /* Dot ile içerik arasına boşluk */
+    width: 85%;
+    margin: 16px auto 0;
   }
 }
+
 
 
 /* Dark Mode ayarları */
