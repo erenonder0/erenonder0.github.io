@@ -35,8 +35,9 @@ imgScale="0.8"
 
 {{< experience-section
 intro_title=" "
-title="Experience"
-padding="true" 
+title="Experiences"
+padding="true"
+sectionId="experience-list-shortcode"
 hideButton3="true"
 >}}
 
