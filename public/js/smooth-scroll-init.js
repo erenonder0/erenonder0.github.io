@@ -1,4 +1,11 @@
-const scroll = new SmoothScroll('a[href*="#"]');
+// speedAsDuration:true makes `speed` the total scroll time regardless of
+// distance, so far sections (Experience, Projects) take the same time to
+// reach as near ones instead of scaling with distance (the library default).
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 600,
+  speedAsDuration: true,
+  easing: 'easeInOutCubic',
+});
 const navLinks = document.querySelectorAll('a.nav-link');
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', (e) => {
@@ -6,7 +13,7 @@ navLinks.forEach(navLink => {
     if (navbar && navbar.classList.contains('show')) {
       simulateClick(document.querySelector('.navbar-toggler'));
     }
-  });    
+  });
 });
 
 /**
