@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>http://localhost:56186/tr/tags/</link>
+    <link>https://erenonder0.netlify.app/tr/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo</generator>
     <language>tr</language>
     <lastBuildDate>Sun, 25 Aug 2024 09:53:42 +0200</lastBuildDate>
-    <atom:link href="http://localhost:56186/tr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://erenonder0.netlify.app/tr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AES Encryption</title>
-      <link>http://localhost:56186/tr/tags/aes-encryption/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/aes-encryption/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/aes-encryption/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/aes-encryption/</guid>
       <description></description>
     </item>
     <item>
       <title>C#</title>
-      <link>http://localhost:56186/tr/tags/c%23/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/c%23/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/c%23/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/c%23/</guid>
       <description></description>
     </item>
     <item>
       <title>Ethereum</title>
-      <link>http://localhost:56186/tr/tags/ethereum/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/ethereum/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/ethereum/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/ethereum/</guid>
       <description></description>
     </item>
     <item>
       <title>Malware Simulation</title>
-      <link>http://localhost:56186/tr/tags/malware-simulation/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/malware-simulation/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/malware-simulation/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/malware-simulation/</guid>
       <description></description>
     </item>
     <item>
       <title>MetaMask</title>
-      <link>http://localhost:56186/tr/tags/metamask/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/metamask/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/metamask/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/metamask/</guid>
       <description></description>
     </item>
     <item>
       <title>Security Research</title>
-      <link>http://localhost:56186/tr/tags/security-research/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/security-research/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/security-research/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/security-research/</guid>
       <description></description>
     </item>
     <item>
       <title>Solidity</title>
-      <link>http://localhost:56186/tr/tags/solidity/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/solidity/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/solidity/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/solidity/</guid>
       <description></description>
     </item>
     <item>
       <title>Unicode Obfuscation</title>
-      <link>http://localhost:56186/tr/tags/unicode-obfuscation/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/unicode-obfuscation/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/unicode-obfuscation/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/unicode-obfuscation/</guid>
       <description></description>
     </item>
     <item>
       <title>Web3.js</title>
-      <link>http://localhost:56186/tr/tags/web3.js/</link>
+      <link>https://erenonder0.netlify.app/tr/tags/web3.js/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:56186/tr/tags/web3.js/</guid>
+      <guid>https://erenonder0.netlify.app/tr/tags/web3.js/</guid>
       <description></description>
     </item>
   </channel>

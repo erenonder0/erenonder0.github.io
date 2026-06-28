@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on </title>
-    <link>http://localhost:56186/home/</link>
+    <link>https://erenonder0.netlify.app/home/</link>
     <description>Recent content in Homes on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:56186/home/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://erenonder0.netlify.app/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home</title>
-      <link>http://localhost:56186/home/home/</link>
+      <link>https://erenonder0.netlify.app/home/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:56186/home/home/</guid>
-      <description>&lt;section id=&#34;showcase&#34; class=&#34;rad-showcase cyber-hero&#34;&gt;&#xA;  &lt;canvas class=&#34;cyber-hero__canvas&#34; aria-hidden=&#34;true&#34;&gt;&lt;/canvas&gt;&#xA;&#xA;  &lt;div class=&#34;cyber-hero__inner&#34;&gt;&#xA;    &lt;div class=&#34;cyber-hero__text&#34;&gt;&#xA;      &lt;span class=&#34;cyber-hero__label&#34;&gt;&amp;lt; Forensic Engineer &amp;amp; Cyber Security /&amp;gt;&lt;/span&gt;&#xA;      &lt;h1 class=&#34;cyber-hero__name&#34;&gt;EREN ÖNDER&lt;/h1&gt;&#xA;      &lt;div class=&#34;cyber-hero__role&#34;&gt;&#xA;        &lt;span class=&#34;cyber-hero__role-prefix&#34;&gt;I&amp;#39;m a&lt;/span&gt;&#xA;        &lt;span class=&#34;cyber-hero__role-word&#34; data-typewriter data-words=&#34;Associate Cyber Security Analyst|SOC Analyst|Security Researcher|Forensic Engineer|CTF Player&#34;&gt;&lt;/span&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;cyber-hero__bio&#34;&gt;&lt;p&gt;I&#39;m Eren ÖNDER, a 4th-year Digital Forensic Engineering student at Fırat University, working actively across offensive and defensive cybersecurity.&lt;/p&gt;&lt;p&gt;As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.&lt;/p&gt;</description>
+      <guid>https://erenonder0.netlify.app/home/home/</guid>
+      <description>&lt;section id=&#34;showcase&#34; class=&#34;rad-showcase cyber-hero&#34;&gt;&#xD;&#xA;  &lt;canvas class=&#34;cyber-hero__canvas&#34; aria-hidden=&#34;true&#34;&gt;&lt;/canvas&gt;&#xD;&#xA;&#xD;&#xA;  &lt;div class=&#34;cyber-hero__inner&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;cyber-hero__text&#34;&gt;&#xD;&#xA;      &lt;span class=&#34;cyber-hero__label&#34;&gt;&amp;lt; Forensic Engineer &amp;amp; Cyber Security /&amp;gt;&lt;/span&gt;&#xD;&#xA;      &lt;h1 class=&#34;cyber-hero__name&#34;&gt;EREN ÖNDER&lt;/h1&gt;&#xD;&#xA;      &lt;div class=&#34;cyber-hero__role&#34;&gt;&#xD;&#xA;        &lt;span class=&#34;cyber-hero__role-prefix&#34;&gt;I&amp;#39;m a&lt;/span&gt;&#xD;&#xA;        &lt;span class=&#34;cyber-hero__role-word&#34; data-typewriter data-words=&#34;Associate Cyber Security Analyst|SOC Analyst|Security Researcher|Forensic Engineer|CTF Player&#34;&gt;&lt;/span&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;div class=&#34;cyber-hero__bio&#34;&gt;&lt;p&gt;I&#39;m Eren ÖNDER, a 4th-year Digital Forensic Engineering student at Fırat University, working actively across offensive and defensive cybersecurity.&lt;/p&gt;&lt;p&gt;As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

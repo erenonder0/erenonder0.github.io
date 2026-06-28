@@ -326,7 +326,7 @@
 ## Contact
 - id: "contact_eyebrow"
   translation: "// contact"
-- id: "contact_message"
-  translation: "Open to internships, collaborations and CTF teams. Let's connect."
+#- id: "contact_message"
+  #translation: ""
 - id: "contact_location"
-  translation: "Elazığ / Istanbul, Turkey 🇹🇷"
+  translation: "Istanbul, Turkey 🇹🇷"
