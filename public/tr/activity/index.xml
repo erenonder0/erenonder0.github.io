@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Activities on </title>
-    <link>https://erenonder0.netlify.app/tr/activity/</link>
+    <link>http://localhost:1313/tr/activity/</link>
     <description>Recent content in Activities on </description>
     <generator>Hugo</generator>
     <language>tr</language>
     <lastBuildDate>Sat, 05 Apr 2025 00:00:00 +0100</lastBuildDate>
-    <atom:link href="https://erenonder0.netlify.app/tr/activity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tr/activity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABMCTF CTF Yarışması Organizasyonu</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-1/</link>
+      <link>http://localhost:1313/tr/activity/experience-1/</link>
       <pubDate>Sat, 05 Apr 2025 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-1/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-1/</guid>
       <description>&lt;p&gt;Her yıl yarışmacı olarak katıldığım ABMCTF CTF yarışmasına bu yıl yarışmacı olarak değil, organizatör olarak katıldım. Ekibimizle birlikte, katılımcıları hem eğlenmeye hem de öğrenmeye teşvik etmek amacıyla Kriptoloji, Web, Network, OSINT, Reverse Engineering kategorilerinde yaklaşık 30 soru hazırladık.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ahmet Kabaklı Fen Lisesi&#39;nde Siber Güvenlik Semineri</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-2/</link>
+      <link>http://localhost:1313/tr/activity/experience-2/</link>
       <pubDate>Tue, 31 Dec 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-2/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-2/</guid>
       <description>&lt;p&gt;Elazığ’daki Ahmet Kabaklı Fen Lisesi’nde öğrencilere yönelik dijital tehditler hakkında farkındalık kazandırmak amacıyla bir konferans verdim. Ele aldığım konular arasında “Siber Güvenlik Nedir?” ve “Adli Bilişim Mühendisliği Nedir?” yer aldı.&lt;/p&gt;</description>
     </item>
     <item>
       <title>1.lik, HacktorX CTF Yarışması</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-3/</link>
+      <link>http://localhost:1313/tr/activity/experience-3/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-3/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-3/</guid>
       <description>&lt;p&gt;Elazığ’da düzenlenen HacktorX CTF yarışmasında ekibimizle birlikte Kriptoloji, Ağ, Web, OSINT ve Tersine Mühendislik kategorilerindeki soruları başarıyla çözerek birincilik elde ettik.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Red Team Bootcamp ve CTF Eğitimi</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-4/</link>
+      <link>http://localhost:1313/tr/activity/experience-4/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-4/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-4/</guid>
       <description>&lt;p&gt;Siber Güvenlik Kulübü Başkanı olarak bir Red Team Bootcamp etkinliği düzenledim. Katılımcılara başlangıç ve ileri seviye CTF eğitimi verdim. Ayrıca mini bir CTF yarışması düzenleyerek çözüm stratejilerini paylaştım.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3.lük, ABMCTF</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-5/</link>
+      <link>http://localhost:1313/tr/activity/experience-5/</link>
       <pubDate>Wed, 03 Jul 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-5/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-5/</guid>
       <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 3. ABMCTF Capture The Flag yarışmasına “Black Team” adlı ekibimizle katıldık. Birçok zafiyetli makineyi başarıyla çözerek üçüncü olduk.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Code Night CTF Eğitimi</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-6/</link>
+      <link>http://localhost:1313/tr/activity/experience-6/</link>
       <pubDate>Fri, 24 May 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-6/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-6/</guid>
       <description>&lt;p&gt;Fırat Üniversitesi Mimarlık Fakültesi’nde düzenlenen “Code Night” etkinliğinde Kriptoloji, Ağ, Web ve OSINT konularında kapsamlı CTF eğitimi verdim. Katılımcıların bilgilerini pekiştirmesi amacıyla mini bir CTF yarışması da organize ettim.&lt;/p&gt;</description>
     </item>
     <item>
       <title>IIC2024 Konferansında Akademik Yayın</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-7/</link>
+      <link>http://localhost:1313/tr/activity/experience-7/</link>
       <pubDate>Fri, 03 May 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-7/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-7/</guid>
       <description>&lt;p&gt;“Real-Time Human Recognition With Random Forest Algorithm Using Gait Biometrics Images” başlıklı makalem, 3. Uluslararası Bilişim Kongresi’nde (IFEST2024) sunuldu ve yayımlandı. Kongrenin ana temaları dijital dönüşüm, siber güvenlik ve yapay zekaydı.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3.lük, HAVELSAN Hackathon (HAVELSAN EKSPRES)</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-8/</link>
+      <link>http://localhost:1313/tr/activity/experience-8/</link>
       <pubDate>Tue, 23 Apr 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-8/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-8/</guid>
       <description>&lt;p&gt;Ankara’dan Ahlat’a tren yolculuğu eşliğinde düzenlenen 4 günlük yapay zeka yarışmasında, “Cyber MAIN” adlı Yapay Zeka Tabanlı Saldırı Tespit Sistemini geliştirdik. 26 üniversite takımı arasından “Ana Fikir ve Uygulama” kategorisinde üçüncülük elde ettik.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Siber Suç Farkındalık Konferansı</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-9/</link>
+      <link>http://localhost:1313/tr/activity/experience-9/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-9/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-9/</guid>
       <description>&lt;p&gt;Siber Suçlarla Mücadele Birimi ile iş birliği içinde, üniversite öğrencileri ve akademisyenlere yönelik bir farkındalık konferansı düzenledim. Sosyal mühendislik ve oltalama saldırıları gibi konularda gerçek hayat senaryolarıyla sunum yaptım.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Elazığ Yöntemim Okulları’nda Siber Güvenlik Semineri</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-10/</link>
+      <link>http://localhost:1313/tr/activity/experience-10/</link>
       <pubDate>Tue, 12 Mar 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-10/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-10/</guid>
       <description>&lt;p&gt;Fırat Üniversitesi Siber Güvenlik Kulübü ve HSD Kulübü ile birlikte “Adli Bilişim Mühendisliği ve Siber Güvenlik Nedir? Güncel Siber Tehditler” başlıklı semineri düzenledim. Gerçek zamanlı siber saldırı simülasyonuyla öğrencilere farkındalık kazandırdım.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TÜBİTAK 2209-A Araştırma Projesi</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-11/</link>
+      <link>http://localhost:1313/tr/activity/experience-11/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-11/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-11/</guid>
       <description>&lt;p&gt;TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı (2023/2) kapsamında, “Adli Vakalarda Gözetim Görüntülerinden Yürüyüş Biyometrisi Kullanılarak Kişi Tespiti Algoritmalarının Geliştirilmesi” başlıklı yapay zeka tabanlı proje geliştirdim. Projem yarı finale kalmaya hak kazandı ve destek almaya layık görüldü.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2.lik, ABMCTF</title>
-      <link>https://erenonder0.netlify.app/tr/activity/experience-12/</link>
+      <link>http://localhost:1313/tr/activity/experience-12/</link>
       <pubDate>Sun, 25 Jun 2023 00:00:00 +0100</pubDate>
-      <guid>https://erenonder0.netlify.app/tr/activity/experience-12/</guid>
+      <guid>http://localhost:1313/tr/activity/experience-12/</guid>
       <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 2. ABMCTF CTF yarışmasında “Black Team” olarak çeşitli kategorilerdeki zorlukları başarıyla çözerek ikinci olduk.&lt;/p&gt;</description>
     </item>
   </channel>

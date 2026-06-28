@@ -189,12 +189,17 @@ weight = 2
 [[languages.en.menus.footer]]
 name = "Projects"
 URL = "#projects"
-weight = 4
+weight = 5
 
 
 [[languages.en.menus.footer]]
 name = "Activities"
 URL = "#activity-list-shortcode"
+weight = 4
+
+[[languages.en.menus.footer]]
+name = "Volunteer Works"
+URL = "#volunteer-work"
 weight = 3
 
 [languages.tr]

@@ -52,10 +52,6 @@
             </li>
             {{- end }}
 
-            <li class="nav-item nav-item--available">
-              <span class="available-pill"><span class="available-dot"></span>{{ i18n "hero_available" }}</span>
-            </li>
-
             {{- if hugo.IsMultilingual }}
             {{- if not .Site.Params.languages.selector.disable.header }}
             {{ .Scratch.Set "selectorPlacement" "header" }}
