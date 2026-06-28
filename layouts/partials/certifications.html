@@ -10,12 +10,23 @@
     </div>
 
     <div class="cert-grid">
-      {{ range $i, $c := site.Data.certifications.certifications }}
+      {{ $isTR := eq site.Language.Lang "tr" }}
+      {{ $certs := sort site.Data.certifications.certifications "sort_date" "desc" }}
+      {{ range $i, $c := $certs }}
       <div class="cert-card reveal" data-delay="{{ add (mod $i 3) 1 }}">
-        <div class="cert-card__icon">{{ with $c.icon }}{{ . }}{{ else }}📜{{ end }}</div>
+        {{ if $c.logo }}
+          <div class="cert-logo cert-logo--img">
+            <img src="{{ $c.logo }}" alt="{{ $c.issuer }}" />
+          </div>
+        {{ else }}
+          <div class="cert-logo cert-logo--icon">
+            {{ with $c.icon }}{{ . }}{{ else }}🛡️{{ end }}
+          </div>
+        {{ end }}
         <h3 class="cert-card__name">{{ $c.name }}</h3>
         <div class="cert-card__issuer">{{ $c.issuer }}</div>
-        {{ with $c.date }}<span class="cert-card__date">{{ . }}</span>{{ end }}
+        {{ $date := cond $isTR (or $c.date_tr $c.date) $c.date }}
+        {{ with $date }}<span class="cert-card__date">{{ . }}</span>{{ end }}
         {{ if $c.credential_url }}
           <a class="cert-card__verify cyber-btn cyber-btn--ghost" href="{{ $c.credential_url }}" target="_blank" rel="noopener">
             {{ i18n "certifications_verify" }} <i class="icon-arrow-right"></i>

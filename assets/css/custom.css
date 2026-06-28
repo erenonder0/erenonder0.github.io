@@ -629,11 +629,36 @@ html.js .ct-item.visible { opacity: 1; transform: translateY(0); }
   background: linear-gradient(120deg, transparent, var(--accent-blue), var(--accent-green), transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
-  opacity: 0; transition: opacity .3s ease;
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
 }
 .cert-card:hover { transform: translateY(-4px); }
 .cert-card:hover::before { opacity: 1; }
 .cert-card__icon { font-size: 1.8rem; margin-bottom: .8rem; }
+.cert-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+.cert-logo--img {
+  background: rgba(255,255,255,0.9);
+  padding: 6px;
+}
+.cert-logo--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cert-logo--icon {
+  background: rgba(0,212,255,0.1);
+  border: 0.5px solid rgba(0,212,255,0.3);
+  color: #00d4ff;
+  font-size: 20px;
+}
 .cert-card__name { font-family: var(--font-head); font-weight: 600; color: var(--text-primary); font-size: 1.08rem; margin: 0 0 .3rem; }
 .cert-card__issuer { color: var(--text-secondary); font-size: .9rem; }
 .cert-card__date {
