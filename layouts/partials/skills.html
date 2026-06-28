@@ -1,0 +1,37 @@
+{{/* Skills section (Task 7) — uses site.Data.skills */}}
+{{ $sectionId := "skills" }}
+{{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
+{{ $isTR := eq site.Language.Lang "tr" }}
+
+<section id="{{ $sectionId }}" class="cyber-section section--border-bottom">
+  <div class="container">
+    <div class="cyber-section__head reveal">
+      <span class="cyber-section__eyebrow">{{ i18n "skills_eyebrow" }}</span>
+      <h2 class="cyber-section__title">{{ i18n "skills_section_title" }}</h2>
+    </div>
+
+    <div class="skills-grid">
+      {{ range $ci, $cat := site.Data.skills.categories }}
+      <div class="skill-card reveal" data-delay="{{ add $ci 1 }}">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">{{ $cat.icon }}</span>
+          <h3 class="skill-card__title">{{ if $isTR }}{{ or $cat.name_tr $cat.name }}{{ else }}{{ $cat.name }}{{ end }}</h3>
+        </div>
+        {{ range $cat.skills }}
+        <div class="skill-row">
+          <div class="skill-row__label">
+            <span>{{ if $isTR }}{{ or .name_tr .name }}{{ else }}{{ .name }}{{ end }}</span>
+          </div>
+          <div class="skill-dots" aria-label="{{ .level }}/5">
+            {{ $lvl := .level }}
+            {{ range $i := (seq 5) }}
+              <span class="skill-dot{{ if le $i $lvl }} filled{{ end }}"></span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

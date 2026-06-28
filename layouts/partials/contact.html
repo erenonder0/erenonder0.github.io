@@ -1,0 +1,29 @@
+{{/* Minimal contact section (Task 10) — overrides theme contact.html */}}
+{{ $sectionId := "contact" }}
+{{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
+{{ $title := .Get "title" | default (i18n "contact_title") }}
+
+<section id="{{ $sectionId }}" class="cyber-section cyber-contact">
+  <div class="container">
+    <div class="cyber-section__head reveal" style="text-align:center">
+      <span class="cyber-section__eyebrow">{{ i18n "contact_eyebrow" }}</span>
+      <h2 class="cyber-section__title">{{ $title }}</h2>
+    </div>
+
+    <p class="cyber-contact__msg reveal">{{ i18n "contact_message" }}</p>
+
+    <div class="reveal">
+      <a class="cyber-contact__mail" href="mailto:eerenonder0@gmail.com">
+        <i class="icon-email"></i> eerenonder0@gmail.com
+      </a>
+    </div>
+
+    <div class="cyber-contact__social reveal">
+      <a href="https://www.linkedin.com/in/erenonder0/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+      <a href="https://github.com/erenonder0" target="_blank" rel="noopener" aria-label="GitHub"><i class="icon-square-github"></i></a>
+      <a href="https://www.youtube.com/@erenonder0" target="_blank" rel="noopener" aria-label="YouTube"><i class="icon-youtube"></i></a>
+    </div>
+
+    <p class="cyber-contact__location reveal">{{ i18n "contact_location" }}</p>
+  </div>
+</section>

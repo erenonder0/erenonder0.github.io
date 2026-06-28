@@ -1,0 +1,55 @@
+categories:
+  - name: "Security & Forensics"
+    name_tr: "Güvenlik & Adli Bilişim"
+    icon: "🛡️"
+    skills:
+      - name: "CTF / Penetration Testing"
+        name_tr: "CTF / Sızma Testi"
+        level: 4
+      - name: "Digital Forensics"
+        name_tr: "Dijital Adli Bilişim"
+        level: 4
+      - name: "SIEM & Incident Response"
+        name_tr: "SIEM & Olay Müdahale"
+        level: 3
+      - name: "Network Analysis (Wireshark)"
+        name_tr: "Ağ Analizi (Wireshark)"
+        level: 4
+      - name: "Malware Analysis"
+        name_tr: "Zararlı Yazılım Analizi"
+        level: 3
+  - name: "Programming"
+    name_tr: "Programlama"
+    icon: "💻"
+    skills:
+      - name: "Python"
+        name_tr: "Python"
+        level: 4
+      - name: "C#"
+        name_tr: "C#"
+        level: 3
+      - name: "Bash / Linux"
+        name_tr: "Bash / Linux"
+        level: 4
+      - name: "JavaScript"
+        name_tr: "JavaScript"
+        level: 2
+      - name: "Web3 / Solidity"
+        name_tr: "Web3 / Solidity"
+        level: 2
+  - name: "Research & Community"
+    name_tr: "Araştırma & Topluluk"
+    icon: "🔬"
+    skills:
+      - name: "Academic Research"
+        name_tr: "Akademik Araştırma"
+        level: 3
+      - name: "Event Organization"
+        name_tr: "Etkinlik Organizasyonu"
+        level: 5
+      - name: "Technical Training"
+        name_tr: "Teknik Eğitim"
+        level: 4
+      - name: "Community Management"
+        name_tr: "Topluluk Yönetimi"
+        level: 5

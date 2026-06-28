@@ -1,0 +1,332 @@
+## Meta tags
+- id: "meta_title"
+  translation: "Eren ÖNDER | Forensic Informatics and Cyber Security Student Portfolio"
+- id: "meta_description"
+  translation: "Discover my projects and technical work in the field of cyber security."
+- id: "meta_keywords"
+  translation: "cybersecurity, forensic, eren, önder, eren önder, eren önder blog"
+- id: "meta_author"
+  translation: "Eren ONDER"
+- id: "meta_image"
+  translation: "/img/general/og-image.jpg"
+
+## Header
+
+- id: "logo_alt"
+  translation: "Eren logo"
+
+- id: "logo_text1"
+  translation: "Eren"
+
+- id: "logo_text2"
+  translation: "ONDER"
+
+## General
+- id: "skipToMainContent"
+  translation: "Skip to main content"
+
+- id: "toggle_navigation"
+  translation: "Toggle navigation"
+
+## Footer
+- id: "footer_notice"
+  translation: "© Eren ONDER. Digital Forensic Student"
+
+- id: "language"
+  translation: "Language"
+
+- id: "toggle_theme"
+  translation: "Toggle theme"
+
+- id: "theme_light"
+  translation: "☀️ Light"
+- id: "theme_dark"
+  translation: "🌑 Dark"
+- id: "theme_auto"
+  translation: "✨ Auto"
+
+## Homepage head title
+- id: "head_title"
+  translation: "Eren ONDER"
+
+- id: "head_description"
+  translation: "Discover my projects and technical work in the field of cyber security."
+
+## Homepage showcase
+- id: "showcase_title"
+  translation: "Welcome to the demo"
+
+- id: "showcase_subtitle"
+  translation: "Let's dive into an example"
+
+- id: "showcase_description"
+  translation: "This is a high performance theme for the Hugo static site generator. 
+    This sample content can be edited in the locale files (as the theme supports translations).
+    <br>
+    You can download this theme from <a target='_blank' href='https://github.com/zetxek/adritian-free-hugo-theme'>github</a>, 
+    and see it live <a target='_blank' href='https://adritian-demo.vercel.app/'>as a demo site</a> 
+    or <a target='_blank' href='https://www.adrianmoreno.info'>a real one</a>.
+    <br>
+    The content you see so far in the homepage is:
+    <ul>
+      <li>Site logo/name: site config file (<code>hugo.toml</code>)</li>
+      <li>Site top menu: site config file (<code>hugo.toml</code>), look for the <code>[[languages.en.menus.header]]</code> section</li>
+      <li>This paragraph: <code>i18n/en.yaml</code> (for English)</li>
+    </ul>
+    Additionally, the order of the items in the homepage is configured in the <code>sections</code> array in the <code>hugo.toml</code> file:
+    <code>sections = [
+  \"showcase\",
+  \"about\",
+  \"education\",
+  \"experience\",
+  \"client-and-work\",
+  \"testimonial\",
+  \"contact\",
+  \"newsletter\",
+  ]</code><br/> 
+  The content of each section is defined in the <code>data/homepage.yml</code> file (ie: links to social sites, mail, ...).
+  <br/>
+  If you scroll this page you will see some hints on where the content comes from - all the way to the footer menu. These links come from the site config file (<code>hugo.toml</code>), look for the <code>[[languages.en.menus.footer]]</code> section."
+
+- id: "showcase_button"
+  translation: "Contact"
+
+  ## not visible but used for accessibility
+- id: "showcase_image_alt"
+  translation: "A picture of Cool Name"
+
+## Homepage about
+- id: "about_title"
+  translation: "About Me"
+
+- id: "about_content"
+  translation:  '<p class="lead">
+      Here you can add some information about you. A small excerpt that describes 
+      your experience, for example.   
+      <br/>
+      You explain something about your academic/study background, as well as your
+      preferred areas of work.
+      </p>
+      <p>The content for this section is defined in the <code>i18n/en.yaml</code> file, 
+      in the <code>about_content</code> item.
+      </p>'
+
+- id: "about_button"
+  translation: "About Me"
+
+## Homepage education
+- id: "education_eyebrow"
+  translation: "// education"
+- id: "education_title"
+  translation: "Education"
+
+## Homepage experience
+- id: "experience_button"
+  translation: "LinkedIn"
+
+- id: "experience_button_url"
+  translation: "https://www.linkedin.com/in/erenonder0/"
+
+- id: "experience_button2"
+  translation: "Download"
+
+- id: "experience_button2_url"
+  translation: "/img/general/ErenOnderCv.pdf"
+
+- id: "experience_button3"
+  translation: "View All"
+
+- id: "experience_button3_url"
+  translation: "/experience"
+
+## Homepage client & work
+- id: "client_work_title"
+  translation: "Clients & Work"
+
+## Homepage newsletter
+- id: "newsletter_title"
+  translation: "Newsletter"
+
+- id: "newsletter_button"
+  translation: "Subscribe"
+
+- id: "newsletter_placeholder"
+  translation: "Your email"
+
+- id: "newsletter_success_message"
+  translation: "Thank you for subscribing to my newsletter!"
+
+- id: "newsletter_error_message"
+  translation: "An error occurred. Please try again."
+
+- id: "newsletter_note"
+  translation: "We'll never share your email with anyone else."
+
+## Homepage testimonials
+- id: "testimonials_title"
+  translation: "Testimonials"
+
+## Homepage contact
+- id: "contact_title"
+  translation: "Contact"
+
+- id: "contact_button"
+  translation: "Send message"
+
+- id: "contact_form_name"
+  translation: "Full Name"
+
+- id: "contact_form_email"
+  translation: "Email Address"
+
+- id: "contact_form_message"
+  translation: "Type Your Message Here"
+
+- id: "contact_phone_title"
+  translation: "Phone Number"
+
+- id: "contact_phone_number"
+  translation: "Defined in i18n/en.yaml (contact_phone_number)"
+
+- id: "contact_email_title"
+  translation: "Email"
+
+- id: "contact_email_email"
+  translation: 'Defined in i18n/en.yaml (contact_email_email)'
+
+- id: "contact_address_title"
+  translation: "Address"
+
+- id: "contact_address_address"
+  translation: "Defined in i18n/en.yaml (contact_address_address)"
+
+- id: "contact_button"
+  translation: "Send Message"
+
+## Blog
+- id: "read_more"
+  translation: "Read more"
+
+- id: "published_on"
+  translation: "Published on "
+
+- id: "continue_reading"
+  translation: "Continue reading"
+
+## 404 Page
+- id: "404_title"
+  translation: "Page not found"
+- id: "404_description"
+  translation: "Sorry, but the page you were looking for could not be found."
+- id: "404_button"
+  translation: "Back to homepage"
+
+## ===== Cyber portfolio redesign keys =====
+
+## Hero
+- id: "hero_label"
+  translation: "&lt; Forensic Engineer &amp; Cyber Security /&gt;"
+- id: "hero_roles"
+  translation: "Associate Cyber Security Analyst|SOC Analyst|Security Researcher|Forensic Engineer|CTF Player"
+- id: "hero_role_prefix"
+  translation: "I'm a"
+- id: "hero_bio"
+  translation: "4th-year Digital Forensic Engineering student. CTF competitor, organizer, and researcher building a career at the intersection of offensive security and forensic science."
+- id: "hero_view_work"
+  translation: "View My Work"
+- id: "hero_download_cv"
+  translation: "Download CV"
+- id: "hero_available"
+  translation: "Available"
+
+## About
+- id: "about_eyebrow"
+  translation: "// whoami"
+- id: "about_bio"
+  translation: "<p>I'm Eren ÖNDER, a 4th-year Digital Forensic Engineering student at Fırat University, working actively across offensive and defensive cybersecurity.</p><p>As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.</p>"
+- id: "about_stat1_value"
+  translation: "4th Year"
+- id: "about_stat1_label"
+  translation: "Class"
+- id: "about_stat2_value"
+  translation: "Digital Forensic Eng."
+- id: "about_stat2_label"
+  translation: "Major"
+- id: "about_stat3_value"
+  translation: "Fırat University"
+- id: "about_stat3_label"
+  translation: "School"
+
+## Skills
+- id: "skills_eyebrow"
+  translation: "// capabilities"
+- id: "skills_section_title"
+  translation: "Skills"
+- id: "skills_level_1"
+  translation: "Beginner"
+- id: "skills_level_5"
+  translation: "Expert"
+
+## Certifications
+- id: "certifications_eyebrow"
+  translation: "// credentials"
+- id: "certifications_section_title"
+  translation: "Certifications"
+- id: "certifications_verify"
+  translation: "Verify"
+
+## Experience
+- id: "experience_eyebrow"
+  translation: "// work"
+- id: "experience_title"
+  translation: "Experience"
+- id: "experience_current"
+  translation: "Current"
+- id: "experience_description"
+  translation: "A blend of corporate security internships and hands-on community work."
+- id: "show_more"
+  translation: "Show more"
+- id: "show_less"
+  translation: "Show less"
+
+## Volunteer work
+- id: "volunteer_eyebrow"
+  translation: "// community"
+- id: "volunteer_linkedin"
+  translation: "View on LinkedIn"
+
+## Activity timeline
+- id: "activity_eyebrow"
+  translation: "// timeline"
+- id: "activity_section_title"
+  translation: "Activity"
+- id: "activity_filter_all"
+  translation: "All"
+- id: "activity_cat_ctf"
+  translation: "CTF"
+- id: "activity_cat_ctf_organizer"
+  translation: "CTF Organizer"
+- id: "activity_cat_training"
+  translation: "Training"
+- id: "activity_cat_research"
+  translation: "Research"
+- id: "activity_cat_conference"
+  translation: "Conference"
+- id: "activity_cat_hackathon"
+  translation: "Hackathon"
+- id: "activity_cat_other"
+  translation: "Activity"
+
+## Projects
+- id: "projects_eyebrow"
+  translation: "// portfolio"
+- id: "projects_see"
+  translation: "See Project"
+
+## Contact
+- id: "contact_eyebrow"
+  translation: "// contact"
+- id: "contact_message"
+  translation: "Open to internships, collaborations and CTF teams. Let's connect."
+- id: "contact_location"
+  translation: "Elazığ / Istanbul, Turkey 🇹🇷"

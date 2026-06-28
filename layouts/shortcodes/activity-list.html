@@ -1,0 +1,76 @@
+{{/* Interactive activity timeline (Task 6) */}}
+{{ $sectionId := "activity-list-shortcode" }}
+{{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
+{{ $title := .Get "title" | default (i18n "activity_section_title") }}
+
+{{/* category metadata: category -> filter group, icon, badge color, dot color, label */}}
+{{ $meta := dict
+  "ctf"           (dict "group" "ctf"        "icon" "🏆" "color" "cat-ctf"           "dot" "dot-ctf"           "label" (i18n "activity_cat_ctf"))
+  "ctf-organizer" (dict "group" "ctf"        "icon" "🎯" "color" "cat-ctf-organizer" "dot" "dot-ctf-organizer" "label" (i18n "activity_cat_ctf_organizer"))
+  "training"      (dict "group" "training"   "icon" "🎓" "color" "cat-training"      "dot" "dot-training"      "label" (i18n "activity_cat_training"))
+  "research"      (dict "group" "research"   "icon" "📄" "color" "cat-research"      "dot" "dot-research"      "label" (i18n "activity_cat_research"))
+  "conference"    (dict "group" "conference" "icon" "🎤" "color" "cat-conference"    "dot" "dot-conference"    "label" (i18n "activity_cat_conference"))
+  "hackathon"     (dict "group" "hackathon"  "icon" "🏅" "color" "cat-hackathon"     "dot" "dot-hackathon"     "label" (i18n "activity_cat_hackathon"))
+  "other"         (dict "group" "other"      "icon" "•"  "color" "cat-ctf-organizer" "dot" "dot-ctf-organizer" "label" (i18n "activity_cat_other"))
+}}
+
+{{/* filter buttons (key -> i18n label) */}}
+{{ $filters := slice
+  (dict "key" "all"        "label" (i18n "activity_filter_all"))
+  (dict "key" "ctf"        "label" (i18n "activity_cat_ctf"))
+  (dict "key" "training"   "label" (i18n "activity_cat_training"))
+  (dict "key" "research"   "label" (i18n "activity_cat_research"))
+  (dict "key" "conference" "label" (i18n "activity_cat_conference"))
+  (dict "key" "hackathon"  "label" (i18n "activity_cat_hackathon"))
+}}
+
+<section id="{{ $sectionId }}" class="cyber-section section--border-bottom">
+  <div class="container">
+    <div class="cyber-section__head reveal" style="text-align:center">
+      <span class="cyber-section__eyebrow">{{ i18n "activity_eyebrow" }}</span>
+      <h2 class="cyber-section__title">{{ $title }}</h2>
+    </div>
+
+    <div class="cyber-activity__filters reveal">
+      {{ range $f := $filters }}
+        <button class="cyber-filter{{ if eq $f.key "all" }} active{{ end }}" data-filter="{{ $f.key }}">{{ $f.label }}</button>
+      {{ end }}
+    </div>
+
+    <div class="cyber-timeline">
+      <div class="cyber-timeline__line"><span class="cyber-timeline__progress"></span></div>
+
+      {{ $xp := where site.RegularPages "Type" "activity" }}
+      {{ range $index, $el := sort $xp "Date" "desc" }}
+        {{/* prefer explicit front-matter category; otherwise infer from title */}}
+        {{ $cat := .Params.category | default "" }}
+        {{ if not $cat }}
+          {{ $t := .Params.title }}
+          {{ if in $t "Hackathon" }}{{ $cat = "hackathon" }}
+          {{ else if or (in $t "Paper") (in $t "TÜBİTAK") (in $t "Project") }}{{ $cat = "research" }}
+          {{ else if or (in $t "Training") (in $t "Instructor") (in $t "Bootcamp") }}{{ $cat = "training" }}
+          {{ else if or (in $t "Conference") (in $t "Seminar") }}{{ $cat = "conference" }}
+          {{ else if in $t "Organizer" }}{{ $cat = "ctf-organizer" }}
+          {{ else if in $t "CTF" }}{{ $cat = "ctf" }}
+          {{ else }}{{ $cat = "other" }}{{ end }}
+        {{ end }}
+        {{ $m := index $meta $cat }}
+        {{ if not $m }}{{ $m = index $meta "other" }}{{ end }}
+        {{ $side := cond (eq (mod $index 2) 0) "left" "right" }}
+        <div class="ct-item {{ $side }}" data-group="{{ $m.group }}">
+          <span class="ct-dot {{ $m.dot }}"></span>
+          <div class="ct-card">
+            <div class="ct-date">{{ .Params.duration }}</div>
+            <div class="ct-title">{{ .Params.title }}</div>
+            <span class="ct-badge {{ $m.color }}">{{ $m.icon }} {{ $m.label }}</span>
+            <div class="ct-desc">{{ .Content }}</div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* keep the site's supplementary stylesheet available on the homepage */}}
+{{ $style := resources.Get "scss/eren.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

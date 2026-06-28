@@ -1,0 +1,86 @@
+{{ $contextType := printf "%T" . }}
+{{ $isShortcode := (eq $contextType "*hugolib.ShortcodeWithPage") }}
+
+{{/* Experience — full-width single-column cards, descriptions always visible (Option C) */}}
+{{ $sectionId := "experience-single" }}
+{{ if $isShortcode }}
+  {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
+{{ end }}
+
+{{/* Skill tag pills per company */}}
+{{ $tagMap := dict
+  "OnBT" (slice "Cyber Security" "Network Security" "Threat Analysis" "Vulnerability Assessment")
+  "Turkish Technology" (slice "SIEM" "Security Architecture" "Incident Response" "PoC")
+}}
+
+<section {{ if $sectionId }}id="{{ $sectionId }}"{{ end }} class="section section-experience section--border-bottom cyber-section">
+  <div class="container">
+    <span class="cyber-section__eyebrow">{{ i18n "experience_eyebrow" }}</span>
+    <h2 class="cyber-section__title">
+      {{ if $isShortcode }}{{ .Get "title" | default (i18n "experience_title") }}{{ else }}{{ i18n "experience_title" }}{{ end }}
+    </h2>
+
+    {{ $xp := where .Site.RegularPages.ByDate "Type" "experience" }}
+    {{ if not $isShortcode }}
+      {{ $baseLangSite := .Sites.Default }}
+      {{ $xp = $xp | lang.Merge (where $baseLangSite.RegularPages.ByDate.Reverse "Type" "experience") }}
+    {{ end }}
+    {{ $xpCount := len $xp }}
+    {{ $totalCount := .Site.Params.homepageExperienceCount }}
+    {{ if not $isShortcode }}{{ if not .IsHome }}{{ $totalCount = $xpCount }}{{ end }}{{ end }}
+
+    <div class="experience-cards">
+      {{ range $index, $e := first $totalCount (sort $xp "Date" "desc") }}
+      {{ $active := in (lower .Params.duration) "now" }}
+      {{ $tags := index $tagMap .Params.company }}
+      <div class="exp-card reveal{{ if $active }} exp-card--active is-expanded{{ end }}">
+        <div class="exp-card__top">
+          <div class="exp-card__logo">
+            {{ $img := resources.Get .Params.companyLogo }}
+            {{ if $img }}
+              {{ $w := $img.Resize "88x webp q85" }}
+              <img src="{{ $w.RelPermalink }}" alt="{{ .Params.company }} logo" loading="lazy" />
+            {{ else }}
+              {{ $words := split .Params.company " " }}
+              {{ $initials := "" }}
+              {{ if gt (len $words) 1 }}
+                {{ $initials = printf "%s%s" (substr (index $words 0) 0 1) (substr (index $words 1) 0 1) }}
+              {{ else }}
+                {{ $initials = substr .Params.company 0 2 }}
+              {{ end }}
+              <span class="exp-card__initials">{{ upper $initials }}</span>
+            {{ end }}
+          </div>
+
+          <div class="exp-card__meta">
+            <div class="exp-card__date">{{ .Params.duration }}</div>
+            <div class="exp-card__role">{{ .Params.jobTitle }}</div>
+            <div class="exp-card__company">{{ .Params.company }}<span class="exp-card__location"> · {{ .Params.location }}</span></div>
+          </div>
+
+          {{ if $active }}
+          <span class="exp-card__current"><span class="exp-current-dot"></span>{{ i18n "experience_current" }}</span>
+          {{ end }}
+        </div>
+
+        {{ $hasDesc := trim (.Content | plainify) " \n\t" }}
+        {{ if or $hasDesc $tags }}
+        <div class="exp-card__collapse">
+          {{ if $hasDesc }}<div class="exp-card__desc">{{ .Content }}</div>{{ end }}
+          {{ with $tags }}
+          <div class="exp-card__tags">
+            {{ range . }}<span class="exp-tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+        <button type="button" class="exp-card__toggle" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}"
+                data-more="{{ i18n "show_more" }}" data-less="{{ i18n "show_less" }}">
+          <span class="exp-toggle-label">{{ if $active }}{{ i18n "show_less" }}{{ else }}{{ i18n "show_more" }}{{ end }}</span>
+          <span class="exp-toggle-chev">{{ if $active }}▴{{ else }}▾{{ end }}</span>
+        </button>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

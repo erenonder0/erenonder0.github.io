@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main  # veya default kullandığın branch adı
+identity:
+  enabled: true
+
+media_folder: "static/images/uploads"   # Upload edilen resimler burada tutulur
+public_folder: "/images/uploads"        # Site içinde resimlerin ulaşım yolu
+
+collections:
+  - name: "blog_tr"
+    label: "Blog Yazıları (Türkçe)"
+    folder: "content/blog/blog_tr"
+    create: true
+    slug: "{{slug}}.tr"
+    extension: "md"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Taslak?", name: "draft", widget: "boolean", default: false }
+      - { label: "Tür", name: "type", widget: "string", default: "blog" }
+      - { label: "Öne Çıkan Yazı mı?", name: "featured", widget: "boolean", default: false }
+      - { label: "Etiketler", name: "tags", widget: "list", allow_add: true }
+      - label: "Görseller"
+        name: "images"
+        widget: "object"
+        fields:
+        - { label: "Kapak Görseli", name: "featured_image", widget: "image", required: false }
+      - { label: "Dil", name: "language", widget: "hidden", default: "tr" }
+      - { label: "İçerik", name: "body", widget: "markdown",  modes: [rich_text, raw]}
+
+  - name: "blog_en"
+    label: "Blog Posts (English)"
+    folder: "content/blog/blog_en"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft?", name: "draft", widget: "boolean", default: false }
+      - { label: "Type", name: "type", widget: "string", default: "blog" }
+      - { label: "Featured?", name: "featured", widget: "boolean", default: false }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true }
+      - label: "Görseller"
+        name: "images"
+        widget: "object"
+        fields:
+        - { label: "Kapak Görseli", name: "featured_image", widget: "image", required: false }
+      - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+

@@ -1,0 +1,48 @@
+{{/* Projects grid (Task 9) — overrides theme client-and-work.html.
+     Demo client logos intentionally dropped; renders the `projects` section only. */}}
+{{- $contextType := printf "%T" . -}}
+{{- $isShortcode := (eq $contextType "*hugolib.ShortcodeWithPage") -}}
+
+{{ $sectionTitle := "" }}
+{{ if $isShortcode }}{{ $sectionTitle = .Get "title" }}{{ else }}{{ $sectionTitle = i18n "client_work_title" }}{{ end }}
+
+{{ $sectionId := "projects" }}
+{{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
+
+{{ $projects := where site.RegularPages "Type" "projects" }}
+
+<section id="{{ $sectionId }}" class="cyber-section section--border-bottom">
+  <div class="container">
+    <div class="cyber-section__head reveal">
+      <span class="cyber-section__eyebrow">{{ i18n "projects_eyebrow" }}</span>
+      <h2 class="cyber-section__title">{{ $sectionTitle }}</h2>
+    </div>
+
+    <div class="cyber-projects__grid">
+      {{ range $i, $p := $projects }}
+      <div class="project-card reveal" data-delay="{{ add (mod $i 3) 1 }}">
+        <div class="project-card__media">
+          {{ with .Params.warning }}<span class="project-card__warn">⚠ {{ . }}</span>{{ end }}
+          {{ $img := resources.Get .Params.image.src }}
+          {{ with $img }}
+            {{ $r := .Fill "640x400 webp q80 Center" }}
+            <img src="{{ $r.RelPermalink }}" width="640" height="400" alt="{{ $p.Params.title }}" loading="lazy" />
+          {{ end }}
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">{{ .Params.title }}</h3>
+          <div class="project-card__desc">{{ .Content | plainify | truncate 150 }}</div>
+          {{ with .Params.tags }}
+          <div class="project-card__tags">
+            {{ range . }}<span class="project-tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          <a class="project-card__link cyber-btn cyber-btn--primary" href="{{ .Params.button.URL }}" target="_blank" rel="noopener">
+            {{ i18n "projects_see" }} <i class="icon-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

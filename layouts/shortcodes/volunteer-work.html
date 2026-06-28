@@ -1,0 +1,80 @@
+{{/* Volunteer work cards (Task 5) — highlight stat + expandable body */}}
+{{ $title      := .Get "title" }}
+{{ $sectionId  := .Get "sectionId" | default "volunteer-work" }}
+{{ $order      := .Get "order" | default "weight" }}
+{{ $reverse    := .Get "reverse" | default "false" }}
+
+{{ $pages := where site.Pages "Section" "volunteer-work" }}
+{{ $pages = where $pages "Kind" "page" }}
+{{ $pages = where $pages "Lang" .Site.Language.Lang }}
+{{ $pages = where $pages "Draft" false }}
+{{ $pages = where $pages "Date" "le" now }}
+
+{{ if eq $order "date" }}{{ $pages = $pages.ByDate }}
+{{ else if eq $order "title" }}{{ $pages = $pages.ByTitle }}
+{{ else }}{{ $pages = $pages.ByWeight }}{{ end }}
+{{ if eq ($reverse | lower) "true" }}{{ $pages = $pages.Reverse }}{{ end }}
+
+<section id="{{ $sectionId }}" class="volunteer-work-section cyber-section section--border-bottom">
+  <div class="container">
+    <div class="cyber-section__head reveal">
+      <span class="cyber-section__eyebrow">{{ i18n "volunteer_eyebrow" }}</span>
+      {{ if $title }}<h2 class="cyber-section__title">{{ $title }}</h2>{{ end }}
+    </div>
+
+    {{ if $pages }}
+    <div class="volunteer-work-grid">
+      {{ range $index, $p := $pages }}
+        {{/* logo resolution (assets -> bundle -> static) */}}
+        {{ $val := trim ($p.Params.companyLogo | default "") " " }}
+        {{ $logoURL := "" }}
+        {{ if $val }}
+          {{ if or (hasPrefix $val "http://") (hasPrefix $val "https://") }}
+            {{ $logoURL = $val }}
+          {{ else }}
+            {{ $res := resources.Get $val }}
+            {{ if $res }}{{ $logoURL = $res.RelPermalink }}
+            {{ else }}{{ with $p.Resources.GetMatch $val }}{{ $logoURL = .RelPermalink }}{{ else }}{{ $logoURL = (printf "/%s" $val) | absURL }}{{ end }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ $descId := printf "vol-desc-%d" $index }}
+
+        <article class="volunteer-card reveal" data-delay="{{ add (mod $index 3) 1 }}">
+          <header class="volunteer-head">
+            {{ with $logoURL }}<img class="logo" src="{{ . }}" alt="{{ $p.Params.company }} logo">{{ end }}
+            <div class="vol-left">
+              {{ with $p.Params.duration }}<div class="vol-date">{{ . }}</div>{{ end }}
+              <h3 class="vol-role">{{ or $p.Params.jobTitle $p.Title }}</h3>
+              <div class="vol-orgline">
+                {{ with $p.Params.company }}
+                  {{ if $p.Params.companyUrl }}<a class="vol-company" href="{{ $p.Params.companyUrl }}">{{ . }}</a>
+                  {{ else }}<span class="vol-company">{{ . }}</span>{{ end }}
+                {{ end }}
+                {{ with $p.Params.location }}<span class="vol-location"> · {{ . }}</span>{{ end }}
+              </div>
+            </div>
+          </header>
+
+          {{ with $p.Params.highlight }}<span class="vol-highlight">{{ . }}</span>{{ end }}
+
+          {{ if $p.Content }}
+          <button class="expand-toggle" aria-expanded="false" aria-controls="{{ $descId }}"
+                  data-more="{{ i18n "show_more" }}" data-less="{{ i18n "show_less" }}">
+            <span class="expand-label">{{ i18n "show_more" }}</span> <span class="chev">▾</span>
+          </button>
+          <div class="expandable" id="{{ $descId }}">
+            <div class="volunteer-body">{{ $p.Content }}</div>
+          </div>
+          {{ end }}
+
+          <div class="vol-cta">
+            <a class="cyber-btn cyber-btn--ghost" href="https://www.linkedin.com/in/erenonder0/" target="_blank" rel="noopener">
+              {{ i18n "volunteer_linkedin" }} <i class="icon-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/tr/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>tr</language>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/experience/job-3/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-3/</guid>
+      <description>&lt;h2 id=&#34;siber-güvenlik-analisti-uzman-yardımcısı&#34;&gt;Siber Güvenlik Analisti Uzman Yardımcısı&lt;/h2&gt;&#xA;&lt;p&gt;FILL&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/experience/job-2/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-2/</guid>
+      <description>&lt;h2 id=&#34;siber-güvenlik---stajyer&#34;&gt;Siber Güvenlik - Stajyer&lt;/h2&gt;&#xA;&lt;p&gt;DOLDUR&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/experience/job-1/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/experience/job-1/</guid>
+      <description>&lt;h2 id=&#34;network-security---stajyer&#34;&gt;Network Security - Stajyer&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>ABMCTF CTF Yarışması Organizasyonu</title>
+      <link>http://localhost:1313/tr/activity/experience-1/</link>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-1/</guid>
+      <description>&lt;p&gt;Her yıl yarışmacı olarak katıldığım ABMCTF CTF yarışmasına bu yıl yarışmacı olarak değil, organizatör olarak katıldım. Ekibimizle birlikte, katılımcıları hem eğlenmeye hem de öğrenmeye teşvik etmek amacıyla Kriptoloji, Web, Network, OSINT, Reverse Engineering kategorilerinde yaklaşık 30 soru hazırladık.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ahmet Kabaklı Fen Lisesi&#39;nde Siber Güvenlik Semineri</title>
+      <link>http://localhost:1313/tr/activity/experience-2/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-2/</guid>
+      <description>&lt;p&gt;Elazığ’daki Ahmet Kabaklı Fen Lisesi’nde öğrencilere yönelik dijital tehditler hakkında farkındalık kazandırmak amacıyla bir konferans verdim. Ele aldığım konular arasında “Siber Güvenlik Nedir?” ve “Adli Bilişim Mühendisliği Nedir?” yer aldı.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>1.lik, HacktorX CTF Yarışması</title>
+      <link>http://localhost:1313/tr/activity/experience-3/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-3/</guid>
+      <description>&lt;p&gt;Elazığ’da düzenlenen HacktorX CTF yarışmasında ekibimizle birlikte Kriptoloji, Ağ, Web, OSINT ve Tersine Mühendislik kategorilerindeki soruları başarıyla çözerek birincilik elde ettik.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Red Team Bootcamp ve CTF Eğitimi</title>
+      <link>http://localhost:1313/tr/activity/experience-4/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-4/</guid>
+      <description>&lt;p&gt;Siber Güvenlik Kulübü Başkanı olarak bir Red Team Bootcamp etkinliği düzenledim. Katılımcılara başlangıç ve ileri seviye CTF eğitimi verdim. Ayrıca mini bir CTF yarışması düzenleyerek çözüm stratejilerini paylaştım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fake Extension Builder</title>
+      <link>http://localhost:1313/tr/projects/fakeextensionbuilder/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/projects/fakeextensionbuilder/</guid>
+      <description>&lt;p&gt;Bu proje, &lt;span class=&#34;inline-code&#34;&gt;.exe&lt;/span&gt; dosya uzantılarını gizlemek amacıyla geliştirilmiş küçük ve hafif bir araçtır. Araç, dosya adının sonuna görünmez bir Unicode karakteri (Braille Pattern Blank – U+2800) ekleyerek dosya uzantısının görsel olarak kamufle edilmesini sağlar. Özellikle sosyal mühendislik, güvenlik farkındalığı eğitimleri ve siber güvenlik araştırmaları gibi alanlarda kullanılmak üzere tasarlanmıştır.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fırat Üniversitesi</title>
+      <link>http://localhost:1313/tr/education/firat-university/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/education/firat-university/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ryuk Ransomware</title>
+      <link>http://localhost:1313/tr/projects/ryuk-ransomware/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/projects/ryuk-ransomware/</guid>
+      <description>&lt;p&gt;Bu proje, gerçek fidye yazılımlarının nasıl çalıştığını güvenli bir ortamda test edebilmek için geliştirildi.&#xA;C# ile kodladığım bu simülasyon, AES şifreleme ile dosyaları şifreleyerek kendini başlangıca yerleştiriyor bu sayede gerçek hayattaki Ransomware virüslerini birebir modelleyerek bizlere test ortamı sunuyor.&lt;/p&gt;&#xA;&lt;p&gt;Not: Bu proje yalnızca akademik ve eğitim amaçlı yapılmıştır ve hiçbir zaman gerçek sistemlerde çalıştırılmamalıdır.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web 3.0 Kripto Para Transferi Sitesi</title>
+      <link>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</link>
+      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+      <guid>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</guid>
+      <description>&lt;p&gt;Web 3.0 teknolojilerini kullanarak, kullanıcıların MetaMask cüzdanlarıyla Ethereum ağı üzerinde güvenli ve hızlı kripto para transferi yapmasını sağlayan bir uygulama geliştirdim. Kullanıcı dostu arayüzü ile blok zincirini deneyimlemenizi sağlıyor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.lük, ABMCTF</title>
+      <link>http://localhost:1313/tr/activity/experience-5/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-5/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 3. ABMCTF Capture The Flag yarışmasına “Black Team” adlı ekibimizle katıldık. Birçok zafiyetli makineyi başarıyla çözerek üçüncü olduk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code Night CTF Eğitimi</title>
+      <link>http://localhost:1313/tr/activity/experience-6/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-6/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Mimarlık Fakültesi’nde düzenlenen “Code Night” etkinliğinde Kriptoloji, Ağ, Web ve OSINT konularında kapsamlı CTF eğitimi verdim. Katılımcıların bilgilerini pekiştirmesi amacıyla mini bir CTF yarışması da organize ettim.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IIC2024 Konferansında Akademik Yayın</title>
+      <link>http://localhost:1313/tr/activity/experience-7/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-7/</guid>
+      <description>&lt;p&gt;“Real-Time Human Recognition With Random Forest Algorithm Using Gait Biometrics Images” başlıklı makalem, 3. Uluslararası Bilişim Kongresi’nde (IFEST2024) sunuldu ve yayımlandı. Kongrenin ana temaları dijital dönüşüm, siber güvenlik ve yapay zekaydı.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3.lük, HAVELSAN Hackathon (HAVELSAN EKSPRES)</title>
+      <link>http://localhost:1313/tr/activity/experience-8/</link>
+      <pubDate>Tue, 23 Apr 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-8/</guid>
+      <description>&lt;p&gt;Ankara’dan Ahlat’a tren yolculuğu eşliğinde düzenlenen 4 günlük yapay zeka yarışmasında, “Cyber MAIN” adlı Yapay Zeka Tabanlı Saldırı Tespit Sistemini geliştirdik. 26 üniversite takımı arasından “Ana Fikir ve Uygulama” kategorisinde üçüncülük elde ettik.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Siber Suç Farkındalık Konferansı</title>
+      <link>http://localhost:1313/tr/activity/experience-9/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-9/</guid>
+      <description>&lt;p&gt;Siber Suçlarla Mücadele Birimi ile iş birliği içinde, üniversite öğrencileri ve akademisyenlere yönelik bir farkındalık konferansı düzenledim. Sosyal mühendislik ve oltalama saldırıları gibi konularda gerçek hayat senaryolarıyla sunum yaptım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elazığ Yöntemim Okulları’nda Siber Güvenlik Semineri</title>
+      <link>http://localhost:1313/tr/activity/experience-10/</link>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-10/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Siber Güvenlik Kulübü ve HSD Kulübü ile birlikte “Adli Bilişim Mühendisliği ve Siber Güvenlik Nedir? Güncel Siber Tehditler” başlıklı semineri düzenledim. Gerçek zamanlı siber saldırı simülasyonuyla öğrencilere farkındalık kazandırdım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TÜBİTAK 2209-A Araştırma Projesi</title>
+      <link>http://localhost:1313/tr/activity/experience-11/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-11/</guid>
+      <description>&lt;p&gt;TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı (2023/2) kapsamında, “Adli Vakalarda Gözetim Görüntülerinden Yürüyüş Biyometrisi Kullanılarak Kişi Tespiti Algoritmalarının Geliştirilmesi” başlıklı yapay zeka tabanlı proje geliştirdim. Projem yarı finale kalmaya hak kazandı ve destek almaya layık görüldü.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/volunteer-work/job-1/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/volunteer-work/job-1/</guid>
+      <description>&lt;h2 id=&#34;siber-güvenlik-topluluğu---başkan&#34;&gt;Siber Güvenlik Topluluğu - Başkan&lt;/h2&gt;&#xA;&lt;p&gt;Fırat Üniversitesinin en aktif teknik topluluklarından birinin başkanlığını yaptım. 500&amp;rsquo;ün üzerinde aktif üyesi bulunan bu topluluğun liderliğini üstlenerek, 20 kişilik bir yönetim ekibiyle birlikte çok sayıda teknik, sosyal ve kariyer odaklı etkinlik düzenledim.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Öne Çıkan Katkılarım&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Etkinlik planlama, ekip yönetimi, takım çalışması ve dış paydaşlarla iletişim konularında aktif rol üstlendim&lt;/li&gt;&#xA;&lt;li&gt;Siber güvenliğin çeşitli alanlarında eğitimler, farkındalık etkinlikleri ve CTF yarışmaları düzenledim&lt;/li&gt;&#xA;&lt;li&gt;Sektörün önde gelen uzmanlarıyla kariyer sohbetleri ve teknik konferanslar gerçekleştirdim&lt;/li&gt;&#xA;&lt;li&gt;Öğrencilerin bilgi paylaşımında bulunduğu ve birlikte kodladığı Code Night geceleri düzenledim&lt;/li&gt;&#xA;&lt;li&gt;Kulübün vizyonunu geliştirerek, hem teknik hem sosyal yönü güçlü bir topluluk yapısı oluşturdum&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/volunteer-work/job-2/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/volunteer-work/job-2/</guid>
+      <description>&lt;h2 id=&#34;siber-anadolu-toplulukları---etkinlik-ve-organizasyon-sorumlusu&#34;&gt;Siber Anadolu Toplulukları - Etkinlik ve Organizasyon Sorumlusu&lt;/h2&gt;&#xA;&lt;p&gt;Siber Anadolu Toplulukları çatısı altında etkinlik organizasyon sorumlusu olarak görev aldım. Türkiye genelinde 35&amp;rsquo;ten fazla üniversite kulübünü ve 17 binden fazla öğrenciyi bir araya getiren bu oluşum, öğrenciler arasında siber güvenlik farkındalığını artırmayı, bilgi ve deneyim paylaşımını teşvik etmeyi, bireylerin teknik becerilerini geliştirmeyi ve sektöre bilinçli bireyler kazandırmayı amaçlayan gönüllü bir topluluktur.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Bu kapsamda birçok kış kampı, çevrim içi etkinlik ve Türkiye ile İngiltere arasında düzenlenen uluslararası CTF gibi organizasyonların planlama süreçlerinde aktif rol aldım.&#xA;Etkinliklerin içerik oluşturma, zamanlama, iletişim ve koordinasyon gibi çeşitli aşamalarında görev alarak organizasyonel planlama, zaman yönetimi, takım içi koordinasyon alanlarında önemli deneyimler edindim. Bu süreç aynı zamanda büyük ölçekli bir toplulukla çalışma, sorumluluk alma ve siber güvenlik ekosistemine katkıda bulunma becerilerimi de geliştirdi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/tr/volunteer-work/job-3/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/volunteer-work/job-3/</guid>
+      <description>&lt;h2 id=&#34;google-developer-student-club---etkinlik-organizasyon-sorumlusu&#34;&gt;Google Developer Student Club - Etkinlik Organizasyon Sorumlusu&lt;/h2&gt;&#xA;&lt;p&gt;Google&amp;rsquo;ın Elazığ elçiliğini yapan Google Developer Student Club (GDSC) kulübünde etkinlik organizasyon sorumlusu olarak görev aldım ve teknoloji, yapay zeka, siber güvenlik, google ürünleri hakkında birçok etkinliğin düzenlenmesinde aktif rol aldım.&lt;/p&gt;&#xA;&lt;p&gt;Bu rol kapsamında teknoloji ve yazılım geliştirme alanlarına ilgi duyan öğrencileri bir araya getirerek çeşitli teknik etkinlikler, seminerler ve atölye çalışmaları düzenledim. Etkinliklerin planlanma sürecinde içerik belirleme, konuşmacı daveti ve zaman yönetimi gibi alanlarda aktif olarak yer aldım.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2.lik, ABMCTF</title>
+      <link>http://localhost:1313/tr/activity/experience-12/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/tr/activity/experience-12/</guid>
+      <description>&lt;p&gt;Fırat Üniversitesi Adli Bilişim Mühendisliği Bölümü tarafından düzenlenen 2. ABMCTF CTF yarışmasında “Black Team” olarak çeşitli kategorilerdeki zorlukları başarıyla çözerek ikinci olduk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Home</title>
+      <link>http://localhost:1313/tr/home/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tr/home/home/</guid>
+      <description>&lt;section id=&#34;showcase&#34; class=&#34;rad-showcase cyber-hero&#34;&gt;&#xA;  &lt;canvas class=&#34;cyber-hero__canvas&#34; aria-hidden=&#34;true&#34;&gt;&lt;/canvas&gt;&#xA;&#xA;  &lt;div class=&#34;cyber-hero__inner&#34;&gt;&#xA;    &lt;div class=&#34;cyber-hero__text&#34;&gt;&#xA;      &lt;span class=&#34;cyber-hero__label&#34;&gt;&amp;lt; Adli Bilişim Mühendisi &amp;amp; Siber Güvenlik /&amp;gt;&lt;/span&gt;&#xA;      &lt;h1 class=&#34;cyber-hero__name&#34;&gt;EREN ÖNDER&lt;/h1&gt;&#xA;      &lt;div class=&#34;cyber-hero__role&#34;&gt;&#xA;        &lt;span class=&#34;cyber-hero__role-prefix&#34;&gt;Ben bir&lt;/span&gt;&#xA;        &lt;span class=&#34;cyber-hero__role-word&#34; data-typewriter data-words=&#34;Siber Güvenlik Uzman Yardımcısı|SOC Analisti|Güvenlik Araştırmacısı|Adli Bilişim Mühendisi|CTF Oyuncusu&#34;&gt;&lt;/span&gt;&#xA;      &lt;/div&gt;&#xA;      &lt;div class=&#34;cyber-hero__bio&#34;&gt;&lt;p&gt;Ben Eren ÖNDER, Fırat Üniversitesi Adli Bilişim Mühendisliği 4. sınıf öğrencisiyim ve siber güvenliğin hem saldırı hem de savunma tarafında aktif olarak çalışıyorum.&lt;/p&gt;&lt;p&gt;CTF yarışmacısı, organizatör, eğitmen ve araştırmacı olarak; teknik derinliği yüksek ve topluluğa katkı sağlayan bir kariyer izliyorum — ulusal projeler ve yayımlanmış araştırmalardan seminerlere ve büyük öğrenci topluluklarına kadar.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

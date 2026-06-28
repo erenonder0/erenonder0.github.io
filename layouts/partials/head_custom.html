@@ -1,0 +1,17 @@
+{{/* Custom <head> additions for the cyber portfolio redesign */}}
+{{/* Mark JS as available before paint so reveal/timeline states only hide when JS can re-show them */}}
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<meta name="theme-color" content="#080c14" />
+
+{{/* Portfolio interaction script (the theme does not iterate params.plugins.js) */}}
+{{- $pjs := resources.Get "js/portfolio-animations.js" -}}
+{{- if $pjs }}
+  {{- if hugo.IsProduction }}{{ $pjs = $pjs | minify | fingerprint }}{{ end -}}
+  <script defer src="{{ $pjs.RelPermalink }}"></script>
+{{- end }}
