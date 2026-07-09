@@ -258,6 +258,10 @@ html.js .reveal.visible { opacity: 1; transform: translate(0) scale(1); }
 .cyber-hero,
 .rad-showcase.cyber-hero {
   position: relative;
+  /* full-bleed: break out of the site-wide <main class="container"> */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   min-height: 100vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: left;
@@ -809,6 +813,7 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 
 /* --- Large screens: let the layout breathe and scale up --- */
 @media (min-width: 1400px) {
+  main.container,
   .cyber-section .container,
   .section .container { max-width: 1320px; }
   .cyber-hero__inner { max-width: 1280px; }
@@ -823,6 +828,7 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 
 @media (min-width: 1920px) {
   html { font-size: 17px; }
+  main.container,
   .cyber-section .container,
   .section .container { max-width: 1480px; }
   .cyber-hero__inner { max-width: 1400px; gap: 4rem; }

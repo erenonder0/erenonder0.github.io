@@ -175,13 +175,13 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/ethereum/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/ethereum/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/ethereum/"
+                hreflang="en"
+                href="http://localhost:1313/tags/ethereum/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/projects/fakeextensionbuilder/</loc>
@@ -214,39 +214,39 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/malware-simulation/"
+                hreflang="en"
+                href="http://localhost:1313/tags/malware-simulation/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/malware-simulation/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/malware-simulation/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/tags/metamask/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/metamask/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/metamask/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/metamask/"
+                hreflang="en"
+                href="http://localhost:1313/tags/metamask/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/projects/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/projects/"
+                hreflang="en"
+                href="http://localhost:1313/projects/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/projects/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/projects/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/projects/ryuk-ransomware/</loc>
@@ -331,13 +331,13 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/web3.js/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/web3.js/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/web3.js/"
+                hreflang="en"
+                href="http://localhost:1313/tags/web3.js/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/activity/experience-5/</loc>
@@ -448,13 +448,13 @@
     <lastmod>2023-12-02T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/volunteer-work/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/volunteer-work/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/volunteer-work/"
+                hreflang="en"
+                href="http://localhost:1313/volunteer-work/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/volunteer-work/job-2/</loc>
@@ -539,13 +539,13 @@
     <loc>http://localhost:1313/tr/home/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/home/"
+                hreflang="en"
+                href="http://localhost:1313/home/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/home/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/home/"
                 />
   </url>
 </urlset>
