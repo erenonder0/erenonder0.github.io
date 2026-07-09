@@ -341,6 +341,61 @@
     window.addEventListener("resize", function () { size(); build(); });
   }
 
+  /* ----------------------------------------------------------------------
+     10. Scroll progress bar (injects its own element)
+     ---------------------------------------------------------------------- */
+  function initScrollProgress() {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var ticking = false;
+    function update() {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? window.scrollY / max : 0;
+      bar.style.transform = "scaleX(" + Math.min(1, Math.max(0, pct)) + ")";
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
+  /* ----------------------------------------------------------------------
+     11. Card tilt + cursor glow (cert & project cards)
+     ---------------------------------------------------------------------- */
+  function initTilt() {
+    if (prefersReduced || !window.matchMedia("(hover: hover)").matches) return;
+    var cards = document.querySelectorAll(".cert-card, .project-card");
+    cards.forEach(function (card) {
+      card.classList.add("tilt-card");
+      var glow = document.createElement("span");
+      glow.className = "tilt-glow";
+      card.appendChild(glow);
+      var raf = null;
+      card.addEventListener("mousemove", function (ev) {
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          var r = card.getBoundingClientRect();
+          var px = (ev.clientX - r.left) / r.width;
+          var py = (ev.clientY - r.top) / r.height;
+          card.style.setProperty("--mx", px * 100 + "%");
+          card.style.setProperty("--my", py * 100 + "%");
+          var rx = (0.5 - py) * 6; /* max 3deg each way */
+          var ry = (px - 0.5) * 6;
+          card.style.transform =
+            "perspective(800px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
+          raf = null;
+        });
+      });
+      card.addEventListener("mouseleave", function () {
+        card.style.transform = "";
+      });
+    });
+  }
+
   /* ---------------------------------------------------------------------- */
   function boot() {
     initReveal();
@@ -353,6 +408,8 @@
     initFilters();
     initExpanders();
     initParticles();
+    initScrollProgress();
+    initTilt();
   }
 
   if (document.readyState === "loading") {

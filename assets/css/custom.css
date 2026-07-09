@@ -728,6 +728,54 @@ html.js .ct-item.visible { opacity: 1; transform: translateY(0); }
 html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !important; }
 
 /* ============================================================================
+   Scroll progress bar (element injected by portfolio-animations.js)
+   ========================================================================== */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; z-index: 2000;
+  width: 100%; height: 3px; pointer-events: none;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  box-shadow: 0 0 10px var(--accent-blue-glow);
+}
+
+/* ============================================================================
+   Hero cyber-grid background (behind particles)
+   ========================================================================== */
+.cyber-hero__gridbg {
+  position: absolute; inset: -60px; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 78%);
+  animation: grid-pan 26s linear infinite;
+}
+@keyframes grid-pan {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 56px 56px, 56px 56px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cyber-hero__gridbg { animation: none; }
+}
+
+/* ============================================================================
+   Card tilt + cursor glow (cert & project cards; driven by JS --mx/--my)
+   ========================================================================== */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt-card .tilt-glow {
+  content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit;
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%),
+              rgba(0, 212, 255, 0.12), transparent 65%);
+}
+.tilt-card:hover .tilt-glow { opacity: 1; }
+.project-card.tilt-card { position: relative; }
+
+/* ============================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 991px) {
@@ -757,4 +805,31 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
   .cyber-timeline__progress { box-shadow: none; }
   .ct-item, .ct-item.left, .ct-item.right { width: 100%; left: 0; text-align: left; padding: 0 0 1.8rem 2.4rem; }
   .ct-item.left .ct-dot, .ct-item.right .ct-dot { left: 2px; right: auto; }
+}
+
+/* --- Large screens: let the layout breathe and scale up --- */
+@media (min-width: 1400px) {
+  .cyber-section .container,
+  .section .container { max-width: 1320px; }
+  .cyber-hero__inner { max-width: 1280px; }
+  .cyber-hero__text { max-width: 720px; }
+  .cyber-hero__bio { max-width: 680px; font-size: 1.15rem; }
+  .cyber-about__grid { max-width: 1000px; }
+  .cyber-timeline { max-width: 1080px; }
+  .cyber-section { padding: 96px 0; }
+  .cyber-section__title { font-size: clamp(2.2rem, 2.5vw, 3rem); }
+  .cert-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+}
+
+@media (min-width: 1920px) {
+  html { font-size: 17px; }
+  .cyber-section .container,
+  .section .container { max-width: 1480px; }
+  .cyber-hero__inner { max-width: 1400px; gap: 4rem; }
+  .cyber-hero__text { max-width: 800px; }
+  .cyber-hero__name { font-size: clamp(4rem, 5.5vw, 7rem); }
+  .cyber-about__grid { max-width: 1100px; }
+  .cyber-timeline { max-width: 1160px; }
+  .skills-grid, .cyber-projects__grid { gap: 1.8rem; }
+  .cyber-section { padding: 110px 0; }
 }

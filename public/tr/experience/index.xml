@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Deneyim on </title>
-    <link>http://localhost:1313/tr/experience/</link>
-    <description>Recent content in Deneyim on </description>
-    <generator>Hugo</generator>
-    <language>tr</language>
-    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tr/experience/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/tr/experience/job-3/</link>
-      <pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/tr/experience/job-3/</guid>
-      <description>&lt;h2 id=&#34;siber-güvenlik-analisti-uzman-yardımcısı&#34;&gt;Siber Güvenlik Analisti Uzman Yardımcısı&lt;/h2&gt;&#xA;&lt;p&gt;FILL&lt;/p&gt;&#xA;&lt;hr&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/tr/experience/job-2/</link>
-      <pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/tr/experience/job-2/</guid>
-      <description>&lt;h2 id=&#34;siber-güvenlik---stajyer&#34;&gt;Siber Güvenlik - Stajyer&lt;/h2&gt;&#xA;&lt;p&gt;DOLDUR&lt;/p&gt;&#xA;&lt;hr&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/tr/experience/job-1/</link>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/tr/experience/job-1/</guid>
-      <description>&lt;h2 id=&#34;network-security---stajyer&#34;&gt;Network Security - Stajyer&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Deneyim on </title>
+		<link>http://localhost:1313/tr/experience/</link>
+		<description>Recent content in Deneyim on </description>
+		<generator>Hugo</generator>
+		<language>tr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tr/experience/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>http://localhost:1313/tr/experience/job-3/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/experience/job-3/</guid>
+				<description>&lt;h2 id=&#34;siber-güvenlik-analisti-uzman-yardımcısı&#34;&gt;Siber Güvenlik Analisti Uzman Yardımcısı&lt;/h2&gt;&#xA;&lt;p&gt;FILL&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+			<item>
+				<title></title>
+				<link>http://localhost:1313/tr/experience/job-2/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/experience/job-2/</guid>
+				<description>&lt;h2 id=&#34;siber-güvenlik---stajyer&#34;&gt;Siber Güvenlik - Stajyer&lt;/h2&gt;&#xA;&lt;p&gt;DOLDUR&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+			<item>
+				<title></title>
+				<link>http://localhost:1313/tr/experience/job-1/</link>
+				<pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/experience/job-1/</guid>
+				<description>&lt;h2 id=&#34;network-security---stajyer&#34;&gt;Network Security - Stajyer&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+	</channel>
 </rss>

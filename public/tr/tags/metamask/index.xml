@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MetaMask on </title>
-    <link>http://localhost:1313/tr/tags/metamask/</link>
-    <description>Recent content in MetaMask on </description>
-    <generator>Hugo</generator>
-    <language>tr</language>
-    <lastBuildDate>Sun, 25 Aug 2024 09:53:42 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tr/tags/metamask/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Web 3.0 Kripto Para Transferi Sitesi</title>
-      <link>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</guid>
-      <description>&lt;p&gt;Web 3.0 teknolojilerini kullanarak, kullanıcıların MetaMask cüzdanlarıyla Ethereum ağı üzerinde güvenli ve hızlı kripto para transferi yapmasını sağlayan bir uygulama geliştirdim. Kullanıcı dostu arayüzü ile blok zincirini deneyimlemenizi sağlıyor.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>MetaMask on </title>
+		<link>http://localhost:1313/tr/tags/metamask/</link>
+		<description>Recent content in MetaMask on </description>
+		<generator>Hugo</generator>
+		<language>tr</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 25 Aug 2024 09:53:42 +0200</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tr/tags/metamask/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Web 3.0 Kripto Para Transferi Sitesi</title>
+				<link>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</link>
+				<pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
+				<guid>http://localhost:1313/tr/projects/web3.0-cryptocurrency/</guid>
+				<description>&lt;p&gt;Web 3.0 teknolojilerini kullanarak, kullanıcıların MetaMask cüzdanlarıyla Ethereum ağı üzerinde güvenli ve hızlı kripto para transferi yapmasını sağlayan bir uygulama geliştirdim. Kullanıcı dostu arayüzü ile blok zincirini deneyimlemenizi sağlıyor.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
