@@ -14,25 +14,25 @@
 		
 			<atom:link href="http://localhost:1313/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>DLL Hijacking: Bir DLL Dosyası Ne Kadar Tehlikeli Olabilir?</title>
-				<link>http://localhost:1313/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</link>
+				<title>DLL Hijacking: How Dangerous Can a Single DLL Be?</title>
+				<link>http://localhost:1313/blog/dll-hijacking-how-dangerous-can-a-dll-be/</link>
 				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
-				<guid>http://localhost:1313/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</guid>
-				<description>Günlük kullandığımız hemen hemen her program, arka planda onlarca belki de yüzlerce DLL çağırır. İşletim sisteminin ve uygulamaların pek çok kritik işlevi bu küçük dosyalara dayanır. Peki bu küçük,&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/dll-hijacking-how-dangerous-can-a-dll-be/</guid>
+				<description>Almost every program we use daily calls dozens, maybe hundreds, of DLLs in the background. Much of the operating system&amp;rsquo;s and applications&amp;rsquo; critical functionality rests on these small files. But can these unremarkable files become a doorway to full system compromise in the wrong hands?</description>
 			</item>
 			<item>
-				<title>APT42: İran Destekli Gelişmiş Tehdit Operasyonları</title>
-				<link>http://localhost:1313/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</link>
+				<title>APT42: Iran-Backed Advanced Threat Operations</title>
+				<link>http://localhost:1313/blog/apt42-iran-backed-advanced-threat-operations/</link>
 				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
-				<guid>http://localhost:1313/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</guid>
-				<description>Siber güvenlik dünyasında bazı gelişmiş tehdit aktörleri (APT), bilgi sızdırır, sistemleri çökertir ve geride izler bırakır. Ancak bazıları vardır ki sessizdir, tek bir alarm çalmadan aylarca ağın&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/apt42-iran-backed-advanced-threat-operations/</guid>
+				<description>In the cybersecurity world, some advanced persistent threats (APTs) leak data, crash systems, and leave traces behind. But some are silent — roaming a network undetected for months without a single alarm, exfiltrating data and observing their target&amp;rsquo;s behavior.</description>
 			</item>
 			<item>
-				<title>Yeni Nesil Siber Tuzaklar: Sahte AI Temalı Web Siteleri</title>
-				<link>http://localhost:1313/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</link>
+				<title>Next-Generation Cyber Traps: Fake AI-Themed Websites</title>
+				<link>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</link>
 				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
-				<guid>http://localhost:1313/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</guid>
-				<description>Yapay zeka teknolojileri, her geçen gün daha fazla ilgi görüyor. Kimi onunla ödevlerini yapıyor, kimi yemek tarifleri için kullanıyor, kimi ise yapay zekayı para kazanmak için sıkça işlerinde&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</guid>
+				<description>AI technologies draw more interest every day. Some use them for homework, some for recipes, some to make money at work. As this interest grows, so does the number of people weaponizing it against others.</description>
 			</item>
 	</channel>
 </rss>

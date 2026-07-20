@@ -9,6 +9,61 @@
 />
 <meta name="theme-color" content="#080c14" />
 
+{{/* --- Twitter/X share cards (the theme emits OpenGraph but no twitter:* tags) --- */}}
+{{- $shareTitle := cond .IsHome (.Site.Params.title | default .Site.Title) .Title -}}
+{{- $shareDesc := .Params.summary | default .Description | default (i18n "head_description") -}}
+{{- $shareDesc = $shareDesc | plainify | truncate 200 -}}
+{{- $shareImg := "" -}}
+{{- if eq .Type "blog" }}{{ with .Params.images }}{{ with .featured_image }}{{ $shareImg = . }}{{ end }}{{ end }}{{ end -}}
+{{- if not $shareImg }}{{ with .Site.Params.images }}{{ $shareImg = (index . 0) | absURL }}{{ end }}{{ end -}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $shareTitle }}" />
+<meta name="twitter:description" content="{{ $shareDesc }}" />
+{{- with $shareImg }}
+<meta name="twitter:image" content="{{ . }}" />
+<meta name="twitter:image:alt" content="{{ $shareTitle }}" />
+{{- end }}
+
+{{/* --- hreflang alternates + og:locale:alternate (multilingual SEO) --- */}}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Language.Lang }}" href="{{ .Permalink }}" />
+{{- end }}
+{{- with .Site.Home.Permalink }}<link rel="alternate" hreflang="x-default" href="{{ . }}" />{{- end }}
+{{- range .Translations }}
+<meta property="og:locale:alternate" content="{{ .Language.Lang }}" />
+{{- end }}
+<meta property="og:image:alt" content="{{ $shareTitle }}" />
+
+{{/* --- JSON-LD structured data (Person + WebSite on home, BlogPosting on posts) --- */}}
+{{- if .IsHome }}
+{{- $sameAs := slice "https://www.linkedin.com/in/erenonder0/" "https://github.com/erenonder0" "https://www.youtube.com/@erenonder0" "https://medium.com/@erenonder0" }}
+{{- $jobTitle := cond (eq .Lang "tr") "Siber Güvenlik Uzman Yardımcısı" "Junior Cyber Security Specialist" }}
+{{- $person := dict
+  "@context" "https://schema.org" "@type" "Person"
+  "name" "Eren ONDER" "url" .Site.Home.Permalink
+  "image" ($shareImg) "jobTitle" $jobTitle
+  "description" (i18n "head_description") "sameAs" $sameAs }}
+<script type="application/ld+json">{{ $person | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- $website := dict
+  "@context" "https://schema.org" "@type" "WebSite"
+  "name" (.Site.Params.title | default .Site.Title) "url" .Site.Home.Permalink
+  "inLanguage" .Lang
+  "author" (dict "@type" "Person" "name" "Eren ONDER" "url" .Site.Home.Permalink) }}
+<script type="application/ld+json">{{ $website | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- else if and (eq .Type "blog") (eq .Kind "page") }}
+{{- $author := dict "@type" "Person" "name" "Eren ONDER" "url" .Site.Home.Permalink }}
+{{- $post := dict
+  "@context" "https://schema.org" "@type" "BlogPosting"
+  "headline" .Title "url" .Permalink
+  "mainEntityOfPage" .Permalink
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+  "description" $shareDesc "author" $author "publisher" $author "inLanguage" .Lang }}
+{{- with $shareImg }}{{ $post = merge $post (dict "image" .) }}{{ end }}
+{{- with .Params.tags }}{{ $post = merge $post (dict "keywords" (delimit . ", ")) }}{{ end }}
+<script type="application/ld+json">{{ $post | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}
+
 {{/* Medium'dan cekilen yazilarda asil kaynak Medium'u gosterir (yinelenen icerik SEO cezasini onler) */}}
 {{- with .Params.canonical_url }}
 <link rel="canonical" href="{{ . }}" />

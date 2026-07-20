@@ -1,6 +1,6 @@
 ## Meta tags
 - id: "meta_title"
-  translation: "Eren ÖNDER | Forensic Informatics and Cyber Security Student Portfolio"
+  translation: "Eren ONDER | Cyber Security & Digital Forensics Portfolio"
 - id: "meta_description"
   translation: "Discover my projects and technical work in the field of cyber security."
 - id: "meta_keywords"
@@ -30,7 +30,7 @@
 
 ## Footer
 - id: "footer_notice"
-  translation: "© Eren ONDER. Digital Forensic Student"
+  translation: "© Eren ONDER. Junior Cyber Security Specialist"
 
 - id: "language"
   translation: "Language"
@@ -47,7 +47,7 @@
 
 ## Homepage head title
 - id: "head_title"
-  translation: "Eren ONDER"
+  translation: "Eren ONDER | Cyber Security & Digital Forensics"
 
 - id: "head_description"
   translation: "Discover my projects and technical work in the field of cyber security."
@@ -225,13 +225,13 @@
 
 ## Hero
 - id: "hero_label"
-  translation: "&lt; Forensic Engineer &amp; Cyber Security /&gt;"
+  translation: "&lt; Cyber Security &amp; Digital Forensics /&gt;"
 - id: "hero_roles"
   translation: "Associate Cyber Security Analyst|SOC Analyst|Security Researcher|Forensic Engineer|CTF Player"
 - id: "hero_role_prefix"
   translation: "I'm a"
 - id: "hero_bio"
-  translation: "4th-year Digital Forensic Engineering student. CTF competitor, organizer, and researcher building a career at the intersection of offensive security and forensic science."
+  translation: "Junior Cyber Security Specialist. CTF competitor, organizer, and researcher building a career at the intersection of offensive security and digital forensics."
 #- id: "hero_view_work"
   #translation: "View My Work"
 - id: "hero_download_cv"
@@ -243,11 +243,11 @@
 - id: "about_eyebrow"
   translation: "// whoami"
 - id: "about_bio"
-  translation: "<p>I'm Eren ÖNDER, a 4th-year Digital Forensic Engineering student at Fırat University, working actively across offensive and defensive cybersecurity.</p><p>As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.</p>"
+  translation: "<p>I'm Eren ONDER, a Junior Cyber Security Specialist working actively across offensive and defensive cybersecurity.</p><p>As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.</p>"
 - id: "about_stat1_value"
-  translation: "4th Year"
+  translation: "Junior Specialist"
 - id: "about_stat1_label"
-  translation: "Class"
+  translation: "Role"
 - id: "about_stat2_value"
   translation: "Digital Forensic Eng."
 - id: "about_stat2_label"

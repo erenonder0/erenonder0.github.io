@@ -4,7 +4,7 @@ Guidance for working in this repository.
 
 ## Project
 
-Personal portfolio for **Eren ÖNDER** (Digital Forensic Engineering student). Built with **Hugo** using the vendored `adritian-free-hugo-theme` (`_vendor/`), redesigned with a dark cyber aesthetic. Forced dark theme; English + Turkish (`/tr/`).
+Personal portfolio for **Eren Onder** (Junior Cyber Security Specialist). Built with **Hugo** using the vendored `adritian-free-hugo-theme` (`_vendor/`), redesigned with a dark cyber aesthetic. Forced dark theme; English + Turkish (`/tr/`).
 
 ## Build / run
 

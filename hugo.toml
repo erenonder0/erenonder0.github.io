@@ -1,6 +1,7 @@
 baseURL = "https://erenonder0.github.io/"
 title = "Eren ONDER"
 languageCode = "en"
+enableRobotsTXT = true
 
  
 [markup.goldmark.renderer]
@@ -67,7 +68,7 @@ target = "assets/css/bootstrap-print.css"
 
 
 [params]
-title = 'Eren ÖNDER | Forensic Informatics and Cyber Security Student Portfolio'
+title = 'Eren ONDER | Cyber Security & Digital Forensics Portfolio'
 description = 'Discover my projects and technical work in the field of cyber security.'
 images = ['/img/og-img.png']
 sections = [
@@ -224,6 +225,11 @@ languageDirection = 'ltr'
 languageName = 'Türkçe'
 title = ''
 weight = 0
+
+# Turkish overrides for share cards / SEO (theme reads og:* from params.*)
+[languages.tr.params]
+title = 'Eren ONDER | Siber Güvenlik & Adli Bilişim Portfolyosu'
+description = 'Siber güvenlik alanındaki projelerimi ve teknik çalışmalarımı keşfedin.'
 
 [languages.tr.menus]
 [[languages.tr.menus.header]]

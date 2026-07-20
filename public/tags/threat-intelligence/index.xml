@@ -14,11 +14,11 @@
 		
 			<atom:link href="http://localhost:1313/tags/threat-intelligence/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Yeni Nesil Siber Tuzaklar: Sahte AI Temalı Web Siteleri</title>
-				<link>http://localhost:1313/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</link>
+				<title>Next-Generation Cyber Traps: Fake AI-Themed Websites</title>
+				<link>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</link>
 				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
-				<guid>http://localhost:1313/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</guid>
-				<description>Yapay zeka teknolojileri, her geçen gün daha fazla ilgi görüyor. Kimi onunla ödevlerini yapıyor, kimi yemek tarifleri için kullanıyor, kimi ise yapay zekayı para kazanmak için sıkça işlerinde&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</guid>
+				<description>AI technologies draw more interest every day. Some use them for homework, some for recipes, some to make money at work. As this interest grows, so does the number of people weaponizing it against others.</description>
 			</item>
 	</channel>
 </rss>

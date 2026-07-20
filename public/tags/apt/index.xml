@@ -14,11 +14,11 @@
 		
 			<atom:link href="http://localhost:1313/tags/apt/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>APT42: İran Destekli Gelişmiş Tehdit Operasyonları</title>
-				<link>http://localhost:1313/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</link>
+				<title>APT42: Iran-Backed Advanced Threat Operations</title>
+				<link>http://localhost:1313/blog/apt42-iran-backed-advanced-threat-operations/</link>
 				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
-				<guid>http://localhost:1313/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</guid>
-				<description>Siber güvenlik dünyasında bazı gelişmiş tehdit aktörleri (APT), bilgi sızdırır, sistemleri çökertir ve geride izler bırakır. Ancak bazıları vardır ki sessizdir, tek bir alarm çalmadan aylarca ağın&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/apt42-iran-backed-advanced-threat-operations/</guid>
+				<description>In the cybersecurity world, some advanced persistent threats (APTs) leak data, crash systems, and leave traces behind. But some are silent — roaming a network undetected for months without a single alarm, exfiltrating data and observing their target&amp;rsquo;s behavior.</description>
 			</item>
 	</channel>
 </rss>

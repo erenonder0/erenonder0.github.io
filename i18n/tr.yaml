@@ -1,12 +1,12 @@
 ## Meta tags
 - id: "meta_title"
-  translation: "Adritian - a high performance hugo theme by Adrián Moreno"
+  translation: "Eren ONDER | Siber Güvenlik & Adli Bilişim Portfolyosu"
 - id: "meta_description"
-  translation: ""
+  translation: "Siber güvenlik alanındaki projelerimi ve teknik çalışmalarımı keşfedin."
 - id: "meta_keywords"
-  translation: "hugo, theme, bootstrap, adritian, adrian moreno, personal site, portfolio, single page application"
+  translation: "siber güvenlik, adli bilişim, eren, önder, eren önder, eren önder blog"
 - id: "meta_author"
-  translation: "Adrián Moreno Peña"
+  translation: "Eren ONDER"
 - id: "meta_image"
   translation: "/img/general/og-image.jpg"
 
@@ -30,7 +30,7 @@
 
 ## Footer
 - id: "footer_notice"
-  translation: "© Eren ÖNDER. Adli Bilişim Mühendisliği Öğrencisi "
+  translation: "© Eren ONDER. Siber Güvenlik Uzman Yardımcısı"
 
 - id: "language"
   translation: "Dil"
@@ -47,10 +47,10 @@
 
 ## Homepage head title
 - id: "head_title"
-  translation: "Eren ONDER"
+  translation: "Eren ONDER | Siber Güvenlik & Adli Bilişim"
 
 - id: "head_description"
-  translation: "This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications."
+  translation: "Siber güvenlik alanındaki projelerimi ve teknik çalışmalarımı keşfedin."
 
 ## Homepage showcase
 - id: "showcase_title"
@@ -226,13 +226,13 @@
 
 ## Hero
 - id: "hero_label"
-  translation: "&lt; Adli Bilişim Mühendisi &amp; Siber Güvenlik /&gt;"
+  translation: "&lt; Siber Güvenlik &amp; Adli Bilişim /&gt;"
 - id: "hero_roles"
   translation: "Siber Güvenlik Uzman Yardımcısı|SOC Analisti|Güvenlik Araştırmacısı|Adli Bilişim Mühendisi|CTF Oyuncusu"
 - id: "hero_role_prefix"
   translation: "Ben bir"
 - id: "hero_bio"
-  translation: "Adli Bilişim Mühendisliği 4. sınıf öğrencisi. Saldırı odaklı güvenlik ile adli bilişimin kesişiminde kariyer inşa eden CTF yarışmacısı, organizatör ve araştırmacı."
+  translation: "Siber Güvenlik Uzman Yardımcısı. Saldırı odaklı güvenlik ile adli bilişimin kesişiminde kariyer inşa eden CTF yarışmacısı, organizatör ve araştırmacı."
 #- id: "hero_view_work"
   #translation: "Çalışmalarımı Gör"
 - id: "hero_download_cv"
@@ -244,11 +244,11 @@
 - id: "about_eyebrow"
   translation: "// whoami"
 - id: "about_bio"
-  translation: "<p>Ben Eren ÖNDER, Fırat Üniversitesi Adli Bilişim Mühendisliği 4. sınıf öğrencisiyim ve siber güvenliğin hem saldırı hem de savunma tarafında aktif olarak çalışıyorum.</p><p>CTF yarışmacısı, organizatör, eğitmen ve araştırmacı olarak; teknik derinliği yüksek ve topluluğa katkı sağlayan bir kariyer izliyorum — ulusal projeler ve yayımlanmış araştırmalardan seminerlere ve büyük öğrenci topluluklarına kadar.</p>"
+  translation: "<p>Ben Eren ONDER, siber güvenliğin hem saldırı hem de savunma tarafında aktif olarak çalışan bir Siber Güvenlik Uzman Yardımcısıyım.</p><p>CTF yarışmacısı, organizatör, eğitmen ve araştırmacı olarak; teknik derinliği yüksek ve topluluğa katkı sağlayan bir kariyer izliyorum — ulusal projeler ve yayımlanmış araştırmalardan seminerlere ve büyük öğrenci topluluklarına kadar.</p>"
 - id: "about_stat1_value"
-  translation: "4. Sınıf"
+  translation: "Uzman Yardımcısı"
 - id: "about_stat1_label"
-  translation: "Sınıf"
+  translation: "Ünvan"
 - id: "about_stat2_value"
   translation: "Adli Bilişim Müh."
 - id: "about_stat2_label"

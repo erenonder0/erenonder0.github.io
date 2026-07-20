@@ -14,11 +14,11 @@
 		
 			<atom:link href="http://localhost:1313/tags/dll-injection/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>DLL Hijacking: Bir DLL Dosyası Ne Kadar Tehlikeli Olabilir?</title>
-				<link>http://localhost:1313/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</link>
+				<title>DLL Hijacking: How Dangerous Can a Single DLL Be?</title>
+				<link>http://localhost:1313/blog/dll-hijacking-how-dangerous-can-a-dll-be/</link>
 				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
-				<guid>http://localhost:1313/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</guid>
-				<description>Günlük kullandığımız hemen hemen her program, arka planda onlarca belki de yüzlerce DLL çağırır. İşletim sisteminin ve uygulamaların pek çok kritik işlevi bu küçük dosyalara dayanır. Peki bu küçük,&amp;hellip;</description>
+				<guid>http://localhost:1313/blog/dll-hijacking-how-dangerous-can-a-dll-be/</guid>
+				<description>Almost every program we use daily calls dozens, maybe hundreds, of DLLs in the background. Much of the operating system&amp;rsquo;s and applications&amp;rsquo; critical functionality rests on these small files. But can these unremarkable files become a doorway to full system compromise in the wrong hands?</description>
 			</item>
 	</channel>
 </rss>

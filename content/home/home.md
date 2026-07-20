@@ -4,7 +4,7 @@ type = "home"
 draft = false
 +++
 
-{{< showcase-section title="Eren ÖNDER" >}}{{< /showcase-section >}}
+{{< showcase-section title="Eren ONDER" >}}{{< /showcase-section >}}
 
 {{< about-section >}}
 
