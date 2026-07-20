@@ -926,9 +926,10 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 }
 
 /* ============================================================================
-   Card tilt + cursor glow (cert & project cards; driven by JS --mx/--my)
+   Card tilt + cursor glow (applied site-wide via JS; driven by --mx/--my)
    ========================================================================== */
 .tilt-card {
+  position: relative; /* anchors the absolutely-positioned glow to the card */
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -939,7 +940,6 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
               rgba(0, 212, 255, 0.12), transparent 65%);
 }
 .tilt-card:hover .tilt-glow { opacity: 1; }
-.project-card.tilt-card { position: relative; }
 
 /* ============================================================================
    Responsive

@@ -364,11 +364,14 @@
   }
 
   /* ----------------------------------------------------------------------
-     11. Card tilt + cursor glow (cert & project cards)
+     11. Card tilt + cursor glow (all grid/standalone cards site-wide)
      ---------------------------------------------------------------------- */
   function initTilt() {
     if (prefersReduced || !window.matchMedia("(hover: hover)").matches) return;
-    var cards = document.querySelectorAll(".cert-card, .project-card");
+    var cards = document.querySelectorAll(
+      ".cert-card, .project-card, .blog-card, .volunteer-card, " +
+      ".skill-card, .education, .ct-card"
+    );
     cards.forEach(function (card) {
       card.classList.add("tilt-card");
       var glow = document.createElement("span");
