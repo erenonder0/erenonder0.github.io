@@ -849,9 +849,11 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0; color: var(--text-primary);
 }
 .blog-post__content blockquote strong { color: var(--accent-green); }
-.blog-post__content figure { margin: 2rem 0; }
+.blog-post__content figure { margin: 2rem 0; text-align: center; }
+/* Render at natural size, capped to the column — small Medium detail shots
+   (icons, cropped screenshots) stay small instead of being upscaled + blurred. */
 .blog-post__content img {
-  width: 100%; height: auto; display: block;
+  max-width: 100%; height: auto; display: inline-block;
   border-radius: var(--radius); border: 1px solid var(--border);
 }
 .blog-post__content figcaption {
