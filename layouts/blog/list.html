@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div id="main-content" class="flex-grow-1">
+  <section class="cyber-section blog-list-section">
+    <div class="container">
+
+      <div class="cyber-section__head reveal">
+        <span class="cyber-section__eyebrow">{{ i18n "blog_eyebrow" }}</span>
+        <h2 class="cyber-section__title">{{ .Title }}</h2>
+        {{ with .Params.intro }}<p class="blog-list__intro">{{ . | safeHTML }}</p>{{ end }}
+      </div>
+
+      {{ $posts := where .Pages "Type" "blog" }}
+      {{ if not $posts }}{{ $posts = .Pages }}{{ end }}
+
+      {{ if $posts }}
+        <div class="blog-grid">
+          {{ range $i, $p := $posts }}
+            <article class="blog-card reveal" data-delay="{{ add (mod $i 3) 1 }}">
+              <a class="blog-card__link" href="{{ $p.RelPermalink }}" aria-label="{{ $p.Title }}"></a>
+
+              {{ with $p.Params.images }}{{ with .featured_image }}
+                <div class="blog-card__media">
+                  <img src="{{ . }}" alt="{{ $p.Title }}" loading="lazy" />
+                </div>
+              {{ end }}{{ end }}
+
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "02 Jan 2006" }}</time>
+                  <span class="blog-card__dot">•</span>
+                  <span>{{ $p.ReadingTime }} {{ i18n "blog_min_read" }}</span>
+                </div>
+
+                <h3 class="blog-card__title">{{ $p.Title }}</h3>
+                <p class="blog-card__desc">{{ with $p.Params.summary }}{{ . }}{{ else }}{{ $p.Summary | plainify | truncate 160 }}{{ end }}</p>
+
+                {{ with $p.Params.tags }}
+                  <div class="blog-card__tags">
+                    {{ range first 4 . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+                  </div>
+                {{ end }}
+
+                <div class="blog-card__foot">
+                  <span class="blog-card__more">{{ i18n "blog_read_more" }} <span aria-hidden="true">→</span></span>
+                  {{ if eq $p.Params.source "medium" }}
+                    <span class="blog-card__source" title="{{ i18n "blog_from_medium" }}">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                        <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75 1.19 2.58 1.19 5.75z"/>
+                      </svg>
+                      Medium
+                    </span>
+                  {{ end }}
+                </div>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="blog-empty">{{ i18n "blog_empty" }}</p>
+      {{ end }}
+
+    </div>
+  </section>
+</div>
+{{ end }}

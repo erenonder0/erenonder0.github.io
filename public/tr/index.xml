@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
+			<lastBuildDate>Wed, 22 Oct 2025 07:53:52 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tr/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>DLL Hijacking: Bir DLL Dosyası Ne Kadar Tehlikeli Olabilir?</title>
+				<link>http://localhost:1313/tr/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tr/blog/dll-hijacking-bir-dll-dosyasi-ne-kadar-tehlikeli-olabilir/</guid>
+				<description>Günlük kullandığımız hemen hemen her program, arka planda onlarca belki de yüzlerce DLL çağırır. İşletim sisteminin ve uygulamaların pek çok kritik işlevi bu küçük dosyalara dayanır. Peki bu küçük,&amp;hellip;</description>
+			</item>
+			<item>
+				<title>APT42: İran Destekli Gelişmiş Tehdit Operasyonları</title>
+				<link>http://localhost:1313/tr/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tr/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</guid>
+				<description>Siber güvenlik dünyasında bazı gelişmiş tehdit aktörleri (APT), bilgi sızdırır, sistemleri çökertir ve geride izler bırakır. Ancak bazıları vardır ki sessizdir, tek bir alarm çalmadan aylarca ağın&amp;hellip;</description>
+			</item>
 			<item>
 				<title></title>
 				<link>http://localhost:1313/tr/experience/job-3/</link>
@@ -33,6 +47,13 @@
 				<pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
 				<guid>http://localhost:1313/tr/experience/job-1/</guid>
 				<description>&lt;h2 id=&#34;network-security---stajyer&#34;&gt;Network Security - Stajyer&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+			<item>
+				<title>Yeni Nesil Siber Tuzaklar: Sahte AI Temalı Web Siteleri</title>
+				<link>http://localhost:1313/tr/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</link>
+				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
+				<guid>http://localhost:1313/tr/blog/yeni-nesil-siber-tuzaklar-sahte-ai-temali-web-siteleri/</guid>
+				<description>Yapay zeka teknolojileri, her geçen gün daha fazla ilgi görüyor. Kimi onunla ödevlerini yapıyor, kimi yemek tarifleri için kullanıyor, kimi ise yapay zekayı para kazanmak için sıkça işlerinde&amp;hellip;</description>
 			</item>
 			<item>
 				<title>ABMCTF CTF Yarışması Organizasyonu</title>

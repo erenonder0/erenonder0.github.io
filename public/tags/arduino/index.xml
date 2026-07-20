@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Arduino on </title>
+		<link>http://localhost:1313/tags/arduino/</link>
+		<description>Recent content in Arduino on </description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 05 Aug 2018 20:23:21 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BLUETOOTH KONTROLLÜ ROBOT YAPIYORUZ!</title>
+				<link>http://localhost:1313/blog/bluetooth-kontrollu-robot-yapiyoruz/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/blog/bluetooth-kontrollu-robot-yapiyoruz/</guid>
+				<description>Merhaba! Bugün hep beraber Arduino ile bluetooth kontrollü robot projesini yapıyoruz. Bu projeyi 4 konu halinde sizlere sunacağım.kgkgkgj Konu Başlığında : Gerekli malzemeleri ve malzemelerin her&amp;hellip;</description>
+			</item>
+	</channel>
+</rss>

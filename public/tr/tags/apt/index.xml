@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Apt on </title>
+		<link>http://localhost:1313/tr/tags/apt/</link>
+		<description>Recent content in Apt on </description>
+		<generator>Hugo</generator>
+		<language>tr</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 09 Oct 2025 13:07:15 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tr/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>APT42: İran Destekli Gelişmiş Tehdit Operasyonları</title>
+				<link>http://localhost:1313/tr/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tr/blog/apt42-iran-destekli-gelismis-tehdit-operasyonlari/</guid>
+				<description>Siber güvenlik dünyasında bazı gelişmiş tehdit aktörleri (APT), bilgi sızdırır, sistemleri çökertir ve geride izler bırakır. Ancak bazıları vardır ki sessizdir, tek bir alarm çalmadan aylarca ağın&amp;hellip;</description>
+			</item>
+	</channel>
+</rss>

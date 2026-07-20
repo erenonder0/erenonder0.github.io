@@ -7,6 +7,13 @@ on:
     branches:
       - main
 
+  # Medium senkronizasyonu yeni yazi commit'ledikten sonra siteyi yeniden yayinla.
+  # (GITHUB_TOKEN ile atilan commit'ler push tetikleyicisini calistirmaz.)
+  workflow_run:
+    workflows: ["Medium yazilarini senkronize et"]
+    types:
+      - completed
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

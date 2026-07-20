@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div id="main-content" class="flex-grow-1">
+  <article class="cyber-section blog-post">
+    <div class="container">
+
+      <a class="blog-post__back" href="{{ "blog" | relLangURL }}">← {{ i18n "blog_back" }}</a>
+
+      <header class="blog-post__head">
+        <div class="blog-post__meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 January 2006" }}</time>
+          <span class="blog-card__dot">•</span>
+          <span>{{ .ReadingTime }} {{ i18n "blog_min_read" }}</span>
+        </div>
+
+        <h1 class="blog-post__title">{{ .Title }}</h1>
+
+        {{ with .Params.tags }}
+          <div class="blog-post__tags">
+            {{ range . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+          </div>
+        {{ end }}
+
+        {{ if eq .Params.source "medium" }}
+          <div class="blog-post__origin">
+            <span class="blog-post__origin-text">{{ i18n "blog_originally_published" }}</span>
+            <a href="{{ .Params.medium_url }}" target="_blank" rel="noopener canonical" class="blog-post__origin-link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75 1.19 2.58 1.19 5.75z"/>
+              </svg>
+              {{ i18n "blog_read_on_medium" }}
+            </a>
+          </div>
+        {{ end }}
+      </header>
+
+      <div class="blog-post__content">
+        {{ .Content | safeHTML }}
+      </div>
+
+      <footer class="blog-post__foot">
+        {{ if eq .Params.source "medium" }}
+          <a class="cyber-btn cyber-btn--primary" href="{{ .Params.medium_url }}" target="_blank" rel="noopener">
+            {{ i18n "blog_view_on_medium" }} →
+          </a>
+        {{ end }}
+
+        <nav class="blog-post__nav">
+          {{ with .PrevInSection }}
+            <a class="blog-post__nav-item blog-post__nav-item--prev" href="{{ .RelPermalink }}">
+              <span class="blog-post__nav-label">← {{ i18n "blog_prev" }}</span>
+              <span class="blog-post__nav-title">{{ .Title }}</span>
+            </a>
+          {{ end }}
+          {{ with .NextInSection }}
+            <a class="blog-post__nav-item blog-post__nav-item--next" href="{{ .RelPermalink }}">
+              <span class="blog-post__nav-label">{{ i18n "blog_next" }} →</span>
+              <span class="blog-post__nav-title">{{ .Title }}</span>
+            </a>
+          {{ end }}
+        </nav>
+      </footer>
+
+    </div>
+  </article>
+</div>
+{{ end }}

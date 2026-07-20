@@ -1,0 +1,42 @@
+name: Medium yazilarini senkronize et
+
+on:
+  # Her gun 06:00 UTC (Turkiye saatiyle 09:00)
+  schedule:
+    - cron: "0 6 * * *"
+  # Actions sekmesinden elle de calistirilabilir
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: medium-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Medium feed'ini cek
+        run: python scripts/sync_medium.py
+
+      - name: Degisiklik varsa commit et
+        run: |
+          if [ -z "$(git status --porcelain content/blog)" ]; then
+            echo "Yeni yazi yok, commit atlanacak."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/blog
+          git commit -m "Medium yazilari senkronize edildi"
+          git push

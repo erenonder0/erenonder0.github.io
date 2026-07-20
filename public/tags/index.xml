@@ -10,21 +10,91 @@
 		
 		
 		
-			<lastBuildDate>Fri, 14 Feb 2025 14:38:33 +0200</lastBuildDate>
+			<lastBuildDate>Wed, 22 Oct 2025 07:53:52 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Adritian</title>
-				<link>http://localhost:1313/tags/adritian/</link>
-				<pubDate>Fri, 14 Feb 2025 14:38:33 +0200</pubDate>
-				<guid>http://localhost:1313/tags/adritian/</guid>
+				<title>Cybersecurity</title>
+				<link>http://localhost:1313/tags/cybersecurity/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tags/cybersecurity/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Guide</title>
-				<link>http://localhost:1313/tags/guide/</link>
-				<pubDate>Fri, 14 Feb 2025 14:38:33 +0200</pubDate>
-				<guid>http://localhost:1313/tags/guide/</guid>
+				<title>Dll</title>
+				<link>http://localhost:1313/tags/dll/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tags/dll/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dll-Hi̇jacki̇ng</title>
+				<link>http://localhost:1313/tags/dll-hi%CC%87jacki%CC%87ng/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tags/dll-hi%CC%87jacki%CC%87ng/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dll-Injection</title>
+				<link>http://localhost:1313/tags/dll-injection/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tags/dll-injection/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mitre-Attack</title>
+				<link>http://localhost:1313/tags/mitre-attack/</link>
+				<pubDate>Wed, 22 Oct 2025 07:53:52 +0000</pubDate>
+				<guid>http://localhost:1313/tags/mitre-attack/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Apt</title>
+				<link>http://localhost:1313/tags/apt/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tags/apt/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Malware</title>
+				<link>http://localhost:1313/tags/malware/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tags/malware/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phishing</title>
+				<link>http://localhost:1313/tags/phishing/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tags/phishing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scam</title>
+				<link>http://localhost:1313/tags/scam/</link>
+				<pubDate>Thu, 09 Oct 2025 13:07:15 +0000</pubDate>
+				<guid>http://localhost:1313/tags/scam/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Artificial-Intelligence</title>
+				<link>http://localhost:1313/tags/artificial-intelligence/</link>
+				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
+				<guid>http://localhost:1313/tags/artificial-intelligence/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fake-Website</title>
+				<link>http://localhost:1313/tags/fake-website/</link>
+				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
+				<guid>http://localhost:1313/tags/fake-website/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Threat-Intelligence</title>
+				<link>http://localhost:1313/tags/threat-intelligence/</link>
+				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
+				<guid>http://localhost:1313/tags/threat-intelligence/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -91,17 +161,31 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Lorem-Ipsum</title>
-				<link>http://localhost:1313/tags/lorem-ipsum/</link>
-				<pubDate>Fri, 21 Jun 2024 14:38:33 +0200</pubDate>
-				<guid>http://localhost:1313/tags/lorem-ipsum/</guid>
+				<title>Arduino</title>
+				<link>http://localhost:1313/tags/arduino/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/arduino/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Sample</title>
-				<link>http://localhost:1313/tags/sample/</link>
-				<pubDate>Fri, 21 Jun 2024 14:38:33 +0200</pubDate>
-				<guid>http://localhost:1313/tags/sample/</guid>
+				<title>Arduino-Uno</title>
+				<link>http://localhost:1313/tags/arduino-uno/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/arduino-uno/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Robot-Yapımı</title>
+				<link>http://localhost:1313/tags/robot-yap%C4%B1m%C4%B1/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/robot-yap%C4%B1m%C4%B1/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Robots</title>
+				<link>http://localhost:1313/tags/robots/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/robots/</guid>
 				<description></description>
 			</item>
 	</channel>

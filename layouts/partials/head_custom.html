@@ -9,6 +9,13 @@
 />
 <meta name="theme-color" content="#080c14" />
 
+{{/* Medium'dan cekilen yazilarda asil kaynak Medium'u gosterir (yinelenen icerik SEO cezasini onler) */}}
+{{- with .Params.canonical_url }}
+<link rel="canonical" href="{{ . }}" />
+{{- else }}
+<link rel="canonical" href="{{ .Permalink }}" />
+{{- end }}
+
 {{/* Portfolio interaction script (the theme does not iterate params.plugins.js) */}}
 {{- $pjs := resources.Get "js/portfolio-animations.js" -}}
 {{- if $pjs }}
