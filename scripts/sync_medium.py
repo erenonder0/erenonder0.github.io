@@ -24,8 +24,9 @@ from email.utils import parsedate_to_datetime
 FEED_URL = "https://medium.com/feed/@erenonder0"
 OUT_DIR = os.path.join("content", "blog")
 
-# Yazilar hem Ingilizce hem Turkce site surumunde gorunsun diye iki dosya yazilir.
-LANG_SUFFIXES = ["", ".tr"]
+# Medium Turkce yaziliyor: ".tr.md" kaynagin kendisi, her senkronizasyonda tazelenir.
+# ".md" (Ingilizce) elle cevrilir; VAR OLAN bir ceviri ASLA uzerine yazilmaz.
+# Ceviri henuz yoksa Turkce icerikle olusturulur ve needs_translation ile isaretlenir.
 
 TR_MAP = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
 
@@ -110,7 +111,7 @@ def parse_items(xml):
     return posts
 
 
-def render(post):
+def render(post, needs_translation=False):
     fm = [
         "---",
         "title: %s" % yaml_str(post["title"]),
@@ -122,6 +123,8 @@ def render(post):
         "canonical_url: %s" % yaml_str(post["link"]),
         "source: medium",
     ]
+    if needs_translation:
+        fm.append("needs_translation: true")
     if post["tags"]:
         fm.append("tags:")
         fm.extend("  - %s" % yaml_str(t) for t in post["tags"])
@@ -146,24 +149,45 @@ def main():
 
     os.makedirs(OUT_DIR, exist_ok=True)
     written = 0
+    pending = []
 
     for post in posts:
-        content = render(post)
-        for suffix in LANG_SUFFIXES:
-            path = os.path.join(OUT_DIR, "%s%s.md" % (post["slug"], suffix))
-            old = None
-            if os.path.exists(path):
-                with open(path, encoding="utf-8") as fh:
-                    old = fh.read()
-            if old == content:
-                continue
-            with open(path, "w", encoding="utf-8", newline="\n") as fh:
-                fh.write(content)
-            written += 1
-            print("%s %s" % ("guncellendi:" if old else "eklendi:    ", path))
+        # 1) Turkce kaynak: her zaman Medium'daki halini yansitir.
+        tr_path = os.path.join(OUT_DIR, "%s.tr.md" % post["slug"])
+        written += write_if_changed(tr_path, render(post))
+
+        # 2) Ingilizce: yalnizca yoksa olusturulur. Var olan ceviriye dokunulmaz.
+        en_path = os.path.join(OUT_DIR, "%s.md" % post["slug"])
+        if os.path.exists(en_path):
+            with open(en_path, encoding="utf-8") as fh:
+                if "needs_translation: true" in fh.read():
+                    pending.append(en_path)
+            continue
+        write_if_changed(en_path, render(post, needs_translation=True))
+        written += 1
+        pending.append(en_path)
 
     print("\n%d yazi islendi, %d dosya yazildi." % (len(posts), written))
+    if pending:
+        print("\nIngilizce cevirisi bekleyen %d yazi:" % len(pending))
+        for path in pending:
+            print("  - %s" % path)
+        print("\nClaude Code'a 'bekleyen yazilari ingilizceye cevir' diyebilirsin.")
     return 0
+
+
+def write_if_changed(path, content):
+    """Icerik degistiyse dosyayi yazar; 1 (yazildi) veya 0 (degismedi) doner."""
+    old = None
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as fh:
+            old = fh.read()
+    if old == content:
+        return 0
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(content)
+    print("%s %s" % ("guncellendi:" if old else "eklendi:    ", path))
+    return 1
 
 
 if __name__ == "__main__":
