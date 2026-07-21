@@ -399,6 +399,361 @@
     });
   }
 
+  /* ----------------------------------------------------------------------
+     12. Terminal easter egg (>_ trigger button, ` shortcut)
+     ---------------------------------------------------------------------- */
+  function initTerminal() {
+    var dataEl = document.getElementById("terminal-data");
+    if (!dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var s = data.strings;
+    var promptStr = data.promptUser + "@" + data.promptHost + ":~$";
+
+    var trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "terminal-trigger";
+    trigger.setAttribute("aria-label", s.triggerLabel);
+    trigger.title = s.triggerLabel;
+    trigger.textContent = ">_";
+    document.body.appendChild(trigger);
+
+    var overlay = document.createElement("div");
+    overlay.className = "terminal-overlay";
+    overlay.setAttribute("aria-hidden", "true");
+
+    var win = document.createElement("div");
+    win.className = "terminal-window";
+    win.setAttribute("role", "dialog");
+    win.setAttribute("aria-modal", "true");
+    win.setAttribute("aria-label", s.triggerLabel);
+
+    var titlebar = document.createElement("div");
+    titlebar.className = "terminal-titlebar";
+    ["red", "yellow", "green"].forEach(function (c) {
+      var dot = document.createElement("span");
+      dot.className = "terminal-dot terminal-dot--" + c;
+      titlebar.appendChild(dot);
+    });
+    var titleLabel = document.createElement("span");
+    titleLabel.className = "terminal-titlebar__label";
+    titleLabel.textContent = data.promptUser + "@" + data.promptHost + ": ~";
+    titlebar.appendChild(titleLabel);
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "terminal-close";
+    closeBtn.setAttribute("aria-label", s.closeLabel);
+    closeBtn.textContent = "×";
+    titlebar.appendChild(closeBtn);
+
+    var output = document.createElement("div");
+    output.className = "terminal-output";
+
+    var inputRow = document.createElement("div");
+    inputRow.className = "terminal-input-row";
+    var promptSpan = document.createElement("span");
+    promptSpan.className = "terminal-prompt";
+    promptSpan.textContent = promptStr;
+    var input = document.createElement("input");
+    input.type = "text";
+    input.className = "terminal-input";
+    input.autocomplete = "off";
+    input.setAttribute("autocapitalize", "off");
+    input.setAttribute("spellcheck", "false");
+    input.placeholder = s.placeholder;
+    inputRow.appendChild(promptSpan);
+    inputRow.appendChild(input);
+
+    /* Snake game view — swapped in over output+input while playing */
+    var snakeCols = 18, snakeRows = 14, snakeCell = 16;
+    var snakeWrap = document.createElement("div");
+    snakeWrap.className = "terminal-snake";
+    var snakeScoreEl = document.createElement("div");
+    snakeScoreEl.className = "terminal-snake__score";
+    var snakeCanvas = document.createElement("canvas");
+    snakeCanvas.className = "terminal-snake__canvas";
+    snakeCanvas.width = snakeCols * snakeCell;
+    snakeCanvas.height = snakeRows * snakeCell;
+    var snakeHint = document.createElement("div");
+    snakeHint.className = "terminal-snake__hint";
+    snakeHint.textContent = s.snakeHint;
+    snakeWrap.appendChild(snakeScoreEl);
+    snakeWrap.appendChild(snakeCanvas);
+    snakeWrap.appendChild(snakeHint);
+    var snakeCtx = snakeCanvas.getContext("2d");
+
+    win.appendChild(titlebar);
+    win.appendChild(output);
+    win.appendChild(inputRow);
+    win.appendChild(snakeWrap);
+    overlay.appendChild(win);
+    document.body.appendChild(overlay);
+
+    function printLine(text, cls) {
+      var line = document.createElement("div");
+      line.className = "terminal-line" + (cls ? " " + cls : "");
+      line.textContent = text;
+      output.appendChild(line);
+    }
+    function printLines(lines, cls) {
+      (lines || []).forEach(function (l) { printLine(l, cls); });
+    }
+    function printLinkLine(label, href) {
+      var line = document.createElement("div");
+      line.className = "terminal-line terminal-line--link";
+      var a = document.createElement("a");
+      a.href = href;
+      if (href.indexOf("mailto:") !== 0) {
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
+      a.textContent = label;
+      line.appendChild(a);
+      output.appendChild(line);
+    }
+
+    var history = [];
+    var historyIndex = -1;
+    var welcomeShown = false;
+
+    /* ---- Snake game state ---- */
+    var snakeActive = false;
+    var snakeInterval = null;
+    var snakeSpeedMs = 130;
+    var snakeBody, snakeDir, snakeNextDir, snakeFood, snakeScore, snakeBest;
+
+    function snakeLoadBest() {
+      try { return parseInt(localStorage.getItem("terminal_snake_best"), 10) || 0; }
+      catch (e) { return 0; }
+    }
+    function snakeSaveBest(v) {
+      try { localStorage.setItem("terminal_snake_best", String(v)); } catch (e) { /* storage unavailable */ }
+    }
+    function snakeUpdateScoreLine() {
+      snakeScoreEl.textContent =
+        s.snakeScoreLabel + ": " + snakeScore + "    " +
+        s.snakeBestLabel + ": " + Math.max(snakeScore, snakeBest);
+    }
+    function snakeRandomFood() {
+      var cell;
+      do {
+        cell = { x: Math.floor(Math.random() * snakeCols), y: Math.floor(Math.random() * snakeRows) };
+      } while (snakeBody.some(function (seg) { return seg.x === cell.x && seg.y === cell.y; }));
+      return cell;
+    }
+    function setSnakeDirection(dir) {
+      var opposite = { up: "down", down: "up", left: "right", right: "left" };
+      if (opposite[dir] === snakeDir) return; /* no instant 180 turn */
+      snakeNextDir = dir;
+    }
+    function snakeDraw() {
+      var w = snakeCanvas.width, h = snakeCanvas.height;
+      snakeCtx.fillStyle = "#0d1117";
+      snakeCtx.fillRect(0, 0, w, h);
+      snakeCtx.strokeStyle = "rgba(0,212,255,0.07)";
+      snakeCtx.lineWidth = 1;
+      for (var gx = 0; gx <= snakeCols; gx++) {
+        snakeCtx.beginPath(); snakeCtx.moveTo(gx * snakeCell + .5, 0); snakeCtx.lineTo(gx * snakeCell + .5, h); snakeCtx.stroke();
+      }
+      for (var gy = 0; gy <= snakeRows; gy++) {
+        snakeCtx.beginPath(); snakeCtx.moveTo(0, gy * snakeCell + .5); snakeCtx.lineTo(w, gy * snakeCell + .5); snakeCtx.stroke();
+      }
+      snakeCtx.fillStyle = "#00d4ff";
+      snakeCtx.shadowColor = "#00d4ff"; snakeCtx.shadowBlur = 8;
+      snakeCtx.fillRect(snakeFood.x * snakeCell + 2, snakeFood.y * snakeCell + 2, snakeCell - 4, snakeCell - 4);
+      snakeCtx.shadowBlur = 0;
+      snakeBody.forEach(function (seg, i) {
+        snakeCtx.fillStyle = i === 0 ? "#39ff14" : "rgba(57,255,20,0.75)";
+        snakeCtx.fillRect(seg.x * snakeCell + 1, seg.y * snakeCell + 1, snakeCell - 2, snakeCell - 2);
+      });
+    }
+    function snakeTick() {
+      snakeDir = snakeNextDir;
+      var head = snakeBody[0];
+      var next = { x: head.x, y: head.y };
+      if (snakeDir === "up") next.y--;
+      else if (snakeDir === "down") next.y++;
+      else if (snakeDir === "left") next.x--;
+      else next.x++;
+
+      var hitWall = next.x < 0 || next.x >= snakeCols || next.y < 0 || next.y >= snakeRows;
+      /* exclude the tail cell — it moves away this tick unless food is eaten */
+      var body = snakeBody.slice(0, -1);
+      var hitSelf = body.some(function (seg) { return seg.x === next.x && seg.y === next.y; });
+      if (hitWall || hitSelf) { stopSnake(false); return; }
+
+      snakeBody.unshift(next);
+      if (next.x === snakeFood.x && next.y === snakeFood.y) {
+        snakeScore++;
+        snakeFood = snakeRandomFood();
+      } else {
+        snakeBody.pop();
+      }
+      snakeDraw();
+      snakeUpdateScoreLine();
+    }
+    function startSnake() {
+      snakeActive = true;
+      win.classList.add("is-snake-mode");
+      input.blur();
+      snakeBody = [{ x: 8, y: 7 }, { x: 7, y: 7 }, { x: 6, y: 7 }];
+      snakeDir = "right"; snakeNextDir = "right";
+      snakeScore = 0; snakeBest = snakeLoadBest();
+      snakeFood = snakeRandomFood();
+      snakeUpdateScoreLine();
+      snakeDraw();
+      if (snakeInterval) clearInterval(snakeInterval);
+      snakeInterval = setInterval(snakeTick, snakeSpeedMs);
+    }
+    function stopSnake(manual) {
+      if (snakeInterval) { clearInterval(snakeInterval); snakeInterval = null; }
+      snakeActive = false;
+      win.classList.remove("is-snake-mode");
+      if (snakeScore > snakeBest) { snakeBest = snakeScore; snakeSaveBest(snakeBest); }
+      if (manual) {
+        printLine(s.snakeQuit, "terminal-line--muted");
+      } else {
+        printLine(
+          s.snakeGameOverPrefix + " " + s.snakeScoreLabel + ": " + snakeScore +
+          "    " + s.snakeBestLabel + ": " + snakeBest,
+          "terminal-line--error"
+        );
+      }
+      output.scrollTop = output.scrollHeight;
+      setTimeout(function () { input.focus(); }, 30);
+    }
+
+    function scrollToSection(id) {
+      var target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+      } else {
+        window.location.href = data.homeUrl + "#" + id;
+      }
+    }
+
+    var commands = {
+      help: function () { printLines(s.help); },
+      whoami: function () {
+        printLine(data.name, "terminal-line--accent");
+        printLine(data.role);
+        printLine(data.bio, "terminal-line--muted");
+        scrollToSection("showcase");
+      },
+      skills: function () {
+        printLine(s.skillsRedirect, "terminal-line--accent");
+        scrollToSection("skills");
+      },
+      experience: function () {
+        printLine(s.experienceRedirect, "terminal-line--accent");
+        scrollToSection("experience-list-shortcode");
+      },
+      certifications: function () {
+        printLine(s.certificationsRedirect, "terminal-line--accent");
+        scrollToSection("certifications");
+      },
+      contact: function () {
+        printLinkLine(data.email, "mailto:" + data.email);
+        Object.keys(data.social).forEach(function (key) {
+          printLinkLine(data.social[key], data.social[key]);
+        });
+      },
+      cv: function () { printLinkLine(s.cvLabel, data.cvUrl); },
+      clear: function () { output.textContent = ""; },
+      exit: function () { closeTerminal(true); },
+      snake: function () { startSnake(); }
+    };
+    commands.certs = commands.certifications;
+    commands["sudo hire-me"] = function () {
+      printLines(s.hireMe, "terminal-line--accent");
+      printLinkLine(data.email, "mailto:" + data.email);
+    };
+
+    function printPromptEcho(cmd) {
+      printLine(promptStr + " " + cmd, "terminal-line--echo");
+    }
+
+    function runCommand(raw) {
+      var cmd = raw.trim();
+      if (!cmd) return;
+      printPromptEcho(cmd);
+      history.push(cmd);
+      historyIndex = history.length;
+      var key = cmd.toLowerCase();
+      var handler = commands[key];
+      if (handler) {
+        handler();
+      } else {
+        printLine(s.notFound.replace("%s", cmd), "terminal-line--error");
+      }
+      output.scrollTop = output.scrollHeight;
+    }
+
+    function openTerminal() {
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      if (!welcomeShown) { printLines(s.welcome, "terminal-line--muted"); printLine(""); welcomeShown = true; }
+      setTimeout(function () { input.focus(); }, 60);
+    }
+    function closeTerminal(returnFocus) {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      if (returnFocus) trigger.focus();
+    }
+
+    trigger.addEventListener("click", function () {
+      if (overlay.classList.contains("is-open")) closeTerminal(true);
+      else openTerminal();
+    });
+    closeBtn.addEventListener("click", function () { closeTerminal(true); });
+    /* chat-widget style: click anywhere outside the popup closes it (no focus steal) */
+    document.addEventListener("click", function (ev) {
+      if (!overlay.classList.contains("is-open")) return;
+      if (overlay.contains(ev.target) || trigger.contains(ev.target)) return;
+      closeTerminal();
+    });
+
+    input.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter") {
+        runCommand(input.value);
+        input.value = "";
+      } else if (ev.key === "Escape") {
+        closeTerminal(true);
+      } else if (ev.key === "ArrowUp" && history.length) {
+        historyIndex = Math.max(0, historyIndex - 1);
+        input.value = history[historyIndex] || "";
+        ev.preventDefault();
+      } else if (ev.key === "ArrowDown" && history.length) {
+        historyIndex = Math.min(history.length, historyIndex + 1);
+        input.value = history[historyIndex] || "";
+        ev.preventDefault();
+      }
+    });
+
+    var snakeKeyMap = {
+      ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right",
+      w: "up", s: "down", a: "left", d: "right",
+      W: "up", S: "down", A: "left", D: "right"
+    };
+    document.addEventListener("keydown", function (ev) {
+      if (snakeActive) {
+        if (ev.key === "Escape") { stopSnake(true); return; }
+        var dir = snakeKeyMap[ev.key];
+        if (dir) { ev.preventDefault(); setSnakeDirection(dir); }
+        return;
+      }
+      var isOpen = overlay.classList.contains("is-open");
+      if (ev.key === "`" && !isOpen) {
+        var tag = (ev.target && ev.target.tagName) || "";
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+        ev.preventDefault();
+        openTerminal();
+      } else if (ev.key === "Escape" && isOpen) {
+        closeTerminal(true);
+      }
+    });
+  }
+
   /* ---------------------------------------------------------------------- */
   function boot() {
     initReveal();
@@ -413,6 +768,7 @@
     initParticles();
     initScrollProgress();
     initTilt();
+    initTerminal();
   }
 
   if (document.readyState === "loading") {

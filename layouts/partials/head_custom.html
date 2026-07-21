@@ -64,6 +64,53 @@
 <script type="application/ld+json">{{ $post | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end }}
 
+{{/* --- Terminal easter egg data payload (site-wide; consumed by portfolio-animations.js) --- */}}
+{{- $isTr := eq .Lang "tr" }}
+{{- $termRole := cond $isTr "Siber Güvenlik Uzman Yardımcısı" "Junior Cyber Security Specialist" }}
+{{- $skillCats := slice }}
+{{- range .Site.Data.skills.categories }}
+  {{- $catName := cond $isTr .name_tr .name }}
+  {{- $items := slice }}
+  {{- range .skills }}{{ $items = $items | append (cond $isTr .name_tr .name) }}{{ end }}
+  {{- $skillCats = $skillCats | append (dict "category" $catName "items" $items) }}
+{{- end }}
+{{- $certList := slice }}
+{{- range .Site.Data.certifications.certifications }}
+  {{- $certDate := cond $isTr .date_tr .date }}
+  {{- $certList = $certList | append (dict "name" .name "issuer" .issuer "date" $certDate) }}
+{{- end }}
+{{- $termData := dict
+  "promptUser" "guest" "promptHost" "erenonder0"
+  "name" "Eren ONDER" "role" $termRole
+  "bio" (i18n "hero_bio")
+  "email" "eerenonder0@gmail.com"
+  "cvUrl" "/img/general/ErenOnderCv.pdf"
+  "homeUrl" .Site.Home.RelPermalink
+  "social" (dict
+    "linkedin" "https://www.linkedin.com/in/erenonder0/"
+    "github" "https://github.com/erenonder0"
+    "youtube" "https://www.youtube.com/@erenonder0")
+  "skills" $skillCats
+  "certifications" $certList
+  "strings" (dict
+    "triggerLabel" (i18n "terminal_trigger_label")
+    "closeLabel" (i18n "terminal_close_label")
+    "placeholder" (i18n "terminal_placeholder")
+    "welcome" (split (i18n "terminal_welcome") "\n")
+    "help" (split (i18n "terminal_help") "\n")
+    "notFound" (i18n "terminal_not_found")
+    "hireMe" (split (i18n "terminal_hire_me") "\n")
+    "cvLabel" (i18n "terminal_cv_label")
+    "skillsRedirect" (i18n "terminal_skills_redirect")
+    "experienceRedirect" (i18n "terminal_experience_redirect")
+    "certificationsRedirect" (i18n "terminal_certifications_redirect")
+    "snakeHint" (i18n "terminal_snake_hint")
+    "snakeScoreLabel" (i18n "terminal_snake_score_label")
+    "snakeBestLabel" (i18n "terminal_snake_best_label")
+    "snakeGameOverPrefix" (i18n "terminal_snake_gameover_prefix")
+    "snakeQuit" (i18n "terminal_snake_quit")) }}
+<script type="application/json" id="terminal-data">{{ $termData | jsonify | safeJS }}</script>
+
 {{/* Medium'dan cekilen yazilarda asil kaynak Medium'u gosterir (yinelenen icerik SEO cezasini onler) */}}
 {{- with .Params.canonical_url }}
 <link rel="canonical" href="{{ . }}" />

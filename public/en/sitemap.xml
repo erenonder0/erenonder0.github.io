@@ -87,26 +87,26 @@
     <lastmod>2025-10-22T07:53:52+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/mitre-attack/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/mitre-attack/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/mitre-attack/"
+                hreflang="en"
+                href="http://localhost:1313/tags/mitre-attack/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-22T07:53:52+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/"
+                hreflang="en"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/apt/</loc>
@@ -139,13 +139,13 @@
     <lastmod>2025-10-09T13:07:15+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/malware/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/malware/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/malware/"
+                hreflang="en"
+                href="http://localhost:1313/tags/malware/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/phishing/</loc>
@@ -230,26 +230,26 @@
     <lastmod>2025-06-02T10:55:28+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/artificial-intelligence/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/artificial-intelligence/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/artificial-intelligence/"
+                hreflang="en"
+                href="http://localhost:1313/tags/artificial-intelligence/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/fake-website/</loc>
     <lastmod>2025-06-02T10:55:28+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/fake-website/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/fake-website/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/fake-website/"
+                hreflang="en"
+                href="http://localhost:1313/tags/fake-website/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</loc>
@@ -269,13 +269,13 @@
     <lastmod>2025-06-02T10:55:28+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/threat-intelligence/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/threat-intelligence/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/threat-intelligence/"
+                hreflang="en"
+                href="http://localhost:1313/tags/threat-intelligence/"
                 />
   </url><url>
     <loc>http://localhost:1313/activity/</loc>
@@ -359,26 +359,26 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/aes-encryption/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/aes-encryption/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/aes-encryption/"
+                hreflang="en"
+                href="http://localhost:1313/tags/aes-encryption/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/c%23/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/c%23/"
+                hreflang="en"
+                href="http://localhost:1313/tags/c%23/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/c%23/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/c%23/"
                 />
   </url><url>
     <loc>http://localhost:1313/education/</loc>
@@ -437,13 +437,13 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/metamask/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/metamask/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/metamask/"
+                hreflang="en"
+                href="http://localhost:1313/tags/metamask/"
                 />
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
@@ -489,13 +489,13 @@
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/tags/solidity/"
+                hreflang="tr"
+                href="http://localhost:1313/tr/tags/solidity/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
-                href="http://localhost:1313/tr/tags/solidity/"
+                hreflang="en"
+                href="http://localhost:1313/tags/solidity/"
                 />
   </url><url>
     <loc>http://localhost:1313/tags/unicode-obfuscation/</loc>
