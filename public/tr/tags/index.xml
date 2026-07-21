@@ -77,6 +77,83 @@
 				<description></description>
 			</item>
 			<item>
+				<title>EDR/XDR</title>
+				<link>http://localhost:1313/tr/tags/edr/xdr/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/edr/xdr/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SIEM</title>
+				<link>http://localhost:1313/tr/tags/siem/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/siem/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SOC</title>
+				<link>http://localhost:1313/tr/tags/soc/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/soc/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Threat Detection</title>
+				<link>http://localhost:1313/tr/tags/threat-detection/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/threat-detection/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cyber Security</title>
+				<link>http://localhost:1313/tr/tags/cyber-security/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/cyber-security/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Network Security</title>
+				<link>http://localhost:1313/tr/tags/network-security/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/network-security/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Threat Analysis</title>
+				<link>http://localhost:1313/tr/tags/threat-analysis/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/threat-analysis/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vulnerability Assessment</title>
+				<link>http://localhost:1313/tr/tags/vulnerability-assessment/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/vulnerability-assessment/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Incident Response</title>
+				<link>http://localhost:1313/tr/tags/incident-response/</link>
+				<pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/incident-response/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>PoC</title>
+				<link>http://localhost:1313/tr/tags/poc/</link>
+				<pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/poc/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Security Architecture</title>
+				<link>http://localhost:1313/tr/tags/security-architecture/</link>
+				<pubDate>Tue, 01 Jul 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/tags/security-architecture/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Artificial-Intelligence</title>
 				<link>http://localhost:1313/tr/tags/artificial-intelligence/</link>
 				<pubDate>Mon, 02 Jun 2025 10:55:28 +0000</pubDate>
@@ -158,34 +235,6 @@
 				<link>http://localhost:1313/tr/tags/web3.js/</link>
 				<pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
 				<guid>http://localhost:1313/tr/tags/web3.js/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Arduino</title>
-				<link>http://localhost:1313/tr/tags/arduino/</link>
-				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
-				<guid>http://localhost:1313/tr/tags/arduino/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Arduino-Uno</title>
-				<link>http://localhost:1313/tr/tags/arduino-uno/</link>
-				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
-				<guid>http://localhost:1313/tr/tags/arduino-uno/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Robot-Yapımı</title>
-				<link>http://localhost:1313/tr/tags/robot-yap%C4%B1m%C4%B1/</link>
-				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
-				<guid>http://localhost:1313/tr/tags/robot-yap%C4%B1m%C4%B1/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Robots</title>
-				<link>http://localhost:1313/tr/tags/robots/</link>
-				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
-				<guid>http://localhost:1313/tr/tags/robots/</guid>
 				<description></description>
 			</item>
 	</channel>

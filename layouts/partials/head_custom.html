@@ -9,6 +9,12 @@
 />
 <meta name="theme-color" content="#080c14" />
 
+{{/* --- Favicons (custom 'E' monogram; theme head.html emits none). ?v bumps on redesign to defeat cache --- */}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}?v=2" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}?v=2" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}?v=2" />
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}?v=2" />
+
 {{/* --- Twitter/X share cards (the theme emits OpenGraph but no twitter:* tags) --- */}}
 {{- $shareTitle := cond .IsHome (.Site.Params.title | default .Site.Title) .Title -}}
 {{- $shareDesc := .Params.summary | default .Description | default (i18n "head_description") -}}

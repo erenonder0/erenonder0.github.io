@@ -210,13 +210,6 @@
 				<description>&lt;p&gt;Secured 2nd place in the 2nd ABMCTF Capture The Flag competition by solving challenges across various cybersecurity domains.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!</title>
-				<link>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</link>
-				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
-				<guid>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</guid>
-				<description>Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform.</description>
-			</item>
-			<item>
 				<title>Footer</title>
 				<link>http://localhost:1313/footer/footer/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
