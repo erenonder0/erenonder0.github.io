@@ -2,7 +2,7 @@
 title: "LET'S BUILD A BLUETOOTH-CONTROLLED ROBOT!"
 slug: "building-a-bluetooth-controlled-robot"
 date: 2018-08-05T20:23:21+00:00
-draft: true
+draft: false
 type: "blog"
 summary: "Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform."
 medium_url: "https://medium.com/@erenonder0/ardui%CC%87no-nedi%CC%87r-ba4e805e9c28"

@@ -10,6 +10,8 @@
 		
 		
 		
+			<lastBuildDate>Wed, 22 Oct 2025 07:53:52 +0000</lastBuildDate>
+		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>DLL Hijacking: How Dangerous Can a Single DLL Be?</title>
@@ -206,6 +208,13 @@
 				<pubDate>Sun, 25 Jun 2023 00:00:00 +0100</pubDate>
 				<guid>http://localhost:1313/activity/experience-12/</guid>
 				<description>&lt;p&gt;Secured 2nd place in the 2nd ABMCTF Capture The Flag competition by solving challenges across various cybersecurity domains.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!</title>
+				<link>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</guid>
+				<description>Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform.</description>
 			</item>
 			<item>
 				<title>Footer</title>

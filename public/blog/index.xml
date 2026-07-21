@@ -34,5 +34,12 @@
 				<guid>http://localhost:1313/blog/next-gen-cyber-traps-fake-ai-websites/</guid>
 				<description>AI technologies draw more interest every day. Some use them for homework, some for recipes, some to make money at work. As this interest grows, so does the number of people weaponizing it against others.</description>
 			</item>
+			<item>
+				<title>LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!</title>
+				<link>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/blog/building-a-bluetooth-controlled-robot/</guid>
+				<description>Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform.</description>
+			</item>
 	</channel>
 </rss>

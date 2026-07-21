@@ -111,12 +111,22 @@ def parse_items(xml):
     return posts
 
 
-def render(post, needs_translation=False):
+def read_current_draft(path):
+    """Dosyada elle ayarlanmis draft: degerini okur (senkronizasyon bunu asla ezmemeli)."""
+    if not os.path.exists(path):
+        return False
+    with open(path, encoding="utf-8") as fh:
+        content = fh.read()
+    m = re.search(r"^draft:\s*(true|false)\s*$", content, re.M)
+    return m.group(1) == "true" if m else False
+
+
+def render(post, needs_translation=False, draft=False):
     fm = [
         "---",
         "title: %s" % yaml_str(post["title"]),
         "date: %s" % post["date"].isoformat(),
-        "draft: false",
+        "draft: %s" % ("true" if draft else "false"),
         'type: "blog"',
         "summary: %s" % yaml_str(post["excerpt"]),
         "medium_url: %s" % yaml_str(post["link"]),
@@ -152,9 +162,11 @@ def main():
     pending = []
 
     for post in posts:
-        # 1) Turkce kaynak: her zaman Medium'daki halini yansitir.
+        # 1) Turkce kaynak: icerik Medium'dan tazelenir, ama elle ayarlanmis
+        #    draft: true asla ezilmez (bkz. read_current_draft).
         tr_path = os.path.join(OUT_DIR, "%s.tr.md" % post["slug"])
-        written += write_if_changed(tr_path, render(post))
+        tr_draft = read_current_draft(tr_path)
+        written += write_if_changed(tr_path, render(post, draft=tr_draft))
 
         # 2) Ingilizce: yalnizca yoksa olusturulur. Var olan ceviriye dokunulmaz.
         en_path = os.path.join(OUT_DIR, "%s.md" % post["slug"])

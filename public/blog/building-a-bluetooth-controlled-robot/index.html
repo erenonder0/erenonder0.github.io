@@ -24,7 +24,7 @@
 
 <title>
   
-    Educations |
+    LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT! |
   
   Eren ONDER | Cyber Security &amp; Digital Forensics
 </title>
@@ -58,13 +58,20 @@
   
 <script src="http://localhost:1313/js/library/lozad.min.js"></script>
 
-<meta property="og:url" content="http://localhost:1313/education/">
+<meta property="og:url" content="http://localhost:1313/blog/building-a-bluetooth-controlled-robot/">
 	<meta property="og:site_name" content="Eren ONDER | Cyber Security & Digital Forensics Portfolio">
-	<meta property="og:title" content="Educations">
-	<meta property="og:description" content="Discover my projects and technical work in the field of cyber security.">
+	<meta property="og:title" content="LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!">
+	<meta property="og:description" content="Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform.">
 	<meta property="og:locale" content="en">
-	<meta property="og:type" content="website">
-		<meta property="og:image" content="http://localhost:1313/img/og-img.png">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2018-08-05T20:23:21+00:00">
+		<meta property="article:modified_time" content="2018-08-05T20:23:21+00:00">
+		<meta property="article:tag" content="Arduino">
+		<meta property="article:tag" content="Arduino-Uno">
+		<meta property="article:tag" content="Robotics">
+		<meta property="article:tag" content="Robots">
+		<meta property="og:image" content="https://cdn-images-1.medium.com/max/418/1*aRZvTb1VlnMaZiU6vDAA2A.png">
 
 
     
@@ -79,30 +86,53 @@
 <meta name="theme-color" content="#080c14" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Educations" />
-<meta name="twitter:description" content="Discover my projects and technical work in the field of cyber security." />
-<meta name="twitter:image" content="http://localhost:1313/img/og-img.png" />
-<meta name="twitter:image:alt" content="Educations" />
+<meta name="twitter:title" content="LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!" />
+<meta name="twitter:description" content="Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform." />
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/418/1*aRZvTb1VlnMaZiU6vDAA2A.png" />
+<meta name="twitter:image:alt" content="LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!" />
 
 
-<link rel="alternate" hreflang="en" href="http://localhost:1313/education/" />
-<link rel="alternate" hreflang="tr" href="http://localhost:1313/tr/education/" /><link rel="alternate" hreflang="x-default" href="http://localhost:1313/" />
+<link rel="alternate" hreflang="tr" href="http://localhost:1313/tr/blog/bluetooth-kontrollu-robot-yapiyoruz/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/building-a-bluetooth-controlled-robot/" /><link rel="alternate" hreflang="x-default" href="http://localhost:1313/" />
 <meta property="og:locale:alternate" content="tr" />
-<meta property="og:image:alt" content="Educations" />
+<meta property="og:image:alt" content="LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!" />
 
 
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "author": {
+    "@type": "Person",
+    "name": "Eren ONDER",
+    "url": "http://localhost:1313/"
+  },
+  "dateModified": "2018-08-05T20:23:21Z",
+  "datePublished": "2018-08-05T20:23:21Z",
+  "description": "Today we are building a Bluetooth-controlled robot with Arduino. In this first part we cover the components you need, what each one does, and how to assemble the main platform.",
+  "headline": "LET'S BUILD A BLUETOOTH-CONTROLLED ROBOT!",
+  "image": "https://cdn-images-1.medium.com/max/418/1*aRZvTb1VlnMaZiU6vDAA2A.png",
+  "inLanguage": "en",
+  "keywords": "arduino, arduino-uno, robotics, robots",
+  "mainEntityOfPage": "http://localhost:1313/blog/building-a-bluetooth-controlled-robot/",
+  "publisher": {
+    "@type": "Person",
+    "name": "Eren ONDER",
+    "url": "http://localhost:1313/"
+  },
+  "url": "http://localhost:1313/blog/building-a-bluetooth-controlled-robot/"
+}</script>
 
 
 <script type="application/json" id="terminal-data">{"bio":"Junior Cyber Security Specialist. CTF competitor, organizer, and researcher building a career at the intersection of offensive security and digital forensics.","certifications":[{"date":"February 2026","issuer":"The SecOps Group","name":"Certified Social Engineering Defense Practitioner (CSEDP)"},{"date":"July 2025","issuer":"The SecOps Group","name":"Certified Network Security Practitioner (CNSP)"},{"date":"July 2025","issuer":"TryHackMe","name":"Pre Security"},{"date":"January 2024","issuer":"Cisco Networking Academy","name":"CCNA: Introduction to Networks"},{"date":"November 2023","issuer":"Cisco Networking Academy","name":"CCNA: Introduction to Cybersecurity"},{"date":"November 2023","issuer":"Cisco NetAcad","name":"NDG Linux Unhatched"}],"cvUrl":"/img/general/ErenOnderCv.pdf","email":"eerenonder0@gmail.com","homeUrl":"/","name":"Eren ONDER","promptHost":"erenonder0","promptUser":"guest","role":"Junior Cyber Security Specialist","skills":[{"category":"Security \u0026 Forensics","items":["Splunk","Qradar","Penetration Testing","Digital Forensics","Network Analysis (Wireshark)","Reverse Engineering","Email Analysis"]},{"category":"Programming","items":["Python","C#","C++","Bash / Linux","JavaScript"]},{"category":"Soft Skills","items":["Active Learning","Creative Thinking","Communication","Leadership"]}],"social":{"github":"https://github.com/erenonder0","linkedin":"https://www.linkedin.com/in/erenonder0/","youtube":"https://www.youtube.com/@erenonder0"},"strings":{"certificationsRedirect":"Opening the Certifications section...","closeLabel":"Close terminal","cvLabel":"Download CV (PDF)","experienceRedirect":"Opening the Experience section...","help":["Available commands:","  whoami          who am I?","  skills          technical skills","  experience      work experience","  certifications  certifications (alias: certs)","  contact         get in touch","  cv              download my CV","  snake           play a game","  sudo hire-me    ;)","  clear           clear the screen","  exit            close this terminal"],"hireMe":["[sudo] password for recruiter: ********","Access granted. Initiating hiring sequence..."],"notFound":"command not found: %s (type 'help' for a list of commands)","placeholder":"Type 'help' to get started...","skillsRedirect":"Opening the Skills section...","snakeBestLabel":"Best","snakeGameOverPrefix":"Game over!","snakeHint":"Arrow keys or WASD to move. Esc to quit.","snakeQuit":"Snake stopped.","snakeScoreLabel":"Score","triggerLabel":"Open terminal","welcome":["Welcome to erenonder0's terminal.","Type 'help' to see available commands."]}}</script>
 
 
-<link rel="canonical" href="http://localhost:1313/education/" />
+<link rel="canonical" href="https://medium.com/@erenonder0/ardui%CC%87no-nedi%CC%87r-ba4e805e9c28" />
 
 <script defer src="/js/portfolio-animations.js"></script>
 
 </head>
 
-<body class="">
+<body class=" page-bluetooth-kontrollu-robot-yapiyoruz">
     
 
 
@@ -209,7 +239,7 @@
     
     <li class="dropdown-item choice">
       <a class="dropdown-item translation btn-link d-flex align-items-center show" title="Türkçe"
-        href="http://localhost:1313/tr/education/">Türkçe</a>
+        href="http://localhost:1313/tr/blog/bluetooth-kontrollu-robot-yapiyoruz/">Türkçe</a>
     </li>
     
   </ul>
@@ -224,55 +254,71 @@
 </header>
   <section id="breadcrumb-bar" class="breadcrumb-bar container">
     <ul class="breadcrumbs d-print-none">
-        <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/education">Educations</a></span></li></ul>
+        <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item not-current-page"><span><a href="/blog/building-a-bluetooth-controlled-robot">Building a bluetooth controlled robot</a></span></li></ul>
 </section>
 
 
     <main class="container">
         
-<div class="list flex-grow-1"> 
-  <section id="main-content" class="section list-section">
-    <h1>Educations</h1>
-    
-      
-        <div class="posts-list">
-          
-            <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
-              <article class="post summary col-12">
-  <header>
-    <h2 class="post-title"><a href="/education/firat-university/">University of Firat</a></h2>
-    <div class="post-meta">
-      <div>
-        <div class="post-meta-info">
-          <span class="published-label">Published on </span>
-          <time class="date" datetime="2024-08-25">Sun Aug 25, 2024</time> ·
-          <span class="wordcount">0 Words</span>
-        </div>
-         
-      </div>
-    </div>
-  </header>
-  <div class="post-summary post-content">
-  
-  </div>
+<div id="main-content" class="flex-grow-1">
+  <article class="cyber-section blog-post">
+    <div class="container">
 
-  <footer class="">
-    <div class="row">
-      <div class="col-12 col-lg-4">
-        <a class="btn btn-outline-secondary btn-sm" href="/education/firat-university/"
-          >Read more&nbsp;&raquo;</a
-        >
-      </div>
-    </div>
-  </footer>
-</article>
+      <a class="blog-post__back" href="/blog">← All posts</a>
 
-            </div>
-          
+      <header class="blog-post__head">
+        <div class="blog-post__meta">
+          <time datetime="2018-08-05">05 August 2018</time>
+          <span class="blog-card__dot">•</span>
+          <span>4 min read</span>
         </div>
-      
-    
-  </section>
+
+        <h1 class="blog-post__title">LET&#39;S BUILD A BLUETOOTH-CONTROLLED ROBOT!</h1>
+
+        
+          <div class="blog-post__tags">
+            <span class="blog-tag">arduino</span><span class="blog-tag">arduino-uno</span><span class="blog-tag">robotics</span><span class="blog-tag">robots</span>
+          </div>
+        
+
+        
+          <div class="blog-post__origin">
+            <span class="blog-post__origin-text">Originally published on</span>
+            <a href="https://medium.com/@erenonder0/ardui%CC%87no-nedi%CC%87r-ba4e805e9c28" target="_blank" rel="noopener canonical" class="blog-post__origin-link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75 1.19 2.58 1.19 5.75z"/>
+              </svg>
+              Medium
+            </a>
+          </div>
+        
+      </header>
+
+      <div class="blog-post__content">
+        <p>Hello!</p><p>Today we are building a Bluetooth-controlled robot project with Arduino. I will present this project in four parts.</p><ol><li><strong>Part One</strong>: We will go over the components you need and what each one does, and we will assemble the main platform as the first stage of our robot.</li><li><strong>Part Two: </strong>We will add the <strong>Arduino Uno</strong> board that acts as the robot's brain, the <strong>L298N motor driver</strong> and the <strong>HC-06 Bluetooth</strong> module, then connect the wiring and move on to completing the robot.</li><li><strong>Part Three: </strong>We will finish the robot by writing the <strong>code</strong> onto the <strong>Arduino Uno</strong>.</li><li><strong>Part Four:</strong> We will <strong>modify</strong> our robot and add various extra features.</li></ol><p><strong>Required components and prices:</strong></p><p>I recommend buying these from <a href="https://www.robotistan.com/"><strong>ROBOTISTAN</strong></a>.</p><p><strong>Arduino Uno:</strong> 25 TL</p><p><a href="https://www.robotistan.com/4wd-cok-amacli-mobil-robot-platformu-seffaf"><strong>Multi-Purpose Mobile Robot Platform Kit:</strong></a> 91 TL</p><p><strong>L298N Motor Driver Board:</strong> 18 TL</p><p><strong>HC-06 Arduino Bluetooth Module: </strong>30 TL</p><p><strong>6x AA Battery Holder:</strong> 4 TL</p><p><strong>6x 1.5V Batteries:</strong> ?</p><p><strong>1x 9V Battery</strong> : ?</p><p><strong>Male-to-Male (M-M) Jumper Wires: </strong>6 TL</p><p><strong>Female-to-Male (M-F) Jumper Wires:</strong> 6 TL</p><p><strong>A Phone Running Android</strong></p><p><strong>TOTAL PRICE:</strong> 180 TL</p><p>I would like to start by introducing the most important part of this project: the <strong>Arduino Uno board</strong>.</p><figure><img alt="" src="https://cdn-images-1.medium.com/max/418/1*aRZvTb1VlnMaZiU6vDAA2A.png" /></figure><h3>WHAT IS ARDUINO?</h3><p><strong>Arduino</strong> can be described as an open-source <strong>&#8220;BRAIN&#8221;</strong> built so that anyone interested in electronics can use it easily. <strong>With Arduino you can build </strong><em>blinking lights, systems driven by temperature sensors, line-following robots — in short, just about any electronics application you can think of. The only thing limiting what you can build with Arduino is </em><strong><em>your imagination</em></strong><em>. </em>You can build almost <strong>any</strong> electronic system you have in mind with <strong>Arduino</strong>.</p><figure><img alt="" src="https://cdn-images-1.medium.com/max/1024/1*Vmt6yvTweW7ouXVBH64lZA.png" /><figcaption>A project built with Arduino</figcaption></figure><p><strong>Arduino</strong> is used to create standalone interactive objects, but it can also work alongside software running on a computer. In other words, you can connect it to many applications and develop freely. You can build with the <strong>Arduino</strong> IDE, which is platform independent — you can develop your projects on macOS, Linux or Windows.</p><p><strong>ARDUINO VARIANTS</strong></p><figure><img alt="" src="https://cdn-images-1.medium.com/max/710/1*eIfdF19Ck28XFQeh5d9qsA.png" /><figcaption>Arduino models</figcaption></figure><p>We now know what <strong>Arduino</strong> is. So which <strong>Arduino</strong> best suits our project? To answer that, you can browse the <strong>Arduino</strong> variants through the link below and find the board that fits your project best. In <strong>this project we will use the Arduino Uno</strong> board.</p><p><a href="http://www.dudigan.com/2015/12/arduino-modelleri-ve-ozellikleri/">Arduino Models and Their Specifications</a></p><figure><img alt="" src="https://cdn-images-1.medium.com/max/300/1*2y21zdVydYSs_CihSBpHIw.jpeg" /><figcaption><strong>L298N Motor Driver</strong></figcaption></figure><h3><strong>L298N Motor Driver Board:</strong></h3><p>The <strong>L298N</strong> motor driver board is designed to drive motors up to 24V. It has two channels and can supply 2A per channel. Because the board has two channels we can drive 2 motors — but by wiring the two motors on the right side of the car in <strong>reverse parallel</strong>, and the motors on the left side in <strong>reverse parallel</strong> as well, you can drive 4 motors.</p><h3>ASSEMBLING THE ROBOT PLATFORM</h3><figure><img alt="" src="https://cdn-images-1.medium.com/max/696/1*Bz0ozhlN13FinfFcOrLUiw.jpeg" /><figcaption>PARTS OF THE ROBOT PLATFORM</figcaption></figure><p>Right, let's start assembling the robot parts. You can either follow the <strong>photographs below</strong> step by step, or follow along with the <strong>assembly video</strong> I will put at the end of this post.</p><p>The motors in the kit arrive with no wires attached, so let's start by soldering wires to them.</p><figure><img alt="" src="https://cdn-images-1.medium.com/max/696/1*XABJhKwPRkaje2wjwy-MSQ.jpeg" /><figcaption>Photograph taken from the Robotistan website.</figcaption></figure><p>When soldering, if you connect a <strong>red wire to the right terminal</strong> and a <strong>black wire to the left terminal</strong> of every motor, you will save yourself a lot of confusion later on.</p><p>Next, we mount the motors onto the tabs along the sides of the plate using the screws included in the kit, as shown below.</p><figure><img alt="" src="https://cdn-images-1.medium.com/max/696/1*qc_H2KM90emFr3o5YcZF5g.jpeg" /><figcaption>Photograph taken from the Robotistan website.</figcaption></figure><p>Once all the wheels are attached, we route the motor wires up through any of the holes in the plate. After that, all that remains is joining the plate holding the motors to the upper plate. You can do this easily using the yellow standoffs and screws that come with the kit. Once everything is done, the chassis is complete. If you did everything correctly, your body should look like the one below.</p><figure><img alt="" src="https://cdn-images-1.medium.com/max/696/1*eGCO-FBr6WtF3gfXXLn64Q.jpeg" /><figcaption>Photograph taken from the Robotistan website.</figcaption></figure><p>And that is the first step of our Bluetooth-controlled robot project. That is all for today. In Part Two I will be back with the remaining details, again <strong>with both photographs and video</strong>. Just be patient — I will publish Part Two as soon as I can. Take care :)</p>
+
+      </div>
+
+      <footer class="blog-post__foot">
+        
+          <a class="cyber-btn cyber-btn--primary" href="https://medium.com/@erenonder0/ardui%CC%87no-nedi%CC%87r-ba4e805e9c28" target="_blank" rel="noopener">
+            View on Medium →
+          </a>
+        
+
+        <nav class="blog-post__nav">
+          
+          
+            <a class="blog-post__nav-item blog-post__nav-item--next" href="/blog/next-gen-cyber-traps-fake-ai-websites/">
+              <span class="blog-post__nav-label">Next →</span>
+              <span class="blog-post__nav-title">Next-Generation Cyber Traps: Fake AI-Themed Websites</span>
+            </a>
+          
+        </nav>
+      </footer>
+
+    </div>
+  </article>
 </div>
 
     </main>
@@ -522,7 +568,7 @@
     
     <li class="dropdown-item choice">
       <a class="dropdown-item translation btn-link d-flex align-items-center show" title="Türkçe"
-        href="http://localhost:1313/tr/education/">Türkçe</a>
+        href="http://localhost:1313/tr/blog/bluetooth-kontrollu-robot-yapiyoruz/">Türkçe</a>
     </li>
     
   </ul>
