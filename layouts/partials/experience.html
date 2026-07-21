@@ -7,12 +7,6 @@
   {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
 {{ end }}
 
-{{/* Skill tag pills per company */}}
-{{ $tagMap := dict
-  "OnBT" (slice "Cyber Security" "Network Security" "Threat Analysis" "Vulnerability Assessment")
-  "Turkish Technology" (slice "SIEM" "Security Architecture" "Incident Response" "PoC")
-}}
-
 <section {{ if $sectionId }}id="{{ $sectionId }}"{{ end }} class="section section-experience section--border-bottom cyber-section">
   <div class="container">
     <span class="cyber-section__eyebrow">{{ i18n "experience_eyebrow" }}</span>
@@ -32,7 +26,7 @@
     <div class="experience-cards">
       {{ range $index, $e := first $totalCount (sort $xp "Date" "desc") }}
       {{ $active := in (lower .Params.duration) "now" }}
-      {{ $tags := index $tagMap .Params.company }}
+      {{ $tags := .Params.tags }}
       <div class="exp-card reveal{{ if $active }} exp-card--active is-expanded{{ end }}">
         <div class="exp-card__top">
           <div class="exp-card__logo">

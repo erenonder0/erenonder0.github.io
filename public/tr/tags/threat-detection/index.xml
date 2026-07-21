@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Threat Detection on </title>
+		<link>http://localhost:1313/tr/tags/threat-detection/</link>
+		<description>Recent content in Threat Detection on </description>
+		<generator>Hugo</generator>
+		<language>tr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tr/tags/threat-detection/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>http://localhost:1313/tr/experience/job-3/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/tr/experience/job-3/</guid>
+				<description>&lt;h2 id=&#34;siber-güvenlik-analisti-uzman-yardımcısı&#34;&gt;Siber Güvenlik Analisti Uzman Yardımcısı&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SOC L1 ekibinde güvenlik alarmlarını izleyip triaj yapıyorum; EDR, XDR, BEAMSEC, ESA ve SIEM platformlarını kullanarak ağ trafiğini analiz ediyorum&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Phishing, zararlı yazılım ve brute-force/yetkisiz erişim denemeleri gibi tehditleri tespit edip sınıflandırıyorum&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Tespit kurallarının ve triaj prosedürlerinin iyileştirilmesine katkı sağlıyorum&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+	</channel>
+</rss>

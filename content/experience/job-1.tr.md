@@ -7,14 +7,13 @@ company: "Turkish Technology"
 location: "İstanbul, Türkiye"
 duration: "07/2025 - 08/2025"
 companyLogo: "images/experience/thy-logo.png"
-
-
+tags: ["SIEM", "Security Architecture", "Incident Response", "PoC"]
 ---
 ## Network Security - Stajyer
-- Türk Hava Yolları’nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerinin analizi ve değerlendirilmesi
+- Türk Hava Yolları'nın (THY) kurumsal ağ altyapısındaki güvenlik mimarilerini analiz edip değerlendirdim
 
-- Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağlanması
+- Kritik sistemlerin korunmasına yönelik kavram kanıtı (PoC) çalışmalarına katkı sağladım
 
-- SIEM çözümleri aracılığıyla güvenlik olaylarının tespiti, sınıflandırılması ve raporlanması
+- SIEM çözümleri aracılığıyla güvenlik olaylarını tespit edip sınıflandırdım ve raporladım
 
 ---

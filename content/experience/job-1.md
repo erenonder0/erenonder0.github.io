@@ -7,15 +7,16 @@ company: "Turkish Technology"
 location: "Istanbul, Turkey"
 duration: "07/2025 - 08/2025"
 companyLogo: "images/experience/thy-logo.png"
+tags: ["SIEM", "Security Architecture", "Incident Response", "PoC"]
 ---
 
 ## Network Management - Intern
 
-- Analysis and evaluation of security architectures within Turkish Airlines’ corporate network infrastructure
+- Analyzed and evaluated security architectures within Turkish Airlines' corporate network infrastructure
 
-- Contribution to Proof of Concept (PoC) studies for the protection of critical systems
+- Contributed to Proof of Concept (PoC) studies for the protection of critical systems
 
-- Detection, classification, and reporting of security incidents through SIEM solutions
+- Detected, classified, and reported security incidents through SIEM solutions
 
 
 

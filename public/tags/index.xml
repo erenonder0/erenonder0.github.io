@@ -160,5 +160,33 @@
 				<guid>http://localhost:1313/tags/web3.js/</guid>
 				<description></description>
 			</item>
+			<item>
+				<title>Arduino</title>
+				<link>http://localhost:1313/tags/arduino/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/arduino/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Arduino-Uno</title>
+				<link>http://localhost:1313/tags/arduino-uno/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/arduino-uno/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Robotics</title>
+				<link>http://localhost:1313/tags/robotics/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/robotics/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Robots</title>
+				<link>http://localhost:1313/tags/robots/</link>
+				<pubDate>Sun, 05 Aug 2018 20:23:21 +0000</pubDate>
+				<guid>http://localhost:1313/tags/robots/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

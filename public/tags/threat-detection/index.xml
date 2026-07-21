@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Threat Detection on </title>
+		<link>http://localhost:1313/tags/threat-detection/</link>
+		<description>Recent content in Threat Detection on </description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/threat-detection/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>http://localhost:1313/experience/job-3/</link>
+				<pubDate>Wed, 01 Oct 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/experience/job-3/</guid>
+				<description>&lt;h2 id=&#34;associate-cyber-security-analyst&#34;&gt;Associate Cyber Security Analyst&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Monitor and triage security alerts within the SOC L1 team, analyzing network traffic across EDR, XDR, BEAMSEC, ESA, and SIEM platforms&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Detect and classify threats including phishing, malware, and brute-force/unauthorized access attempts&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Contribute to the refinement of detection rules and triage procedures&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+	</channel>
+</rss>

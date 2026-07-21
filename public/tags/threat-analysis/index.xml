@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Threat Analysis on </title>
+		<link>http://localhost:1313/tags/threat-analysis/</link>
+		<description>Recent content in Threat Analysis on </description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/threat-analysis/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>http://localhost:1313/experience/job-2/</link>
+				<pubDate>Mon, 01 Sep 2025 00:00:00 +0100</pubDate>
+				<guid>http://localhost:1313/experience/job-2/</guid>
+				<description>&lt;h2 id=&#34;cyber-security---intern&#34;&gt;Cyber Security - Intern&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Monitored and analyzed security events using QRadar SIEM and Trend Micro Vision One (XDR), supporting network security operations&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Conducted vulnerability assessments and threat analysis across both offensive (red team) and defensive (blue team) exercises&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Contributed to identifying and reporting security gaps within the organization&amp;rsquo;s network infrastructure&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+			</item>
+	</channel>
+</rss>
