@@ -1,7 +1,7 @@
 ---
 title: "BLUETOOTH KONTROLLÜ ROBOT YAPIYORUZ!"
 date: 2018-08-05T20:23:21+00:00
-draft: true
+draft: false
 type: "blog"
 summary: "Merhaba! Bugün hep beraber Arduino ile bluetooth kontrollü robot projesini yapıyoruz. Bu projeyi 4 konu halinde sizlere sunacağım.kgkgkgj Konu Başlığında : Gerekli malzemeleri ve malzemelerin her..."
 medium_url: "https://medium.com/@erenonder0/ardui%CC%87no-nedi%CC%87r-ba4e805e9c28"
