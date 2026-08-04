@@ -1,7 +1,7 @@
-# Security contact for erenonder0.github.io
+# Security contact for erenonder.com
 # https://www.rfc-editor.org/rfc/rfc9116
 
 Contact: mailto:eerenonder0@gmail.com
 Expires: 2027-07-01T00:00:00.000Z
 Preferred-Languages: en, tr
-Canonical: https://erenonder0.github.io/.well-known/security.txt
+Canonical: https://erenonder.com/.well-known/security.txt
