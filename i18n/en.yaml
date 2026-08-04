@@ -47,10 +47,10 @@
 
 ## Homepage head title
 - id: "head_title"
-  translation: "Eren ONDER | Cyber Security & Digital Forensics"
+  translation: "Eren ONDER | SOC & Incident Response"
 
 - id: "head_description"
-  translation: "Discover my projects and technical work in the field of cyber security."
+  translation: "Junior Cyber Security Specialist. SIEM-based threat detection, incident response and SOAR automation on critical infrastructure — projects and technical write-ups."
 
 ## Homepage showcase
 - id: "showcase_title"
@@ -225,13 +225,13 @@
 
 ## Hero
 - id: "hero_label"
-  translation: "&lt; Cyber Security &amp; Digital Forensics /&gt;"
+  translation: "&lt; SOC &amp; Incident Response /&gt;"
 - id: "hero_roles"
-  translation: "Associate Cyber Security Analyst|SOC Analyst|Security Researcher|Forensic Engineer|CTF Player"
+  translation: "Associate Cyber Security Analyst|SOC Analyst|Incident Responder|Threat Hunter|Forensic Engineer"
 - id: "hero_role_prefix"
   translation: "I'm a"
 - id: "hero_bio"
-  translation: "Junior Cyber Security Specialist. CTF competitor, organizer, and researcher building a career at the intersection of offensive security and digital forensics."
+  translation: "Junior Cyber Security Specialist. SOC analyst working on SIEM-based threat detection, incident response and email security across critical national infrastructure."
 #- id: "hero_view_work"
   #translation: "View My Work"
 - id: "hero_download_cv"
@@ -243,7 +243,7 @@
 - id: "about_eyebrow"
   translation: "// whoami"
 - id: "about_bio"
-  translation: "<p>I'm Eren ONDER, a Junior Cyber Security Specialist working actively across offensive and defensive cybersecurity.</p><p>As a CTF competitor, organizer, instructor and researcher, I pursue a career that is both technically deep and gives back to the community — from national projects and published research to seminars and large student communities.</p>"
+  translation: "<p>I'm Eren ONDER, a Junior Cyber Security Specialist working on critical national infrastructure. I cover the full SOC workflow on Splunk and IBM QRadar — from alert triage through SOAR automation — alongside incident response, malware analysis and email security.</p><p>I graduated in Digital Forensic Engineering with a 3.64 GPA and have peer-reviewed research published on machine-learning-based threat detection. I build AI-assisted tooling that cuts the analysis and triage load on SOC teams, and stay active in the community as a CTF competitor and instructor.</p>"
 - id: "about_stat1_value"
   translation: "Junior Specialist"
 - id: "about_stat1_label"
@@ -274,6 +274,11 @@
   translation: "Certifications"
 - id: "certifications_verify"
   translation: "Verify"
+# Toggle on certification cards that hold a multi-course track
+- id: "certifications_courses_show"
+  translation: "Courses"
+- id: "certifications_courses_hide"
+  translation: "Hide courses"
 
 ## Experience
 - id: "experience_eyebrow"
@@ -322,6 +327,11 @@
   translation: "// portfolio"
 - id: "projects_see"
   translation: "See Project"
+# Used when a project has no public repository and links to its write-up instead
+- id: "projects_details"
+  translation: "See Details"
+- id: "projects_back"
+  translation: "All projects"
 
 ## Contact
 - id: "contact_eyebrow"

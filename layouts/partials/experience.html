@@ -29,8 +29,13 @@
       {{ $tags := .Params.tags }}
       <div class="exp-card reveal{{ if $active }} exp-card--active is-expanded{{ end }}">
         <div class="exp-card__top">
-          <div class="exp-card__logo">
-            {{ $img := resources.Get .Params.companyLogo }}
+          {{- /* Company marks here are full-bleed squares that carry their own
+                 background, so they cover the tile. `logoStyle: plate` in the front
+                 matter opts a transparent, dark-ink logo into a light backing, and
+                 the initials fallback always needs one. */}}
+          {{- $img := resources.Get .Params.companyLogo }}
+          {{- $logoMod := cond $img (.Params.logoStyle | default "fill") "initials" }}
+          <div class="exp-card__logo exp-card__logo--{{ $logoMod }}">
             {{ if $img }}
               {{ $w := $img.Resize "88x webp q85" }}
               <img src="{{ $w.RelPermalink }}" alt="{{ .Params.company }} logo" loading="lazy" />

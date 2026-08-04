@@ -47,10 +47,10 @@
 
 ## Homepage head title
 - id: "head_title"
-  translation: "Eren ONDER | Siber Güvenlik & Adli Bilişim"
+  translation: "Eren ONDER | SOC & Olay Müdahale"
 
 - id: "head_description"
-  translation: "Siber güvenlik alanındaki projelerimi ve teknik çalışmalarımı keşfedin."
+  translation: "Siber Güvenlik Uzman Yardımcısı. Kritik altyapıda SIEM tabanlı tehdit tespiti, olay müdahale ve SOAR otomasyonu üzerine projelerim ve teknik çalışmalarım."
 
 ## Homepage showcase
 - id: "showcase_title"
@@ -226,13 +226,13 @@
 
 ## Hero
 - id: "hero_label"
-  translation: "&lt; Siber Güvenlik &amp; Adli Bilişim /&gt;"
+  translation: "&lt; SOC &amp; Olay Müdahale /&gt;"
 - id: "hero_roles"
-  translation: "Siber Güvenlik Uzman Yardımcısı|SOC Analisti|Güvenlik Araştırmacısı|Adli Bilişim Mühendisi|CTF Oyuncusu"
+  translation: "Siber Güvenlik Uzman Yardımcısı|SOC Analisti|Olay Müdahale Uzmanı|Tehdit Avcısı|Adli Bilişim Mühendisi"
 - id: "hero_role_prefix"
   translation: "Ben bir"
 - id: "hero_bio"
-  translation: "Siber Güvenlik Uzman Yardımcısı. Saldırı odaklı güvenlik ile adli bilişimin kesişiminde kariyer inşa eden CTF yarışmacısı, organizatör ve araştırmacı."
+  translation: "Siber Güvenlik Uzman Yardımcısı. Kritik ulusal altyapıda SIEM tabanlı tehdit tespiti, olay müdahale ve e-posta güvenliği üzerine çalışan SOC analisti."
 #- id: "hero_view_work"
   #translation: "Çalışmalarımı Gör"
 - id: "hero_download_cv"
@@ -244,7 +244,7 @@
 - id: "about_eyebrow"
   translation: "// whoami"
 - id: "about_bio"
-  translation: "<p>Ben Eren ONDER, siber güvenliğin hem saldırı hem de savunma tarafında aktif olarak çalışan bir Siber Güvenlik Uzman Yardımcısıyım.</p><p>CTF yarışmacısı, organizatör, eğitmen ve araştırmacı olarak; teknik derinliği yüksek ve topluluğa katkı sağlayan bir kariyer izliyorum — ulusal projeler ve yayımlanmış araştırmalardan seminerlere ve büyük öğrenci topluluklarına kadar.</p>"
+  translation: "<p>Ben Eren ONDER, kritik ulusal altyapıda görev yapan bir Siber Güvenlik Uzman Yardımcısıyım. Splunk ve IBM QRadar üzerinde alarm triyajından SOAR otomasyonuna kadar uçtan uca SOC süreçlerinde yer alıyor; olay müdahale, zararlı yazılım analizi ve e-posta güvenliği üzerine çalışıyorum.</p><p>Adli Bilişim Mühendisliği lisansını 3.64 ortalamayla tamamladım; makine öğrenmesi tabanlı tehdit tespiti alanında hakemli yayınım bulunuyor. SOC ekiplerinin analiz ve triyaj yükünü azaltan yapay zekâ destekli araçlar geliştiriyor, CTF yarışmacısı ve eğitmen olarak topluluğa katkı sağlamayı sürdürüyorum.</p>"
 - id: "about_stat1_value"
   translation: "Uzman Yardımcısı"
 - id: "about_stat1_label"
@@ -275,6 +275,11 @@
   translation: "Sertifikalar"
 - id: "certifications_verify"
   translation: "Doğrula"
+# Birden çok kurs içeren sertifika kartlarındaki aç/kapa düğmesi
+- id: "certifications_courses_show"
+  translation: "Kurslar"
+- id: "certifications_courses_hide"
+  translation: "Kursları gizle"
 
 ## Experience
 - id: "experience_eyebrow"
@@ -323,6 +328,11 @@
   translation: "// portföy"
 - id: "projects_see"
   translation: "Projeyi Gör"
+# Herkese açık repo'su olmayan projelerde, proje sayfasına yönlendirmek için
+- id: "projects_details"
+  translation: "Detayları Gör"
+- id: "projects_back"
+  translation: "Tüm projeler"
 
 ## Contact
 - id: "contact_eyebrow"

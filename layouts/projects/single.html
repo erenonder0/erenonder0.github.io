@@ -1,0 +1,51 @@
+{{/* Project write-up page. For projects whose repository is private this page
+     stands in for the source, so it gets the same reading treatment as a blog
+     post and reuses those styles rather than inventing a second prose scale. */}}
+{{ define "main" }}
+<div id="main-content" class="flex-grow-1">
+  <article class="cyber-section blog-post project-post">
+    <div class="container">
+
+      <a class="blog-post__back" href="{{ "projects" | relLangURL }}">← {{ i18n "projects_back" }}</a>
+
+      <header class="blog-post__head">
+        <h1 class="blog-post__title">{{ .Title }}</h1>
+
+        {{ with .Params.warning }}
+          <span class="project-post__status">⚠ {{ . }}</span>
+        {{ end }}
+
+        {{ with .Params.tags }}
+          <div class="blog-post__tags">
+            {{ range . }}<span class="blog-tag">{{ . }}</span>{{ end }}
+          </div>
+        {{ end }}
+      </header>
+
+      {{- $img := "" }}
+      {{- with .Params.image }}{{ with .src }}{{ $img = resources.Get . }}{{ end }}{{ end }}
+      {{ with $img }}
+        {{ $r := .Resize "1200x webp q85" }}
+        <figure class="project-post__shot">
+          <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}"
+               alt="{{ $.Title }}" loading="lazy" />
+        </figure>
+      {{ end }}
+
+      <div class="blog-post__content">
+        {{ .Content }}
+      </div>
+
+      <footer class="blog-post__foot">
+        {{- /* Only projects with a public repository get an outbound button */}}
+        {{- with .Params.button }}{{ with .URL }}
+          <a class="cyber-btn cyber-btn--primary" href="{{ . }}" target="_blank" rel="noopener">
+            {{ i18n "projects_see" }} →
+          </a>
+        {{ end }}{{ end }}
+      </footer>
+
+    </div>
+  </article>
+</div>
+{{ end }}

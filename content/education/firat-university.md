@@ -6,5 +6,6 @@ draft: false # set to "true" if you want to hide the content
 university: "University of Firat"
 year: "2022-2026"
 degree: "Digital Forensic Engineering, Technology Faculty"
+detail: "GPA 3.64 / 4.00 · Network Security, Digital Forensics, Cryptography, Operating Systems"
 
 ---

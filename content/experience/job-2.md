@@ -2,19 +2,19 @@
 date: 2025-09-01T00:00:00+01:00
 draft: false
 title: ""
-jobTitle: "Intern"
-company: "OnBT"
+jobTitle: "SOC L1 Analyst (Intern)"
+company: "OnBT - Kalyon Holding"
 location: "Istanbul, Turkey"
 duration: "09/2025 - 01/2026"
 companyLogo: "images/experience/onbt-logo.jpg"
-tags: ["Cyber Security", "Network Security", "Threat Analysis", "Vulnerability Assessment"]
+tags: ["IBM QRadar", "Trend Micro Vision One", "Alert Triage", "IOC Analysis", "Threat Intelligence"]
 ---
-## Cyber Security - Intern
+## SOC L1 Analyst - Intern
 
-- Monitored and analyzed security events using QRadar SIEM and Trend Micro Vision One (XDR), supporting network security operations
+- Triaged security alerts across the organisation in IBM QRadar and Trend Micro Vision One by applying documented L1 playbooks, escalating confirmed true positives to L2 within SLA
 
-- Conducted vulnerability assessments and threat analysis across both offensive (red team) and defensive (blue team) exercises
+- Analysed raw event logs and enriched IOCs against VirusTotal and open-source threat intelligence, classifying and escalating phishing, malware and intrusion attempts each month
 
-- Contributed to identifying and reporting security gaps within the organization's network infrastructure
+- Contributed to identifying and reporting security gaps within the organisation's network infrastructure
 
 ---

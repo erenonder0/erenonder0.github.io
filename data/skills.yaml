@@ -1,30 +1,56 @@
 categories:
-  - name: "Security & Forensics"
-    name_tr: "Güvenlik & Adli Bilişim"
+  - name: "Security Operations"
+    name_tr: "Güvenlik Operasyonları"
     icon: "🛡️"
     skills:
-      - name: "Splunk"
-        name_tr: "Splunk"
+      - name: "Splunk (SPL)"
+        name_tr: "Splunk (SPL)"
         level: 4
-      - name: "Qradar"
-        name_tr: "Qradar"
+      - name: "IBM QRadar (AQL)"
+        name_tr: "IBM QRadar (AQL)"
         level: 4
-      - name: "Penetration Testing"
-        name_tr: "Sızma Testi"
+      - name: "Cisco XSOAR (SOAR)"
+        name_tr: "Cisco XSOAR (SOAR)"
         level: 3
-      - name: "Digital Forensics"
-        name_tr: "Dijital Adli Bilişim"
+      - name: "MITRE ATT&CK"
+        name_tr: "MITRE ATT&CK"
         level: 4
+      - name: "EDR / XDR"
+        name_tr: "EDR / XDR"
+        level: 4
+      - name: "Incident Response"
+        name_tr: "Olay Müdahale"
+        level: 4
+      - name: "Email Security (ESA)"
+        name_tr: "E-posta Güvenliği (ESA)"
+        level: 4
+
+  - name: "Analysis & Forensics"
+    name_tr: "Analiz & Adli Bilişim"
+    icon: "🔍"
+    skills:
       - name: "Network Analysis (Wireshark)"
         name_tr: "Ağ Analizi (Wireshark)"
         level: 4
+      - name: "Sysmon / Windows Event Log"
+        name_tr: "Sysmon / Windows Event Log"
+        level: 4
+      - name: "Volatility"
+        name_tr: "Volatility"
+        level: 3
+      - name: "Autopsy"
+        name_tr: "Autopsy"
+        level: 3
+      - name: "Nmap"
+        name_tr: "Nmap"
+        level: 3
+      - name: "Penetration Testing"
+        name_tr: "Sızma Testi"
+        level: 3
       - name: "Reverse Engineering"
         name_tr: "Tersine Mühendislik"
         level: 2
-      - name: "Email Analysis"
-        name_tr: "E-posta Analizi"
-        level: 4
-        
+
   - name: "Programming"
     name_tr: "Programlama"
     icon: "💻"
@@ -32,15 +58,15 @@ categories:
       - name: "Python"
         name_tr: "Python"
         level: 4
-      - name: "C#"
-        name_tr: "C#"
-        level: 3
-      - name: "C++"
-        name_tr: "C++"
-        level: 3
       - name: "Bash / Linux"
         name_tr: "Bash / Linux"
         level: 4
+      - name: "C#"
+        name_tr: "C#"
+        level: 3
+      - name: "C / C++"
+        name_tr: "C / C++"
+        level: 3
       - name: "JavaScript"
         name_tr: "JavaScript"
         level: 2

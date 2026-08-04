@@ -33,6 +33,7 @@
               <div class="education__date">{{ .Params.year }}</div>
               <div class="education__title">{{ .Params.university }}</div>
               <div class="education__degree">{{ .Params.degree }}</div>
+              {{ with .Params.detail }}<div class="education__detail">{{ . }}</div>{{ end }}
             </div>
           </div>
           {{ end }}

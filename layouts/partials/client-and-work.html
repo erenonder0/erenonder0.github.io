@@ -21,12 +21,17 @@
     <div class="cyber-projects__grid">
       {{ range $i, $p := $projects }}
       <div class="project-card reveal" data-delay="{{ add (mod $i 3) 1 }}">
-        <div class="project-card__media">
+        {{- /* Projects without a screenshot fall back to a monospace plate so the
+               grid keeps an even rhythm instead of showing an empty media box. */}}
+        {{- $img := "" }}
+        {{- with .Params.image }}{{ with .src }}{{ $img = resources.Get . }}{{ end }}{{ end }}
+        <div class="project-card__media{{ if not $img }} project-card__media--plate{{ end }}">
           {{ with .Params.warning }}<span class="project-card__warn">⚠ {{ . }}</span>{{ end }}
-          {{ $img := resources.Get .Params.image.src }}
-          {{ with $img }}
-            {{ $r := .Fill "640x400 webp q80 Center" }}
+          {{ if $img }}
+            {{ $r := $img.Fill "640x400 webp q80 Center" }}
             <img src="{{ $r.RelPermalink }}" width="640" height="400" alt="{{ $p.Params.title }}" loading="lazy" />
+          {{ else }}
+            <span class="project-card__plate-mark" aria-hidden="true">{{ with .Params.glyph }}{{ . }}{{ else }}&lt;/&gt;{{ end }}</span>
           {{ end }}
         </div>
         <div class="project-card__body">
@@ -37,9 +42,19 @@
             {{ range . }}<span class="project-tag">{{ . }}</span>{{ end }}
           </div>
           {{ end }}
-          <a class="project-card__link cyber-btn cyber-btn--primary" href="{{ .Params.button.URL }}" target="_blank" rel="noopener">
+          {{- /* A project with no public repo links to its own page on the site
+                 instead; the write-up there stands in for the source. */}}
+          {{- $external := "" }}
+          {{- with .Params.button }}{{ with .URL }}{{ $external = . }}{{ end }}{{ end }}
+          {{ if $external }}
+          <a class="project-card__link cyber-btn cyber-btn--primary" href="{{ $external }}" target="_blank" rel="noopener">
             {{ i18n "projects_see" }} <i class="icon-arrow-right"></i>
           </a>
+          {{ else }}
+          <a class="project-card__link cyber-btn cyber-btn--primary" href="{{ .RelPermalink }}">
+            {{ i18n "projects_details" }} <i class="icon-arrow-right"></i>
+          </a>
+          {{ end }}
         </div>
       </div>
       {{ end }}

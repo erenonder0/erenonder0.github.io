@@ -402,7 +402,16 @@ html.js .reveal.visible { opacity: 1; transform: translate(0) scale(1); }
   border-left: 3px solid var(--accent-blue); border-radius: var(--radius);
   padding: 1.4rem 1.5rem; height: 100%; transition: transform .25s ease, box-shadow .25s ease;
 }
-.education::before { content: "🎓"; font-size: 1.4rem; display: block; margin-bottom: .6rem; }
+/* The theme makes this pseudo-element an absolutely positioned skewed band (a
+   light-theme flourish) that painted a diagonal over the card text. Its stylesheet
+   loads after this one, so plain `.education::before` loses the tie — the `html`
+   prefix wins on specificity instead. Reset the box properties too, not just
+   `content`, so it renders as the plain glyph this design wants. */
+html .education::before {
+  content: "🎓"; font-size: 1.4rem; display: block; margin-bottom: .6rem;
+  position: static; width: auto; height: auto;
+  background: none; transform: none; z-index: auto;
+}
 .education:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.35); border-left-color: var(--accent-green); }
 html[data-bs-theme="dark"] .education__date,
 .education__date { color: var(--accent-green) !important; font-family: var(--font-mono); font-size: .85rem; }
@@ -410,11 +419,21 @@ html[data-bs-theme="dark"] .education__title,
 .education__title { color: var(--text-primary) !important; font-family: var(--font-head); font-weight: 600; font-size: 1.15rem !important; margin: .3rem 0; }
 html[data-bs-theme="dark"] .education__degree,
 .education__degree { color: var(--text-secondary) !important; font-size: .92rem; }
+html[data-bs-theme="dark"] .education__detail,
+.education__detail {
+  /* z-index 2 matches the theme's other education fields, which sit above the
+     decorative pseudo-element rather than behind it. */
+  position: relative; z-index: 2;
+  color: var(--text-muted, var(--text-secondary)) !important;
+  font-family: var(--font-mono); font-size: .78rem; line-height: 1.6; margin-top: .45rem;
+}
 
 /* ============================================================================
    TASK 7 — SKILLS
    ========================================================================== */
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+/* Two columns: with four categories a three-column track left a lone card on
+   the second row. Wider cards also let each skill sit on one line. */
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
 .skill-card {
   background: var(--bg-surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.6rem;
@@ -422,8 +441,8 @@ html[data-bs-theme="dark"] .education__degree,
 .skill-card__head { display: flex; align-items: center; gap: .6rem; margin-bottom: 1.2rem; }
 .skill-card__icon { font-size: 1.5rem; }
 .skill-card__title { font-family: var(--font-head); font-weight: 600; font-size: 1.15rem; color: var(--text-primary); margin: 0; }
-.skill-row { margin-bottom: .9rem; }
-.skill-row__label { display: flex; justify-content: space-between; font-size: .9rem; color: var(--text-secondary); margin-bottom: .35rem; }
+.skill-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .9rem; }
+.skill-row__label { flex: 1; min-width: 0; font-size: .9rem; color: var(--text-secondary); }
 .skill-dots { display: flex; gap: 6px; }
 .skill-dot {
   width: 16px; height: 16px; transform: rotate(45deg) scale(1);
@@ -448,6 +467,10 @@ html.js .skill-card.visible .skill-dot { transform: rotate(45deg) scale(1); }
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .exp-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.3); border-color: var(--border-accent); }
+/* Added by JS only for cards that actually have something to reveal, so cards
+   without a description keep the default cursor. */
+.exp-card--clickable { cursor: pointer; }
+.exp-card--clickable:hover .exp-card__toggle { color: var(--accent-green); }
 .exp-card--active {
   border-left: 3px solid var(--accent-blue);
   background: linear-gradient(0deg, rgba(0,212,255,0.05), rgba(0,212,255,0.05)), var(--bg-surface);
@@ -456,10 +479,27 @@ html.js .skill-card.visible .skill-dot { transform: rotate(45deg) scale(1); }
 .exp-card__top { display: flex; align-items: flex-start; gap: 1rem; }
 .exp-card__logo {
   flex: 0 0 44px; width: 44px; height: 44px; border-radius: var(--radius-sm);
-  background: #fff; padding: 4px; overflow: hidden;
+  overflow: hidden;
   display: inline-flex; align-items: center; justify-content: center;
 }
-.exp-card__logo img { width: 100%; height: 100%; object-fit: contain; }
+.exp-card__logo img { width: 100%; height: 100%; }
+/* Square marks with their own background read as the tile itself; a white box
+   around them just shrinks the logo and rings it in white. */
+.exp-card__logo--fill { position: relative; }
+.exp-card__logo--fill img { object-fit: cover; }
+/* The frame has to be its own layer: an inset box-shadow paints beneath child
+   content, and the logo covers the whole tile, so it would never be seen.
+   Alpha is above --border (0.07) because a hairline that faint disappears at 44px,
+   and dark marks (THY) need the edge to separate them from the card surface. */
+.exp-card__logo--fill::after {
+  content: ""; position: absolute; inset: 0;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: inherit; pointer-events: none;
+}
+/* Dark-ink marks on transparency would disappear on the dark card surface */
+.exp-card__logo--plate { background: #fff; padding: 4px; }
+.exp-card__logo--plate img { object-fit: contain; }
+.exp-card__logo--initials { background: #fff; }
 .exp-card__initials { color: #0a0f1a; font-family: var(--font-head); font-weight: 700; font-size: .95rem; }
 
 .exp-card__meta { flex: 1 1 auto; min-width: 0; }
@@ -535,6 +575,9 @@ html[data-bs-theme="dark"] .exp-card__desc li,
   border-radius: var(--radius); padding: 1.5rem !important; transition: all .25s ease;
 }
 .volunteer-card:hover { transform: translateY(-4px); border-color: var(--border-accent) !important; box-shadow: 0 12px 30px rgba(0,0,0,.32); }
+/* Added by JS only for cards that actually have something to reveal */
+.volunteer-card--clickable { cursor: pointer; }
+.volunteer-card--clickable:hover .expand-toggle { color: var(--accent-green); }
 .volunteer-head { display: flex !important; grid-template-columns: none !important; flex-direction: column; gap: .8rem !important; align-items: flex-start; }
 .volunteer-head .logo { width: 52px !important; height: 52px !important; background: #fff; padding: 4px; border-radius: var(--radius-sm); }
 .vol-date { color: var(--accent-green) !important; font-family: var(--font-mono); font-size: .8rem; }
@@ -638,30 +681,42 @@ html.js .ct-item.visible { opacity: 1; transform: translateY(0); }
 .cert-card:hover { transform: translateY(-4px); }
 .cert-card:hover::before { opacity: 1; }
 .cert-card__icon { font-size: 1.8rem; margin-bottom: .8rem; }
+/* Every logo occupies the same tile so the cards keep one baseline; only the
+   treatment inside it changes with the kind of artwork (see logo_style). */
 .cert-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
 }
-.cert-logo--img {
-  background: rgba(255,255,255,0.9);
-  padding: 6px;
-}
-.cert-logo--img img {
+.cert-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+/* Dark-ink marks on transparency disappear on the dark surface without a backing */
+.cert-logo--plate {
+  background: #fff;
+  padding: 7px;
+}
+/* Round seals are legible as-is; a square white backing only crops them visually */
+.cert-logo--badge {
+  background: transparent;
+}
+/* Artwork with its own background reads as a tile in its own right */
+.cert-logo--fill img {
+  object-fit: cover;
 }
 .cert-logo--icon {
   background: rgba(0,212,255,0.1);
   border: 0.5px solid rgba(0,212,255,0.3);
   color: #00d4ff;
-  font-size: 20px;
+  font-size: 22px;
 }
 .cert-card__name { font-family: var(--font-head); font-weight: 600; color: var(--text-primary); font-size: 1.08rem; margin: 0 0 .3rem; }
 .cert-card__issuer { color: var(--text-secondary); font-size: .9rem; }
@@ -670,6 +725,31 @@ html.js .ct-item.visible { opacity: 1; transform: translateY(0); }
   color: var(--accent-blue); background: var(--accent-blue-glow); padding: 3px 10px; border-radius: 999px;
 }
 .cert-card__verify { display: block; margin-top: .4rem; }
+
+/* Multi-course track: the list stays collapsed until the toggle is pressed */
+.cert-card__toggle { display: flex; width: 100%; margin-top: .2rem; }
+.cert-card__count {
+  font-family: var(--font-mono); font-size: .68rem; line-height: 1;
+  color: var(--accent-green); background: rgba(57,255,20,.12);
+  border: 1px solid rgba(57,255,20,.35); border-radius: 999px; padding: 3px 7px;
+}
+.cert-card__toggle .chev { margin-left: auto; }
+.cert-courses {
+  list-style: none; margin: 0; padding: 0;
+  max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .3s ease, opacity .3s ease, margin .3s ease;
+}
+.cert-courses.open { max-height: 420px; opacity: 1; margin-top: .6rem; }
+.cert-courses li {
+  position: relative; padding: .3rem 0 .3rem 1.1rem;
+  font-size: .85rem; color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+}
+.cert-courses li:first-child { border-top: none; }
+.cert-courses li::before {
+  content: "▸"; position: absolute; left: 0; top: .3rem;
+  color: var(--accent-blue); font-size: .8rem;
+}
 
 /* ============================================================================
    TASK 9 — PROJECTS
@@ -688,6 +768,28 @@ html.js .ct-item.visible { opacity: 1; transform: translateY(0); }
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 40%, rgba(8,12,20,.85));
 }
+/* Fallback plate for projects with no screenshot (e.g. private repos) */
+.project-card__media--plate {
+  display: grid; place-items: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(0,212,255,.14), transparent 55%),
+    linear-gradient(135deg, var(--bg-secondary), var(--bg-surface));
+}
+.project-card__media--plate::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.project-card__plate-mark {
+  position: relative; z-index: 1;
+  font-family: var(--font-mono); font-size: 2.6rem; font-weight: 600;
+  color: var(--accent-blue); opacity: .55; letter-spacing: .06em;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.project-card:hover .project-card__plate-mark { transform: scale(1.08); opacity: .8; }
+
 .project-card__warn {
   position: absolute; top: 10px; left: 10px; z-index: 2;
   font-family: var(--font-mono); font-size: .68rem; padding: 4px 9px; border-radius: 6px;
@@ -824,6 +926,18 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 .blog-post__origin-link:hover { color: var(--accent-green) !important; }
 
 /* article body — Medium HTML rendered inside */
+/* Project write-ups reuse the blog reading styles; these are the only additions */
+.project-post__status {
+  display: inline-block; margin-bottom: 1rem;
+  font-family: var(--font-mono); font-size: .72rem; padding: 4px 10px; border-radius: 6px;
+  background: rgba(249,115,22,.18); color: var(--cat-research); border: 1px solid rgba(249,115,22,.4);
+}
+.project-post__shot {
+  margin: 0 0 2rem; border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; background: var(--bg-secondary);
+}
+.project-post__shot img { display: block; width: 100%; height: auto; }
+
 .blog-post__content { font-size: 1.05rem; line-height: 1.8; }
 .blog-post__content p { color: var(--text-secondary) !important; margin: 0 0 1.4rem; }
 .blog-post__content h1,

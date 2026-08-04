@@ -241,26 +241,58 @@
         card.closest(".ct-item").classList.toggle("open");
       });
     });
-    /* generic expand toggles (volunteer) */
+    /* Shared by the button itself and by the card-wide click handler below, so
+       both entry points produce exactly the same state. */
+    function toggleExpandable(btn) {
+      var target = document.getElementById(btn.getAttribute("aria-controls"));
+      if (!target) return;
+      var open = target.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      var label = btn.querySelector(".expand-label");
+      if (label) {
+        label.textContent = open
+          ? btn.getAttribute("data-less") || "Show less"
+          : btn.getAttribute("data-more") || "Show more";
+      }
+    }
+
+    /* generic expand toggles (volunteer cards, certification tracks) */
     document.querySelectorAll(".expand-toggle").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        var target = document.getElementById(btn.getAttribute("aria-controls"));
-        if (!target) return;
-        var open = target.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        var label = btn.querySelector(".expand-label");
-        if (label) {
-          label.textContent = open
-            ? btn.getAttribute("data-less") || "Show less"
-            : btn.getAttribute("data-more") || "Show more";
-        }
+        toggleExpandable(btn);
       });
     });
-    /* experience cards: toggle .is-expanded on the card (multiple can stay open) */
-    document.querySelectorAll(".exp-card__toggle").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var card = btn.closest(".exp-card");
-        if (!card) return;
+
+    /* volunteer cards: the whole card toggles, like the experience cards. Unlike
+       those, the button keeps its own listener here because it is shared with the
+       certification cards — so a click on the button is skipped below to avoid
+       toggling twice. */
+    document.querySelectorAll(".volunteer-card").forEach(function (card) {
+      var btn = card.querySelector(".expand-toggle");
+      if (!btn) return; /* entries with no body have nothing to reveal */
+      card.classList.add("volunteer-card--clickable");
+      card.addEventListener("click", function (e) {
+        if (e.target.closest(".expand-toggle")) return; /* handled by its own listener */
+        if (e.target.closest("a")) return; /* the organisation link still navigates */
+        var selection = window.getSelection();
+        if (selection && selection.toString()) return; /* don't collapse on text selection */
+        toggleExpandable(btn);
+      });
+    });
+    /* experience cards: the whole card toggles .is-expanded, like the timeline
+       items. The button sits inside the card, so its click — including the one
+       the browser fires for Enter/Space — bubbles up to this handler; a second
+       listener on the button would toggle twice and cancel itself out.
+       (multiple cards can stay open) */
+    document.querySelectorAll(".exp-card").forEach(function (card) {
+      var btn = card.querySelector(".exp-card__toggle");
+      if (!btn) return; /* entries with no description have nothing to reveal */
+      card.classList.add("exp-card--clickable");
+      card.addEventListener("click", function (e) {
+        if (e.target.closest("a")) return; /* links in the description still navigate */
+        var selection = window.getSelection();
+        if (selection && selection.toString()) return; /* don't collapse on text selection */
+
         var expanded = card.classList.toggle("is-expanded");
         btn.setAttribute("aria-expanded", expanded ? "true" : "false");
         var label = btn.querySelector(".exp-toggle-label");
