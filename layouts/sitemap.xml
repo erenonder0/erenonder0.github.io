@@ -1,0 +1,20 @@
+{{/* Overrides Hugo's built-in sitemap to drop the data-only sections.
+     content/home and content/footer feed the homepage and the footer partial, so
+     they stay in the page collections, but they are marked `render = "never"` and
+     have no URL of their own — listing them here would advertise 404s. */}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- range .Pages }}
+  {{- if not (in (slice "home" "footer") .Type) }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+    {{- end }}
+    {{- range .Translations }}
+    <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+    {{- end }}
+  </url>
+  {{- end }}
+  {{- end }}
+</urlset>

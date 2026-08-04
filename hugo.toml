@@ -23,6 +23,11 @@ unsafe = true
 # Specifically disable generation of these kinds for the footer content
 disableKinds = ["footerSection", "RSS"]
 
+# Only "tags" is used for classification. Declaring it explicitly drops Hugo's
+# default "categories" taxonomy, which otherwise publishes an empty /categories/ page.
+[taxonomies]
+  tag = "tags"
+
 [module]
 [[module.imports]]
 path = "github.com/zetxek/adritian-free-hugo-theme"

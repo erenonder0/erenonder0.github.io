@@ -2,6 +2,11 @@
 title =  "Footer"
 type = "footer"
 draft = false
+
+# Data-only page: partials/footer.html reads pages of type "footer". Keep it in
+# the collections, but do not publish it on its own URL (/footer/).
+[build]
+render = "never"
 +++
 
 
