@@ -8,3 +8,7 @@ Thumbs.db
 *.swp
 *.swo
 .vscode/
+# Build output. Tracking it made stale pages survive deploys: the workflow checks
+# out the repo and Hugo writes over public/ without deleting files it no longer
+# generates, so removed pages kept being published.
+/public/
