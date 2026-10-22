@@ -307,20 +307,40 @@
     });
   }
 
+  /* Pause the hero's grid animation (CSS) while the hero is off screen. */
+  function initHeroVisibility() {
+    var hero = document.querySelector(".cyber-hero");
+    if (!hero || !window.IntersectionObserver) return;
+    new IntersectionObserver(function (entries) {
+      hero.classList.toggle("is-offscreen", !entries[0].isIntersecting);
+    }).observe(hero);
+  }
+
   /* ----------------------------------------------------------------------
-     9. Particle background: one viewport canvas behind the homepage, with
-        depth parallax on scroll and a light cursor interaction
+     9. Particle background (homepage only). Desktop: one viewport canvas
+        behind every section, with depth parallax and a light cursor
+        interaction. Phones: inside the hero only, paused once it scrolls away.
+        Drawn at ~30 fps; the motion is slow enough that 60 adds nothing.
      ---------------------------------------------------------------------- */
   function initParticles() {
     /* homepage only (the theme puts .home on its <body>) */
     if (prefersReduced || !document.body.classList.contains("home")) return;
+    var hero = document.querySelector(".cyber-hero");
+    var phone = !!hero && window.matchMedia("(max-width: 767px), (hover: none)").matches;
     var canvas = document.createElement("canvas");
     canvas.className = "site-particles";
     canvas.setAttribute("aria-hidden", "true");
     /* Inline so the size is right even before the async CSS bundle applies. */
-    canvas.style.cssText =
-      "position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none";
-    document.body.insertBefore(canvas, document.body.firstChild);
+    if (phone) {
+      canvas.style.cssText =
+        "position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none";
+      var grid = hero.querySelector(".cyber-hero__gridbg");
+      hero.insertBefore(canvas, grid ? grid.nextSibling : hero.firstChild);
+    } else {
+      canvas.style.cssText =
+        "position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none";
+      document.body.insertBefore(canvas, document.body.firstChild);
+    }
     var ctx = canvas.getContext("2d");
     var dots = [];
     var w, h, dpr;
@@ -328,7 +348,10 @@
     var LINK = 14000;        /* squared distance for dot-to-dot lines (~118px) */
     var MOUSE_R = 125;       /* cursor reach in px */
     var mouse = null;
-    var canHover = window.matchMedia("(hover: hover)").matches;
+    var canHover = !phone && window.matchMedia("(hover: hover)").matches;
+    var visible = true;
+    var rafId = null;
+    var last = 0;
 
     function size() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -353,22 +376,29 @@
           vy: (Math.random() - 0.5) * 0.35,
           r: 0.6 + z * 1.8,
           a: 0.3 + z * 0.4,
-          speed: 0.05 + z * 0.05, /* share of the page scroll: slow and narrow, so no motion sickness */
+          /* share of the page scroll: slow and narrow, so no motion sickness;
+             none on phones, where the canvas scrolls away with the hero */
+          speed: phone ? 0 : 0.05 + z * 0.05,
         });
       }
     }
 
     function wrap(v, span) { return ((v % span) + span) % span; }
 
-    function frame() {
+    function frame(t) {
+      if (!visible) { rafId = null; return; }
+      rafId = requestAnimationFrame(frame);
+      if (t - last < 32) return;          /* ~30 fps */
+      var k = last ? Math.min(3, (t - last) / 16.67) : 1; /* keep speeds frame-rate independent */
+      last = t;
       ctx.clearRect(0, 0, w, h);
-      var scroll = window.scrollY || 0;
+      var scroll = phone ? 0 : window.scrollY || 0;
       var span = h + PAD * 2;
       var i, j, d, o, dx, dy, dist;
 
       for (i = 0; i < dots.length; i++) {
         d = dots[i];
-        d.x += d.vx; d.y += d.vy;
+        d.x += d.vx * k; d.y += d.vy * k;
         if (d.x < 0 || d.x > w) d.vx *= -1;
         d.sx = d.x;
         d.sy = wrap(d.y - scroll * d.speed, span) - PAD;
@@ -377,7 +407,7 @@
           dx = d.sx - mouse.x; dy = d.sy - mouse.y;
           dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MOUSE_R && dist > 0.1) {
-            var push = (1 - dist / MOUSE_R) * 0.35;
+            var push = (1 - dist / MOUSE_R) * 0.35 * k;
             d.x += (dx / dist) * push;
             d.y += (dy / dist) * push;
           }
@@ -416,8 +446,8 @@
         ctx.fillStyle = "rgba(0,212,255," + d.a + ")";
         ctx.fill();
       }
-      requestAnimationFrame(frame);
     }
+    function start() { if (!rafId) { last = 0; rafId = requestAnimationFrame(frame); } }
 
     if (canHover) {
       window.addEventListener("mousemove", function (e) { mouse = { x: e.clientX, y: e.clientY }; }, { passive: true });
@@ -425,7 +455,14 @@
       window.addEventListener("blur", function () { mouse = null; });
     }
 
-    size(); build(); frame();
+    size(); build(); start();
+    /* phones: stop drawing once the hero is off screen */
+    if (phone && window.IntersectionObserver) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        if (visible) start();
+      }).observe(hero);
+    }
     /* Refit whenever the canvas box changes. Mobile URL-bar show/hide only
        changes the height, so re-seed the dots only when the width changes. */
     var lastW = w;
@@ -1078,6 +1115,7 @@
     initFilters();
     initExpanders();
     initParticles();
+    initHeroVisibility();
     initScrollProgress();
     initTilt();
     initTerminal();
