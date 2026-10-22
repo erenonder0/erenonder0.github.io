@@ -66,6 +66,8 @@ Published: `/`, `/blog/…`, `/projects/…` (the project list page is the back-
     - Then the page shakes and goes **real fullscreen** (Fullscreen API, like F11; skipped silently where it is not allowed, e.g. iPhone Safari). A ":(" crash screen counts to 100%, the screen switches off like a CRT and stays black for 3 s, "Rebooting…" shows, fullscreen is exited, and the site comes back with a recap in the terminal (`terminal_troll_done`).
     - Esc skips at any point. In fullscreen the browser takes Esc, so leaving fullscreen early also ends the prank. The terminal stays open, and page scroll is locked meanwhile.
     - It is all page DOM; no real windows or tabs are opened. With reduced motion there are fewer popups and no shake/CRT animation.
+    - **Sound** (`makeSfx()`): all synthesised with Web Audio, no audio files (real OS error sounds are copyrighted). Each popup plays a harsh "critical stop"-style square-wave note dropping a tritone, at random pitch and throttled to ≤ ~14/s, so a flood becomes a dissonant cluster. Under the flood, a rising alarm swells over 3.5 s: two detuned low saws beating, plus a siren that wails faster. The crash cuts the alarm and loops a 45 ms noise/buzz grain like a frozen PC's stuck audio for the shake, then dead silence on the blue screen. The CRT switch-off is a click with a falling whine, and a startup chime plays when the site returns. The output goes through master gain .38 and a 4.2 kHz lowpass; peaks measure ~0.26, with no clipping.
+      The AudioContext is created inside the Enter keypress so browsers allow playback. It is closed at the end; Esc or leaving fullscreen early cuts the sound with no chime. Without Web Audio the prank runs silent.
 
 ## `<head>`
 

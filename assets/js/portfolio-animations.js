@@ -803,6 +803,123 @@
       return e;
     }
 
+    /* Sound effects for the prank, synthesised with Web Audio (no audio files).
+       Must be created inside the user's keypress so the browser lets it play. */
+    function makeSfx() {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      var ctx;
+      try { ctx = new AC(); } catch (e) { return null; }
+      if (ctx.state === "suspended" && ctx.resume) ctx.resume();
+      /* master volume, then a lowpass that takes the sharpest edge off the
+         square waves so "harsh" stays scary rather than painful */
+      var master = ctx.createGain();
+      master.gain.value = 0.38;
+      var tame = ctx.createBiquadFilter();
+      tame.type = "lowpass"; tame.frequency.value = 4200;
+      master.connect(tame); tame.connect(ctx.destination);
+      var lastPop = -1;
+      var alarmNodes = null;
+      function tone(freq, start, dur, type, vol, endFreq) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = type || "sine";
+        o.frequency.setValueAtTime(freq, start);
+        if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, start + dur);
+        g.gain.setValueAtTime(0.0001, start);
+        g.gain.exponentialRampToValueAtTime(vol, start + 0.01);
+        g.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+        o.connect(g); g.connect(master);
+        o.start(start); o.stop(start + dur + 0.02);
+      }
+      function noise(start, dur, vol, freq) {
+        var len = Math.max(1, Math.floor(ctx.sampleRate * dur));
+        var buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
+        for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+        var src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+        src.buffer = buf;
+        f.type = "bandpass"; f.frequency.value = freq; f.Q.value = 0.8;
+        g.gain.setValueAtTime(vol, start);
+        g.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+        src.connect(f); f.connect(g); g.connect(master);
+        src.start(start); src.stop(start + dur);
+      }
+      return {
+        /* "critical stop" style error: a harsh square-wave note dropping a
+           tritone. Random pitch, so a flood piles up into a dissonant cluster.
+           Throttled to ~14/s. */
+        pop: function () {
+          var t = ctx.currentTime;
+          if (t - lastPop < 0.07) return;
+          lastPop = t;
+          var f = 640 + Math.random() * 260;
+          tone(f, t, 0.14, "square", 0.22);
+          tone(f / Math.SQRT2, t + 0.07, 0.28, "square", 0.2);
+        },
+        /* rising dread under the flood: two detuned low saws beating against
+           each other, plus a wailing siren, both swelling until the crash */
+        alarmStart: function (rampSec) {
+          var t = ctx.currentTime;
+          var g = ctx.createGain();
+          g.gain.setValueAtTime(0.0001, t);
+          g.gain.exponentialRampToValueAtTime(1, t + rampSec);
+          g.connect(master);
+          var d1 = ctx.createOscillator(), d2 = ctx.createOscillator();
+          d1.type = d2.type = "sawtooth";
+          d1.frequency.value = 55; d2.frequency.value = 58.3;
+          var dg = ctx.createGain(); dg.gain.value = 0.45;
+          d1.connect(dg); d2.connect(dg); dg.connect(g);
+          var siren = ctx.createOscillator(), lfo = ctx.createOscillator(), depth = ctx.createGain();
+          siren.type = "square"; siren.frequency.value = 760;
+          lfo.frequency.setValueAtTime(1.2, t);
+          lfo.frequency.linearRampToValueAtTime(4, t + rampSec); /* wails faster as it builds */
+          depth.gain.value = 180;
+          lfo.connect(depth); depth.connect(siren.frequency);
+          var sg = ctx.createGain(); sg.gain.value = 0.14;
+          siren.connect(sg); sg.connect(g);
+          [d1, d2, siren, lfo].forEach(function (o) { o.start(t); });
+          alarmNodes = { g: g, oscs: [d1, d2, siren, lfo] };
+        },
+        alarmStop: function () {
+          if (!alarmNodes) return;
+          var t = ctx.currentTime;
+          alarmNodes.g.gain.cancelScheduledValues(t);
+          alarmNodes.g.gain.setValueAtTime(0.0001, t);
+          alarmNodes.oscs.forEach(function (o) { try { o.stop(t + 0.02); } catch (e) { /* stopped */ } });
+          alarmNodes = null;
+        },
+        /* the frozen-PC buzz: a 45 ms grain of noise + buzz looped like a
+           stuck sound buffer, then cut dead (the blue screen is silent) */
+        freeze: function (dur) {
+          var t = ctx.currentTime;
+          var len = Math.floor(ctx.sampleRate * 0.045);
+          var buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
+          for (var i = 0; i < len; i++) {
+            var sq = (Math.floor(i / (ctx.sampleRate / 110)) % 2) ? 0.6 : -0.6;
+            d[i] = sq * 0.6 + (Math.random() * 2 - 1) * 0.5;
+          }
+          var src = ctx.createBufferSource(), g = ctx.createGain();
+          src.buffer = buf; src.loop = true;
+          g.gain.value = 0.6;
+          src.connect(g); g.connect(master);
+          src.start(t); src.stop(t + dur);
+        },
+        /* CRT switch-off: a click, then a whine falling away */
+        crtOff: function () {
+          var t = ctx.currentTime;
+          noise(t, 0.06, 0.9, 3000);
+          tone(1500, t, 0.8, "sine", 0.3, 50);
+        },
+        /* startup chime when the site comes back */
+        chime: function () {
+          var t = ctx.currentTime + 0.05;
+          [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) { tone(f, t + i * 0.12, 0.9, "sine", 0.32); });
+        },
+        close: function (afterMs) {
+          setTimeout(function () { try { ctx.close(); } catch (e) { /* already closed */ } }, afterMs || 0);
+        }
+      };
+    }
+
     function surpriseTroll() {
       surpriseBusy = true;
       var timers = [];
@@ -813,6 +930,8 @@
       var count = 0;
       var z = 1;
       var lastMsg = -1;
+      var sfx = makeSfx(); /* null when Web Audio is unavailable: the prank runs silent */
+      if (sfx) sfx.alarmStart(prefersReduced ? 2 : 3.5); /* swells over the popup flood */
 
       var root = el("div", "troll");
       root.setAttribute("role", "alertdialog");
@@ -860,6 +979,7 @@
         win.appendChild(body);
         win.appendChild(ok);
         root.appendChild(win);
+        if (sfx) sfx.pop();
         /* the prank: closing a window opens two more */
         var multiply = function (ev) {
           ev.stopPropagation();
@@ -916,6 +1036,9 @@
         crashed = true;
         enterFullscreen();
         root.classList.add("is-shaking");
+        /* alarm cuts out, the speakers "freeze" for the shake, then dead
+           silence as the blue screen appears */
+        if (sfx) { sfx.alarmStop(); sfx.freeze(prefersReduced ? 0.3 : 0.7); }
         later(function () {
           var screenEl = el("div", "troll-crash");
           var face = el("div", "troll-crash__face", s.trollCrash[0]);
@@ -938,6 +1061,7 @@
       function powerOff() {
         if (finished) return;
         root.classList.add("is-off"); /* CRT collapse to a line, then a dot */
+        if (sfx) sfx.crtOff();
         later(function () {
           if (finished) return;
           root.classList.add("is-black");
@@ -945,14 +1069,20 @@
           later(function () {
             if (finished) return;
             root.appendChild(el("div", "troll-reboot", s.trollReboot));
-            later(finish, 2200);
+            later(function () { finish(true); }, 2200);
           }, 3000);
         }, prefersReduced ? 0 : 900);
       }
-      function finish() {
+      /* completed = the prank ran to the end (startup chime); otherwise it was
+         skipped and the sound is cut at once */
+      function finish(completed) {
         if (finished) return;
         finished = true;
         timers.forEach(clearTimeout);
+        if (sfx) {
+          if (completed === true) { sfx.chime(); sfx.close(2000); }
+          else sfx.close();
+        }
         document.removeEventListener("keydown", onKey, true);
         document.removeEventListener("fullscreenchange", onFullscreenChange);
         document.removeEventListener("webkitfullscreenchange", onFullscreenChange);
