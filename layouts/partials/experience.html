@@ -1,7 +1,7 @@
 {{ $contextType := printf "%T" . }}
 {{ $isShortcode := (eq $contextType "*hugolib.ShortcodeWithPage") }}
 
-{{/* Experience — full-width single-column cards, descriptions always visible (Option C) */}}
+{{/* Experience cards — see CLAUDE.md → Experience */}}
 {{ $sectionId := "experience-single" }}
 {{ if $isShortcode }}
   {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
@@ -14,25 +14,15 @@
       {{ if $isShortcode }}{{ .Get "title" | default (i18n "experience_title") }}{{ else }}{{ i18n "experience_title" }}{{ end }}
     </h2>
 
-    {{ $xp := where .Site.RegularPages.ByDate "Type" "experience" }}
-    {{ if not $isShortcode }}
-      {{ $baseLangSite := .Sites.Default }}
-      {{ $xp = $xp | lang.Merge (where $baseLangSite.RegularPages.ByDate.Reverse "Type" "experience") }}
-    {{ end }}
-    {{ $xpCount := len $xp }}
-    {{ $totalCount := .Site.Params.homepageExperienceCount }}
-    {{ if not $isShortcode }}{{ if not .IsHome }}{{ $totalCount = $xpCount }}{{ end }}{{ end }}
+    {{ $xp := where .Site.RegularPages "Type" "experience" }}
 
     <div class="experience-cards">
-      {{ range $index, $e := first $totalCount (sort $xp "Date" "desc") }}
+      {{ range $index, $e := first .Site.Params.homepageExperienceCount (sort $xp "Date" "desc") }}
       {{ $active := in (lower .Params.duration) "now" }}
       {{ $tags := .Params.tags }}
       <div class="exp-card reveal{{ if $active }} exp-card--active is-expanded{{ end }}">
         <div class="exp-card__top">
-          {{- /* Company marks here are full-bleed squares that carry their own
-                 background, so they cover the tile. `logoStyle: plate` in the front
-                 matter opts a transparent, dark-ink logo into a light backing, and
-                 the initials fallback always needs one. */}}
+          {{- /* logoStyle: fill (default) | plate */}}
           {{- $img := resources.Get .Params.companyLogo }}
           {{- $logoMod := cond $img (.Params.logoStyle | default "fill") "initials" }}
           <div class="exp-card__logo exp-card__logo--{{ $logoMod }}">

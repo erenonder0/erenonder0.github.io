@@ -1,15 +1,22 @@
-# Temanın dökümantasyonu
-https://github.com/zetxek/adritian-free-hugo-theme/tree/main
-https://www.adrianmoreno.info/
-https://github.com/zetxek/adritian-free-hugo-theme/tree/b3f40a28544b8a21c28daed80c0b2140248fcd6e/layouts/partials
+# erenonder.com
 
-# İlk sefer bağımlılıkları yüklemek için
-npm install
+Source of my personal portfolio — **Eren ONDER**, Junior Cyber Security Specialist.
+Live at **[erenonder.com](https://erenonder.com)** (English) and **[erenonder.com/tr](https://erenonder.com/tr/)** (Türkçe).
 
-# Server localde çalıştırmak için
-hugo server
+Built with [Hugo](https://gohugo.io) on top of the
+[Adritian](https://github.com/zetxek/adritian-free-hugo-theme) theme, with a custom dark design,
+and deployed to GitHub Pages by GitHub Actions. Blog posts are mirrored from
+[Medium](https://medium.com/@erenonder0) by a scheduled workflow.
 
-# İşin bittikten sonra
-git add .
-git commit -m "mesajın"
-git push
+## Local development
+
+Requires Hugo **extended** ≥ 0.163, Go (for Hugo modules) and Node.js.
+
+```sh
+npm ci          # Bootstrap sources used by the theme
+hugo server     # http://localhost:1313
+```
+
+## Security
+
+Found a problem on the site? See [`/.well-known/security.txt`](https://erenonder.com/.well-known/security.txt).

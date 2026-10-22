@@ -1,4 +1,4 @@
-{{/* Skills section (Task 7) — uses site.Data.skills */}}
+{{/* Skills section — uses hugo.Data.skills */}}
 {{ $sectionId := "skills" }}
 {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
 {{ $isTR := eq site.Language.Lang "tr" }}
@@ -11,7 +11,7 @@
     </div>
 
     <div class="skills-grid">
-      {{ range $ci, $cat := site.Data.skills.categories }}
+      {{ range $ci, $cat := hugo.Data.skills.categories }}
       <div class="skill-card reveal" data-delay="{{ add $ci 1 }}">
         <div class="skill-card__head">
           <span class="skill-card__icon">{{ $cat.icon }}</span>

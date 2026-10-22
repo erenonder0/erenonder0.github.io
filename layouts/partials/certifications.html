@@ -1,4 +1,4 @@
-{{/* Certifications section (Task 8) — uses site.Data.certifications */}}
+{{/* Certifications section — uses hugo.Data.certifications */}}
 {{ $sectionId := "certifications" }}
 {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
 
@@ -11,14 +11,11 @@
 
     <div class="cert-grid">
       {{ $isTR := eq site.Language.Lang "tr" }}
-      {{ $certs := sort site.Data.certifications.certifications "sort_date" "desc" }}
+      {{ $certs := sort hugo.Data.certifications.certifications "sort_date" "desc" }}
       {{ range $i, $c := $certs }}
       <div class="cert-card reveal" data-delay="{{ add (mod $i 3) 1 }}">
         {{ if $c.logo }}
-          {{/* logo_style picks the tile treatment, since the artwork differs in kind:
-               plate — dark-ink marks on transparency, need a light backing (default)
-               badge — colourful round seals, which a backing would box in
-               fill  — artwork that carries its own background, so it covers the tile */}}
+          {{/* logo_style: plate | badge | fill — see CLAUDE.md */}}
           <div class="cert-logo cert-logo--{{ $c.logo_style | default "plate" }}">
             <img src="{{ $c.logo }}" alt="{{ $c.issuer }}" loading="lazy" />
           </div>
@@ -31,8 +28,7 @@
         <div class="cert-card__issuer">{{ $c.issuer }}</div>
         {{ $date := cond $isTR (or $c.date_tr $c.date) $c.date }}
         {{ with $date }}<span class="cert-card__date">{{ . }}</span>{{ end }}
-        {{- /* Multi-course tracks collapse behind a toggle so one track does not
-               take seven slots in the grid. Uses the shared .expand-toggle JS. */}}
+        {{- /* multi-course tracks collapse behind .expand-toggle */}}
         {{ with $c.courses }}
         <button
           class="expand-toggle cert-card__toggle"

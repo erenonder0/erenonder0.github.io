@@ -53,6 +53,10 @@ def cdata(block, tag):
 
 def clean_html(body):
     """Medium'a ozgu takip pikselini ve kaynak parametrelerini temizler."""
+    # Hugo HTML'i oldugu gibi basar (unsafe = true); calistirilabilir icerik alinmaz.
+    body = re.sub(r"<(script|style)\b.*?</\1\s*>", "", body, flags=re.S | re.I)
+    body = re.sub(r"""\s+on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)""", "", body, flags=re.I)
+    body = re.sub(r"""(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2""", r'\1="#"', body, flags=re.I)
     # Gorunmez takip pikseli (medium.com/_/stat?event=post.clientViewed...)
     body = re.sub(r'<img[^>]*medium\.com/_/stat[^>]*>', "", body)
     # Link ve gorsellerdeki ?source=rss------ parametreleri

@@ -36,8 +36,16 @@
 }
 
 /* ---------------------------------------------------------------------------
-   Base / typography  (!important to win over theme's eren.scss dark block)
+   Base / typography  (!important to win over the theme's dark-mode block)
    --------------------------------------------------------------------------- */
+/* Paragraph rhythm the design was built on (theme ≤1.7 defaults; newer theme
+   versions use 24px / .75rem). `body` prefix outranks the theme's `p` rule. */
+body p { line-height: 28px; margin-bottom: 1rem; }
+body p + p { margin-top: -12px; }
+body b, body strong { font-weight: bolder; }
+html[data-bs-theme="dark"] .dropdown-menu {
+  --bs-dropdown-bg: #212529; --bs-dropdown-color: #dee2e6; --bs-dropdown-link-color: #dee2e6;
+}
 html { scroll-behavior: smooth; }
 
 html[data-bs-theme="dark"] body,
@@ -268,9 +276,8 @@ html.js .reveal.visible { opacity: 1; transform: translate(0) scale(1); }
   padding: 100px 1rem 80px;
   margin-bottom: 0;
   overflow: hidden;
-  background: var(--bg-primary);
+  background: transparent; /* lets the site-wide particle canvas show through */
 }
-.cyber-hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
 .cyber-hero::before,
 .cyber-hero::after {
   content: ""; position: absolute; z-index: 0; border-radius: 50%;
@@ -1010,6 +1017,28 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 }
 
 /* ============================================================================
+   Breadcrumb (theme partial) — flat, mono, one "/" separator
+   ========================================================================== */
+html[data-bs-theme] #breadcrumb-bar .breadcrumbs {
+  background: none; border: 0; box-shadow: none; backdrop-filter: none;
+  padding: 0; gap: .5rem; font-family: var(--font-mono); font-size: .8rem;
+}
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-item:not(:last-child)::after {
+  content: "/"; margin-left: .5rem; font-size: inherit; color: var(--text-muted);
+}
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-item + .breadcrumb-item { padding-left: 0; }
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-item + .breadcrumb-item::before { content: none; }
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-icon { display: none; }
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-link {
+  padding: 0; color: var(--accent-blue); background: none; box-shadow: none; transform: none;
+}
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-link .breadcrumb-text { color: inherit; }
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-link:hover { color: var(--text-primary); }
+html[data-bs-theme] #breadcrumb-bar .breadcrumb-item.active .breadcrumb-text {
+  color: var(--text-secondary); font-weight: 400; max-width: 60ch; white-space: normal;
+}
+
+/* ============================================================================
    Scroll progress bar (element injected by portfolio-animations.js)
    ========================================================================== */
 .scroll-progress {
@@ -1077,8 +1106,10 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 /* Chat-widget style: a small fixed panel anchored above the trigger, not a full-screen modal */
 .terminal-overlay {
   position: fixed; right: 24px; bottom: 84px; z-index: 3000;
-  width: 380px; max-width: calc(100vw - 48px);
-  height: 480px; max-height: calc(100vh - 140px);
+  /* sized in the output's monospace `ch` so a 58-char line (help, recon) never wraps */
+  font-family: var(--font-mono); font-size: .86rem;
+  width: calc(58ch + 50px); max-width: calc(100vw - 48px);
+  height: 520px; max-height: calc(100vh - 140px);
   opacity: 0; visibility: hidden; pointer-events: none;
   transform-origin: right bottom;
   transform: translateY(12px) scale(.96);
@@ -1154,12 +1185,90 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
   font-family: var(--font-mono); font-size: .72rem; color: var(--text-muted); text-align: center;
 }
 
+/* ============================================================================
+   Terminal `surprise-me` → popup prank (built by JS): fake retro error windows
+   flood the page, a :( crash screen, CRT power-off, reboot. All page DOM.
+   ========================================================================== */
+html.troll-open { overflow: hidden; }
+.troll { position: fixed; inset: 0; z-index: 4000; }
+.troll__skip {
+  position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 100000;
+  padding: 4px 10px; border-radius: 6px; background: rgba(0, 0, 0, 0.65);
+  font-family: var(--font-mono); font-size: .75rem; color: #fff; pointer-events: none;
+}
+.troll-win {
+  position: absolute; overflow: hidden;
+  font-family: Tahoma, "Segoe UI", system-ui, sans-serif; font-size: 13px; color: #000;
+  background: #ece9d8; border: 1px solid #0831d9; border-radius: 8px 8px 4px 4px;
+  box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.45);
+  animation: troll-pop .12s ease-out both;
+}
+.troll-win__bar {
+  display: flex; align-items: center; justify-content: space-between; padding: 4px 5px 4px 10px;
+  background: linear-gradient(180deg, #0a5fe6, #0242c8 45%, #0a3ab8); color: #fff; font-weight: 700;
+}
+.troll-win__x {
+  width: 21px; height: 21px; padding: 0; line-height: 1; cursor: pointer;
+  border: 1px solid #fff; border-radius: 3px; color: #fff; font-weight: 700;
+  background: linear-gradient(180deg, #e9805c, #c4361a);
+}
+.troll-win__body { padding: 14px 14px 8px; min-height: 52px; color: #000; line-height: 1.4; }
+.troll-win__ok {
+  display: block; margin: 0 auto 12px; min-width: 76px; padding: 3px 12px; cursor: pointer;
+  font: inherit; color: #000; border: 1px solid #003c74; border-radius: 3px;
+  background: linear-gradient(180deg, #fff, #ecebe6);
+}
+.troll.is-shaking { animation: troll-shake .1s linear infinite; }
+
+.troll-crash {
+  position: fixed; inset: 0; z-index: 99990; padding: 12vh 10vw;
+  background: #0a64ad; color: #fff; font-family: "Segoe UI", system-ui, sans-serif;
+}
+.troll-crash__face { font-size: clamp(5rem, 14vw, 10rem); line-height: 1; margin-bottom: 2rem; }
+.troll .troll-crash p {
+  max-width: 900px; margin: 0 0 1rem; line-height: 1.4;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem); font-weight: 300; color: #fff !important;
+}
+.troll .troll-crash p.troll-crash__pct { margin-top: 1.6rem; }
+/* power-off: the crash screen collapses like an old CRT */
+.troll.is-off { background: #000; }
+.troll.is-off .troll-win { display: none; }
+.troll.is-off .troll-crash { animation: troll-crt-off .9s cubic-bezier(.55, .06, .68, .19) forwards; }
+.troll-reboot {
+  position: fixed; inset: 0; z-index: 99995; display: flex; align-items: center; justify-content: center;
+  background: #000; color: var(--accent-green); font-family: var(--font-mono); font-size: 1.1rem;
+}
+.troll-reboot::after { content: "_"; margin-left: 2px; animation: troll-blink 1s steps(1) infinite; }
+.troll.is-leaving { opacity: 0; transition: opacity .4s ease; }
+
+@keyframes troll-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes troll-shake {
+  0% { transform: translate(0, 0); } 25% { transform: translate(-6px, 4px); }
+  50% { transform: translate(5px, -5px); } 75% { transform: translate(-4px, -3px); }
+  100% { transform: translate(4px, 5px); }
+}
+@keyframes troll-crt-off {
+  0% { transform: scale(1, 1); filter: brightness(1); }
+  40% { transform: scale(1, .004); filter: brightness(3); }
+  70% { transform: scale(.25, .004); filter: brightness(4); }
+  100% { transform: scale(0, 0); filter: brightness(5); }
+}
+@keyframes troll-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .troll-win, .troll.is-shaking, .troll.is-off .troll-crash, .troll-reboot::after { animation: none !important; }
+  .troll.is-leaving { transition: none; }
+}
+@media (max-width: 480px) {
+  .troll-win { font-size: 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .terminal-overlay { transition: none; }
 }
 @media (max-width: 480px) {
   .terminal-trigger { right: 16px; bottom: 16px; width: 42px; height: 42px; font-size: 13px; }
   .terminal-overlay { right: 12px; bottom: 70px; width: calc(100vw - 24px); height: min(480px, calc(100vh - 120px)); }
+  .terminal-output { font-size: .72rem; padding: 14px 12px; } /* fits the 47-char help lines on a phone */
 }
 
 /* ============================================================================

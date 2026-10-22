@@ -1,15 +1,3 @@
-## Meta tags
-- id: "meta_title"
-  translation: "Eren ONDER | Cyber Security & Digital Forensics Portfolio"
-- id: "meta_description"
-  translation: "Discover my projects and technical work in the field of cyber security."
-- id: "meta_keywords"
-  translation: "cybersecurity, forensic, eren, önder, eren önder, eren önder blog"
-- id: "meta_author"
-  translation: "Eren ONDER"
-- id: "meta_image"
-  translation: "/img/general/og-image.jpg"
-
 ## Header
 
 - id: "logo_alt"
@@ -35,84 +23,11 @@
 - id: "language"
   translation: "Language"
 
-- id: "toggle_theme"
-  translation: "Toggle theme"
-
-- id: "theme_light"
-  translation: "☀️ Light"
-- id: "theme_dark"
-  translation: "🌑 Dark"
-- id: "theme_auto"
-  translation: "✨ Auto"
-
 ## Homepage head title
 - id: "head_title"
   translation: "Eren ONDER | SOC & Incident Response"
 
-- id: "head_description"
-  translation: "Junior Cyber Security Specialist. SIEM-based threat detection, incident response and SOAR automation on critical infrastructure — projects and technical write-ups."
-
-## Homepage showcase
-- id: "showcase_title"
-  translation: "Welcome to the demo"
-
-- id: "showcase_subtitle"
-  translation: "Let's dive into an example"
-
-- id: "showcase_description"
-  translation: "This is a high performance theme for the Hugo static site generator. 
-    This sample content can be edited in the locale files (as the theme supports translations).
-    <br>
-    You can download this theme from <a target='_blank' href='https://github.com/zetxek/adritian-free-hugo-theme'>github</a>, 
-    and see it live <a target='_blank' href='https://adritian-demo.vercel.app/'>as a demo site</a> 
-    or <a target='_blank' href='https://www.adrianmoreno.info'>a real one</a>.
-    <br>
-    The content you see so far in the homepage is:
-    <ul>
-      <li>Site logo/name: site config file (<code>hugo.toml</code>)</li>
-      <li>Site top menu: site config file (<code>hugo.toml</code>), look for the <code>[[languages.en.menus.header]]</code> section</li>
-      <li>This paragraph: <code>i18n/en.yaml</code> (for English)</li>
-    </ul>
-    Additionally, the order of the items in the homepage is configured in the <code>sections</code> array in the <code>hugo.toml</code> file:
-    <code>sections = [
-  \"showcase\",
-  \"about\",
-  \"education\",
-  \"experience\",
-  \"client-and-work\",
-  \"testimonial\",
-  \"contact\",
-  \"newsletter\",
-  ]</code><br/> 
-  The content of each section is defined in the <code>data/homepage.yml</code> file (ie: links to social sites, mail, ...).
-  <br/>
-  If you scroll this page you will see some hints on where the content comes from - all the way to the footer menu. These links come from the site config file (<code>hugo.toml</code>), look for the <code>[[languages.en.menus.footer]]</code> section."
-
-- id: "showcase_button"
-  translation: "Contact"
-
   ## not visible but used for accessibility
-- id: "showcase_image_alt"
-  translation: "A picture of Cool Name"
-
-## Homepage about
-- id: "about_title"
-  translation: "About Me"
-
-- id: "about_content"
-  translation:  '<p class="lead">
-      Here you can add some information about you. A small excerpt that describes 
-      your experience, for example.   
-      <br/>
-      You explain something about your academic/study background, as well as your
-      preferred areas of work.
-      </p>
-      <p>The content for this section is defined in the <code>i18n/en.yaml</code> file, 
-      in the <code>about_content</code> item.
-      </p>'
-
-- id: "about_button"
-  translation: "About Me"
 
 ## Homepage education
 - id: "education_eyebrow"
@@ -121,97 +36,17 @@
   translation: "Education"
 
 ## Homepage experience
-- id: "experience_button"
-  translation: "LinkedIn"
-
-- id: "experience_button_url"
-  translation: "https://www.linkedin.com/in/erenonder0/"
-
-- id: "experience_button2"
-  translation: "Download"
 
 - id: "experience_button2_url"
-  translation: "/img/general/ErenOnder_SOC_CV_TR.pdf"
-
-- id: "experience_button3"
-  translation: "View All"
-
-- id: "experience_button3_url"
-  translation: "/experience"
+  translation: "/img/general/ErenOnder_SOC_CV_EN.pdf"
 
 ## Homepage client & work
 - id: "client_work_title"
   translation: "Clients & Work"
 
-## Homepage newsletter
-- id: "newsletter_title"
-  translation: "Newsletter"
-
-- id: "newsletter_button"
-  translation: "Subscribe"
-
-- id: "newsletter_placeholder"
-  translation: "Your email"
-
-- id: "newsletter_success_message"
-  translation: "Thank you for subscribing to my newsletter!"
-
-- id: "newsletter_error_message"
-  translation: "An error occurred. Please try again."
-
-- id: "newsletter_note"
-  translation: "We'll never share your email with anyone else."
-
-## Homepage testimonials
-- id: "testimonials_title"
-  translation: "Testimonials"
-
 ## Homepage contact
 - id: "contact_title"
   translation: "Contact"
-
-- id: "contact_button"
-  translation: "Send message"
-
-- id: "contact_form_name"
-  translation: "Full Name"
-
-- id: "contact_form_email"
-  translation: "Email Address"
-
-- id: "contact_form_message"
-  translation: "Type Your Message Here"
-
-- id: "contact_phone_title"
-  translation: "Phone Number"
-
-- id: "contact_phone_number"
-  translation: "Defined in i18n/en.yaml (contact_phone_number)"
-
-- id: "contact_email_title"
-  translation: "Email"
-
-- id: "contact_email_email"
-  translation: 'Defined in i18n/en.yaml (contact_email_email)'
-
-- id: "contact_address_title"
-  translation: "Address"
-
-- id: "contact_address_address"
-  translation: "Defined in i18n/en.yaml (contact_address_address)"
-
-- id: "contact_button"
-  translation: "Send Message"
-
-## Blog
-- id: "read_more"
-  translation: "Read more"
-
-- id: "published_on"
-  translation: "Published on "
-
-- id: "continue_reading"
-  translation: "Continue reading"
 
 ## 404 Page
 - id: "404_title"
@@ -220,8 +55,6 @@
   translation: "Sorry, but the page you were looking for could not be found."
 - id: "404_button"
   translation: "Back to homepage"
-
-## ===== Cyber portfolio redesign keys =====
 
 ## Hero
 - id: "hero_label"
@@ -232,40 +65,18 @@
   translation: "I'm a"
 - id: "hero_bio"
   translation: "Junior Cyber Security Specialist. SOC analyst working on SIEM-based threat detection, incident response and email security across critical national infrastructure."
-#- id: "hero_view_work"
-  #translation: "View My Work"
 - id: "hero_download_cv"
   translation: "Download CV"
-- id: "hero_available"
-  translation: "Available"
 
 ## About
-- id: "about_eyebrow"
-  translation: "// whoami"
 - id: "about_bio"
   translation: "<p>I'm Eren ONDER, a Junior Cyber Security Specialist working on critical national infrastructure. I cover the full SOC workflow on Splunk and IBM QRadar — from alert triage through SOAR automation — alongside incident response, malware analysis and email security.</p><p>I graduated in Digital Forensic Engineering with a 3.64 GPA and have peer-reviewed research published on machine-learning-based threat detection. I build AI-assisted tooling that cuts the analysis and triage load on SOC teams, and stay active in the community as a CTF competitor and instructor.</p>"
-- id: "about_stat1_value"
-  translation: "Junior Specialist"
-- id: "about_stat1_label"
-  translation: "Role"
-- id: "about_stat2_value"
-  translation: "Digital Forensic Eng."
-- id: "about_stat2_label"
-  translation: "Major"
-- id: "about_stat3_value"
-  translation: "Fırat University"
-- id: "about_stat3_label"
-  translation: "School"
 
 ## Skills
 - id: "skills_eyebrow"
   translation: "// capabilities"
 - id: "skills_section_title"
   translation: "Skills"
-- id: "skills_level_1"
-  translation: "Beginner"
-- id: "skills_level_5"
-  translation: "Expert"
 
 ## Certifications
 - id: "certifications_eyebrow"
@@ -287,8 +98,6 @@
   translation: "Experience"
 - id: "experience_current"
   translation: "Current"
-- id: "experience_description"
-  translation: "A blend of corporate security internships and hands-on community work."
 - id: "show_more"
   translation: "Show more"
 - id: "show_less"
@@ -297,8 +106,6 @@
 ## Volunteer work
 - id: "volunteer_eyebrow"
   translation: "// community"
-- id: "volunteer_linkedin"
-  translation: "View on LinkedIn"
 
 ## Activity timeline
 - id: "activity_eyebrow"
@@ -336,8 +143,6 @@
 ## Contact
 - id: "contact_eyebrow"
   translation: "// contact"
-#- id: "contact_message"
-  #translation: ""
 - id: "contact_location"
   translation: "Istanbul, Turkey 🇹🇷"
 
@@ -375,7 +180,7 @@
 - id: "terminal_welcome"
   translation: "Welcome to erenonder0's terminal.\nType 'help' to see available commands."
 - id: "terminal_help"
-  translation: "Available commands:\n  whoami          who am I?\n  skills          technical skills\n  experience      work experience\n  certifications  certifications (alias: certs)\n  contact         get in touch\n  cv              download my CV\n  snake           play a game\n  sudo hire-me    ;)\n  clear           clear the screen\n  exit            close this terminal"
+  translation: "Available commands:\n  whoami          who am I?\n  skills          technical skills\n  experience      work experience\n  certifications  certifications (alias: certs)\n  contact         get in touch\n  cv              download my CV\n  snake           play a game\n  surprise-me     try it ;)\n  sudo hire-me    ;)\n  clear           clear the screen\n  exit            close this terminal"
 - id: "terminal_not_found"
   translation: "command not found: %s (type 'help' for a list of commands)"
 - id: "terminal_hire_me"
@@ -398,3 +203,19 @@
   translation: "Game over!"
 - id: "terminal_snake_quit"
   translation: "Snake stopped."
+- id: "terminal_troll_title"
+  translation: "Warning"
+- id: "terminal_troll_ok"
+  translation: "OK"
+- id: "terminal_troll_msgs"
+  translation: "Your firewall is on fire. 🔥\nDownloading more RAM... 12%\nError 418: I'm a teapot.\nInstalling 1,337 updates. Do not turn off your browser.\nCongratulations! You are the 1,000,000th visitor!\nAntivirus found 1 threat: a recruiter who hasn't hired Eren yet.\nAre you sure you want to close this?\nYour password is 'password'. Isn't it?\nCritical: coffee level below 5%.\nsudo rm -rf / ... just kidding. Or am I?"
+- id: "terminal_troll_crash"
+  translation: ":(\nThis site ran into a problem and needs to restart.\nWe're just collecting some error info, and then we'll restart for you."
+- id: "terminal_troll_pct"
+  translation: "{pct}% complete"
+- id: "terminal_troll_reboot"
+  translation: "Rebooting erenonder.com..."
+- id: "terminal_troll_skip"
+  translation: "Esc to skip"
+- id: "terminal_troll_done"
+  translation: "[!] Relax, nothing broke. It was all a prank. 😄\n[i] Those popups were plain page elements; no real windows were opened."

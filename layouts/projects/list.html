@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div id="main-content" class="flex-grow-1">
+  <section class="cyber-section projects-list-section">
+    <div class="container">
+      <div class="cyber-section__head reveal">
+        <span class="cyber-section__eyebrow">{{ i18n "projects_eyebrow" }}</span>
+        <h1 class="cyber-section__title">{{ .Title }}</h1>
+      </div>
+      {{ partial "project-cards.html" .Pages }}
+    </div>
+  </section>
+</div>
+{{ end }}

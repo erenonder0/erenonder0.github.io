@@ -2,7 +2,7 @@
    portfolio-animations.js — vanilla JS, no dependencies
    Handles: reveal-on-scroll, header frosting, timeline scroll-fill,
    skills dot fill, hero typewriter, active-nav detection, timeline filters,
-   card expand/collapse, hero particle canvas.
+   card expand/collapse, site-wide particle background.
    ========================================================================== */
 (function () {
   "use strict";
@@ -308,14 +308,27 @@
   }
 
   /* ----------------------------------------------------------------------
-     9. Hero particle canvas
+     9. Particle background: one viewport canvas behind the homepage, with
+        depth parallax on scroll and a light cursor interaction
      ---------------------------------------------------------------------- */
   function initParticles() {
-    var canvas = document.querySelector(".cyber-hero__canvas");
-    if (!canvas || prefersReduced) return;
+    /* homepage only (the theme puts .home on its <body>) */
+    if (prefersReduced || !document.body.classList.contains("home")) return;
+    var canvas = document.createElement("canvas");
+    canvas.className = "site-particles";
+    canvas.setAttribute("aria-hidden", "true");
+    /* Inline so the size is right even before the async CSS bundle applies. */
+    canvas.style.cssText =
+      "position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none";
+    document.body.insertBefore(canvas, document.body.firstChild);
     var ctx = canvas.getContext("2d");
     var dots = [];
     var w, h, dpr;
+    var PAD = 60;            /* off-screen band so dots wrap in/out without popping */
+    var LINK = 14000;        /* squared distance for dot-to-dot lines (~118px) */
+    var MOUSE_R = 125;       /* cursor reach in px */
+    var mouse = null;
+    var canHover = window.matchMedia("(hover: hover)").matches;
 
     function size() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -330,47 +343,98 @@
       var count = Math.min(70, Math.floor((w * h) / 16000));
       dots = [];
       for (var i = 0; i < count; i++) {
+        /* depth 0 = far, 1 = near: near dots are bigger, brighter and follow
+           the scroll faster, which reads as a layer behind the content */
+        var z = Math.random();
         dots.push({
           x: Math.random() * w,
-          y: Math.random() * h,
+          y: Math.random() * (h + PAD * 2),
           vx: (Math.random() - 0.5) * 0.35,
           vy: (Math.random() - 0.5) * 0.35,
-          r: Math.random() * 1.8 + 0.6,
+          r: 0.6 + z * 1.8,
+          a: 0.3 + z * 0.4,
+          speed: 0.05 + z * 0.05, /* share of the page scroll: slow and narrow, so no motion sickness */
         });
       }
     }
 
+    function wrap(v, span) { return ((v % span) + span) % span; }
+
     function frame() {
       ctx.clearRect(0, 0, w, h);
-      for (var i = 0; i < dots.length; i++) {
-        var d = dots[i];
+      var scroll = window.scrollY || 0;
+      var span = h + PAD * 2;
+      var i, j, d, o, dx, dy, dist;
+
+      for (i = 0; i < dots.length; i++) {
+        d = dots[i];
         d.x += d.vx; d.y += d.vy;
         if (d.x < 0 || d.x > w) d.vx *= -1;
-        if (d.y < 0 || d.y > h) d.vy *= -1;
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(0,212,255,0.55)";
-        ctx.fill();
-        for (var j = i + 1; j < dots.length; j++) {
-          var o = dots[j];
-          var dx = d.x - o.x, dy = d.y - o.y;
-          var dist = dx * dx + dy * dy;
-          if (dist < 14000) {
+        d.sx = d.x;
+        d.sy = wrap(d.y - scroll * d.speed, span) - PAD;
+        /* the cursor gently pushes nearby dots away */
+        if (mouse) {
+          dx = d.sx - mouse.x; dy = d.sy - mouse.y;
+          dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MOUSE_R && dist > 0.1) {
+            var push = (1 - dist / MOUSE_R) * 0.35;
+            d.x += (dx / dist) * push;
+            d.y += (dy / dist) * push;
+          }
+        }
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        d = dots[i];
+        for (j = i + 1; j < dots.length; j++) {
+          o = dots[j];
+          dx = d.sx - o.sx; dy = d.sy - o.sy;
+          dist = dx * dx + dy * dy;
+          if (dist < LINK) {
             ctx.beginPath();
-            ctx.moveTo(d.x, d.y);
-            ctx.lineTo(o.x, o.y);
-            ctx.strokeStyle = "rgba(57,255,20," + (0.12 * (1 - dist / 14000)) + ")";
+            ctx.moveTo(d.sx, d.sy);
+            ctx.lineTo(o.sx, o.sy);
+            ctx.strokeStyle = "rgba(57,255,20," + (0.12 * (1 - dist / LINK)) + ")";
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
         }
+        if (mouse) {
+          dx = d.sx - mouse.x; dy = d.sy - mouse.y;
+          dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MOUSE_R) {
+            ctx.beginPath();
+            ctx.moveTo(d.sx, d.sy);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = "rgba(0,212,255," + (0.24 * (1 - dist / MOUSE_R)) + ")";
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+        ctx.beginPath();
+        ctx.arc(d.sx, d.sy, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(0,212,255," + d.a + ")";
+        ctx.fill();
       }
-      raf = requestAnimationFrame(frame);
+      requestAnimationFrame(frame);
     }
 
-    var raf;
+    if (canHover) {
+      window.addEventListener("mousemove", function (e) { mouse = { x: e.clientX, y: e.clientY }; }, { passive: true });
+      document.documentElement.addEventListener("mouseleave", function () { mouse = null; });
+      window.addEventListener("blur", function () { mouse = null; });
+    }
+
     size(); build(); frame();
-    window.addEventListener("resize", function () { size(); build(); });
+    /* Refit whenever the canvas box changes. Mobile URL-bar show/hide only
+       changes the height, so re-seed the dots only when the width changes. */
+    var lastW = w;
+    var refit = function () {
+      size();
+      if (w !== lastW) { lastW = w; build(); }
+    };
+    if (window.ResizeObserver) new ResizeObserver(refit).observe(canvas);
+    else window.addEventListener("resize", refit);
   }
 
   /* ----------------------------------------------------------------------
@@ -398,11 +462,19 @@
   /* ----------------------------------------------------------------------
      11. Card tilt + cursor glow (all grid/standalone cards site-wide)
      ---------------------------------------------------------------------- */
+  /* A card whose collapsible content is showing (see initExpanders). */
+  function isOpen(card) {
+    if (card.classList.contains("is-expanded")) return true;
+    if (card.querySelector('[aria-expanded="true"]')) return true;
+    var item = card.closest(".ct-item");
+    return !!(item && item.classList.contains("open"));
+  }
+
   function initTilt() {
     if (prefersReduced || !window.matchMedia("(hover: hover)").matches) return;
     var cards = document.querySelectorAll(
       ".cert-card, .project-card, .blog-card, .volunteer-card, " +
-      ".skill-card, .education, .ct-card"
+      ".skill-card, .education, .ct-card, .exp-card"
     );
     cards.forEach(function (card) {
       card.classList.add("tilt-card");
@@ -410,20 +482,29 @@
       glow.className = "tilt-glow";
       card.appendChild(glow);
       var raf = null;
+      function apply(ev) {
+        var r = card.getBoundingClientRect();
+        var px = (ev.clientX - r.left) / r.width;
+        var py = (ev.clientY - r.top) / r.height;
+        card.style.setProperty("--mx", px * 100 + "%");
+        card.style.setProperty("--my", py * 100 + "%");
+        /* max 2deg each way; an opened card is being read, so it barely moves */
+        var amp = isOpen(card) ? 1.2 : 4;
+        var rx = (0.5 - py) * amp;
+        var ry = (px - 0.5) * amp;
+        /* perspective grows with the card so wide (experience) cards tilt as
+           gently as the grid cards instead of warping at the edges */
+        var persp = Math.max(800, r.width);
+        card.style.transform =
+          "perspective(" + persp + "px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
+      }
       card.addEventListener("mousemove", function (ev) {
         if (raf) return;
-        raf = requestAnimationFrame(function () {
-          var r = card.getBoundingClientRect();
-          var px = (ev.clientX - r.left) / r.width;
-          var py = (ev.clientY - r.top) / r.height;
-          card.style.setProperty("--mx", px * 100 + "%");
-          card.style.setProperty("--my", py * 100 + "%");
-          var rx = (0.5 - py) * 6; /* max 3deg each way */
-          var ry = (px - 0.5) * 6;
-          card.style.transform =
-            "perspective(800px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
-          raf = null;
-        });
+        raf = requestAnimationFrame(function () { apply(ev); raf = null; });
+      });
+      /* re-evaluate right after the expanders toggle the card open/closed */
+      card.addEventListener("click", function (ev) {
+        setTimeout(function () { apply(ev); }, 0);
       });
       card.addEventListener("mouseleave", function () {
         card.style.transform = "";
@@ -664,6 +745,203 @@
       }
     }
 
+    /* ---- surprise-me: the popup prank ---- */
+    var surpriseBusy = false;
+
+    function fill(t, vals) {
+      return t.replace(/\{(\w+)\}/g, function (m, k) { return vals[k] != null ? vals[k] : m; });
+    }
+    function lineClass(l) {
+      if (/^\[!\]/.test(l)) return "terminal-line--accent";
+      if (/^\[i\]|^\[\*\]/.test(l)) return "terminal-line--muted";
+      return "";
+    }
+    /* Prank: fake error popups flood the page (closing one opens two), the site
+       "crashes" into a :( screen, switches off like an old CRT, then reboots.
+       Everything is page DOM; no real windows are opened. Esc skips it. */
+    function el(tag, cls, text) {
+      var e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text != null) e.textContent = text;
+      return e;
+    }
+
+    function surpriseTroll() {
+      surpriseBusy = true;
+      var timers = [];
+      var later = function (fn, ms) { timers.push(setTimeout(fn, ms)); };
+      var finished = false;
+      var crashed = false;
+      var maxWins = prefersReduced ? 14 : 60;
+      var count = 0;
+      var z = 1;
+      var lastMsg = -1;
+
+      var root = el("div", "troll");
+      root.setAttribute("role", "alertdialog");
+      root.setAttribute("aria-label", s.trollTitle);
+      var skip = el("div", "troll__skip", s.trollSkip);
+      root.appendChild(skip);
+      document.body.appendChild(root);
+      document.documentElement.classList.add("troll-open");
+
+      function pickMsg() {
+        var i;
+        do { i = Math.floor(Math.random() * s.trollMsgs.length); } while (s.trollMsgs.length > 1 && i === lastMsg);
+        lastMsg = i;
+        return s.trollMsgs[i];
+      }
+      /* new windows mostly cascade down-right from the previous one, like a
+         frozen desktop leaving a trail, with the odd random jump */
+      var cx = 0, cy = 0;
+      function spawn() {
+        if (finished || crashed || count >= maxWins) return;
+        count++;
+        var vw = window.innerWidth, vh = window.innerHeight;
+        var w = Math.min(320, vw - 24), h = 150;
+        if (count === 1 || Math.random() < 0.25 || cx + w > vw || cy + h > vh) {
+          cx = Math.random() * Math.max(0, vw - w);
+          cy = Math.random() * Math.max(0, vh - h);
+        } else {
+          cx += 22; cy += 22;
+        }
+        var win = el("div", "troll-win");
+        win.style.left = cx + "px";
+        win.style.top = cy + "px";
+        win.style.width = w + "px";
+        win.style.zIndex = z++;
+        var bar = el("div", "troll-win__bar");
+        bar.appendChild(el("span", "troll-win__title", "⚠ " + s.trollTitle));
+        var x = el("button", "troll-win__x", "×");
+        x.type = "button";
+        x.setAttribute("aria-label", s.trollOk);
+        bar.appendChild(x);
+        var body = el("div", "troll-win__body", pickMsg());
+        var ok = el("button", "troll-win__ok", s.trollOk);
+        ok.type = "button";
+        win.appendChild(bar);
+        win.appendChild(body);
+        win.appendChild(ok);
+        root.appendChild(win);
+        /* the prank: closing a window opens two more */
+        var multiply = function (ev) {
+          ev.stopPropagation();
+          win.remove();
+          spawn(); spawn();
+        };
+        x.addEventListener("click", multiply);
+        ok.addEventListener("click", multiply);
+      }
+
+      /* spawn faster and faster, then crash. Kept to ~3.5 s so the crash still
+         falls inside the browser's ~5 s user-activation window that fullscreen
+         needs (the Enter that ran the command; clicking popups renews it). */
+      var delay = prefersReduced ? 250 : 300;
+      (function flood() {
+        if (finished || crashed) return;
+        spawn();
+        if (count >= maxWins) { crash(); return; }
+        delay = Math.max(prefersReduced ? 120 : 40, delay * 0.85);
+        later(flood, delay);
+      })();
+      later(crash, 9000); /* closing windows can't keep the site alive forever */
+
+      /* the crash runs in real fullscreen (like F11) when the browser allows it */
+      var wentFull = false;
+      var fsElement = function () { return document.fullscreenElement || document.webkitFullscreenElement; };
+      function enterFullscreen() {
+        var d = document.documentElement;
+        var req = d.requestFullscreen || d.webkitRequestFullscreen;
+        if (!req || fsElement()) return;
+        try {
+          var pr = req.call(d);
+          if (pr && pr.then) pr.then(function () { wentFull = true; }, function () { /* denied: stay windowed */ });
+          else wentFull = true;
+        } catch (e) { /* not allowed here (e.g. iPhone Safari) */ }
+      }
+      function exitFullscreen() {
+        if (!wentFull) return;
+        wentFull = false;
+        if (!fsElement()) return;
+        var ex = document.exitFullscreen || document.webkitExitFullscreen;
+        try { var pr = ex.call(document); if (pr && pr.catch) pr.catch(function () {}); } catch (e) { /* ignore */ }
+      }
+      /* Esc in fullscreen is taken by the browser (no keydown): leaving
+         fullscreen early ends the prank too */
+      function onFullscreenChange() {
+        if (wentFull && !fsElement()) { wentFull = false; finish(); }
+      }
+      document.addEventListener("fullscreenchange", onFullscreenChange);
+      document.addEventListener("webkitfullscreenchange", onFullscreenChange);
+
+      function crash() {
+        if (finished || crashed) return;
+        crashed = true;
+        enterFullscreen();
+        root.classList.add("is-shaking");
+        later(function () {
+          var screenEl = el("div", "troll-crash");
+          var face = el("div", "troll-crash__face", s.trollCrash[0]);
+          screenEl.appendChild(face);
+          s.trollCrash.slice(1).forEach(function (l) { screenEl.appendChild(el("p", "troll-crash__text", l)); });
+          var pct = el("p", "troll-crash__pct", fill(s.trollPct, { pct: 0 }));
+          screenEl.appendChild(pct);
+          root.appendChild(screenEl);
+          root.classList.remove("is-shaking");
+          var p = 0;
+          (function countUp() {
+            if (finished) return;
+            p = Math.min(100, p + 4 + Math.floor(Math.random() * 14));
+            pct.textContent = fill(s.trollPct, { pct: p });
+            if (p < 100) later(countUp, prefersReduced ? 60 : 140);
+            else later(powerOff, 500);
+          })();
+        }, prefersReduced ? 0 : 700);
+      }
+      function powerOff() {
+        if (finished) return;
+        root.classList.add("is-off"); /* CRT collapse to a line, then a dot */
+        later(function () {
+          if (finished) return;
+          root.classList.add("is-black");
+          /* 3 s of dead black screen before the reboot text, to sell the crash */
+          later(function () {
+            if (finished) return;
+            root.appendChild(el("div", "troll-reboot", s.trollReboot));
+            later(finish, 2200);
+          }, 3000);
+        }, prefersReduced ? 0 : 900);
+      }
+      function finish() {
+        if (finished) return;
+        finished = true;
+        timers.forEach(clearTimeout);
+        document.removeEventListener("keydown", onKey, true);
+        document.removeEventListener("fullscreenchange", onFullscreenChange);
+        document.removeEventListener("webkitfullscreenchange", onFullscreenChange);
+        exitFullscreen();
+        root.classList.add("is-leaving");
+        setTimeout(function () {
+          root.remove();
+          document.documentElement.classList.remove("troll-open");
+        }, prefersReduced ? 0 : 400);
+        s.trollDone.forEach(function (l) { printLine(l, lineClass(l)); });
+        output.scrollTop = output.scrollHeight;
+        surpriseBusy = false;
+        setTimeout(function () { input.focus(); }, 60);
+      }
+      /* capture phase so Esc ends the prank without closing the terminal */
+      function onKey(ev) {
+        if (ev.key === "Escape") { ev.stopPropagation(); ev.preventDefault(); finish(); }
+      }
+      document.addEventListener("keydown", onKey, true);
+      /* keep clicks from reaching the terminal's click-outside handler */
+      root.addEventListener("click", function (ev) { ev.stopPropagation(); });
+    }
+    function surprise() {
+      if (!surpriseBusy) surpriseTroll();
+    }
+
     var commands = {
       help: function () { printLines(s.help); },
       whoami: function () {
@@ -696,6 +974,8 @@
       snake: function () { startSnake(); }
     };
     commands.certs = commands.certifications;
+    commands["surprise-me"] = surprise;
+    commands.surprise = surprise;
     commands["sudo hire-me"] = function () {
       printLines(s.hireMe, "terminal-line--accent");
       printLinkLine(data.email, "mailto:" + data.email);

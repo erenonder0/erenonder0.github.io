@@ -1,7 +1,7 @@
 ---
 date: '2026-02-01T00:00:00+03:00'
 title: 'Vardia - Cyber Threat Intelligence Platform'
-draft: false
+draft: true
 
 params:
     button:

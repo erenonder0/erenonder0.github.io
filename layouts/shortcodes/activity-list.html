@@ -1,4 +1,4 @@
-{{/* Interactive activity timeline (Task 6) */}}
+{{/* Interactive activity timeline */}}
 {{ $sectionId := "activity-list-shortcode" }}
 {{ with .Get "sectionId" }}{{ $sectionId = . }}{{ end }}
 {{ $title := .Get "title" | default (i18n "activity_section_title") }}
@@ -70,7 +70,3 @@
     </div>
   </div>
 </section>
-
-{{/* keep the site's supplementary stylesheet available on the homepage */}}
-{{ $style := resources.Get "scss/eren.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

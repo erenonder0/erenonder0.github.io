@@ -1,18 +1,10 @@
 +++
-title =  "Home"
+title = "Home"
 type = "home"
 draft = false
-
-# Data-only page: the theme assembles the homepage from pages of type "home", so
-# this must stay in the page collections, but it should not be published on its
-# own URL (/home/) or appear in the sitemap.
-[build]
-render = "never"
 +++
 
 {{< showcase-section title="Eren ONDER" >}}{{< /showcase-section >}}
-
-{{< about-section >}}
 
 {{< education-list title="Education" >}}
 

@@ -1,0 +1,42 @@
+{{/* Trimmed copy of the theme's head.html (v1.12.1). SEO tags, favicons and analytics
+     live in head_custom.html — see CLAUDE.md → "<head>". */}}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="{{ site.Params.themeColor }}" />
+
+<title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ i18n "head_title" }}</title>
+{{- $desc := site.Params.description }}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ if and .IsPage .Summary }}{{ $desc = .Summary }}{{ end }}{{ end }}
+<meta name="description" content="{{ $desc | plainify | truncate 200 }}" />
+
+{{- with .OutputFormats.Get "RSS" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Title }} | {{ site.Title }}" />
+{{- end }}
+
+{{- with resources.Get "css/critical.css" | resources.Minify }}
+<style data-generator="critical-css">{{ .Content | safeCSS }}</style>
+{{- end }}
+
+{{- $css := slice }}
+{{- range site.Params.plugins.css }}{{ with resources.Get .URL }}{{ $css = $css | append . }}{{ end }}{{ end }}
+{{- with $css }}
+  {{- $bundle := . | resources.Concat "css/bundle.css" }}
+  {{- if hugo.IsProduction }}{{ $bundle = $bundle | minify | fingerprint }}{{ end }}
+<link rel="preload" href="{{ $bundle.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'"{{ if hugo.IsProduction }} integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous"{{ end }} />
+<noscript><link rel="stylesheet" href="{{ $bundle.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous"{{ end }} /></noscript>
+{{- end }}
+
+{{- /* The theme's SCSS is a template that receives the colour scheme. */}}
+{{- $scheme := index hugo.Data.colorSchemes "default" }}
+{{- range site.Params.plugins.scss }}
+  {{- with resources.Get .URL }}
+    {{- $style := . | resources.ExecuteAsTemplate (printf "scss/default-%s" (path.Base .Name)) (dict "scheme" $scheme) | css.Sass }}
+    {{- if hugo.IsProduction }}{{ $style = $style | minify | fingerprint }}{{ end }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"{{ end }} />
+  {{- end }}
+{{- end }}
+
+<link rel="preload" href="{{ "js/library/lozad.min.js" | absURL }}" as="script">
+<script async src="{{ "js/library/lozad.min.js" | absURL }}"></script>
+
+{{ template "_internal/opengraph.html" . }}

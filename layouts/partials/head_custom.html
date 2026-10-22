@@ -1,11 +1,8 @@
-{{/* Custom <head> additions for the cyber portfolio redesign */}}
 {{/* Mark JS as available before paint so reveal/timeline states only hide when JS can re-show them */}}
 <script>document.documentElement.classList.add('js');</script>
 
-{{/* --- Google Analytics (GA4). Emitted here rather than by the theme: the vendored
-     head.html renders gtag('config', '<id> ') with a trailing space, which silently
-     breaks collection. hugo.toml keeps the theme's copy disabled. --- */}}
-{{- with .Site.Params.analytics.googleAnalytics.code }}
+{{/* --- Google Analytics (GA4); theme copy disabled, see CLAUDE.md --- */}}
+{{- with and hugo.IsProduction .Site.Params.analytics.googleAnalytics.code }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,7 +18,6 @@
   href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
   rel="stylesheet"
 />
-<meta name="theme-color" content="#080c14" />
 
 {{/* --- Favicons (custom 'E' monogram; theme head.html emits none). ?v bumps on redesign to defeat cache --- */}}
 <link rel="icon" href="{{ "favicon.ico" | relURL }}?v=2" sizes="any" />
@@ -31,7 +27,7 @@
 
 {{/* --- Twitter/X share cards (the theme emits OpenGraph but no twitter:* tags) --- */}}
 {{- $shareTitle := cond .IsHome (.Site.Params.title | default .Site.Title) .Title -}}
-{{- $shareDesc := .Params.summary | default .Description | default (i18n "head_description") -}}
+{{- $shareDesc := .Params.summary | default .Description | default site.Params.description -}}
 {{- $shareDesc = $shareDesc | plainify | truncate 200 -}}
 {{- $shareImg := "" -}}
 {{- if eq .Type "blog" }}{{ with .Params.images }}{{ with .featured_image }}{{ $shareImg = . }}{{ end }}{{ end }}{{ end -}}
@@ -46,7 +42,7 @@
 
 {{/* --- hreflang alternates + og:locale:alternate (multilingual SEO) --- */}}
 {{- range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Language.Lang }}" href="{{ .Permalink }}" />
+<link rel="alternate" hreflang="{{ .Language.Locale | default .Language.Lang }}" href="{{ .Permalink }}" />
 {{- end }}
 {{- with .Site.Home.Permalink }}<link rel="alternate" hreflang="x-default" href="{{ . }}" />{{- end }}
 {{- range .Translations }}
@@ -62,7 +58,7 @@
   "@context" "https://schema.org" "@type" "Person"
   "name" "Eren ONDER" "url" .Site.Home.Permalink
   "image" ($shareImg) "jobTitle" $jobTitle
-  "description" (i18n "head_description") "sameAs" $sameAs }}
+  "description" site.Params.description "sameAs" $sameAs }}
 <script type="application/ld+json">{{ $person | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- $website := dict
   "@context" "https://schema.org" "@type" "WebSite"
@@ -88,14 +84,14 @@
 {{- $isTr := eq .Lang "tr" }}
 {{- $termRole := cond $isTr "Siber Güvenlik Uzman Yardımcısı" "Junior Cyber Security Specialist" }}
 {{- $skillCats := slice }}
-{{- range .Site.Data.skills.categories }}
+{{- range hugo.Data.skills.categories }}
   {{- $catName := cond $isTr .name_tr .name }}
   {{- $items := slice }}
   {{- range .skills }}{{ $items = $items | append (cond $isTr .name_tr .name) }}{{ end }}
   {{- $skillCats = $skillCats | append (dict "category" $catName "items" $items) }}
 {{- end }}
 {{- $certList := slice }}
-{{- range .Site.Data.certifications.certifications }}
+{{- range hugo.Data.certifications.certifications }}
   {{- $certDate := cond $isTr .date_tr .date }}
   {{- $certList = $certList | append (dict "name" .name "issuer" .issuer "date" $certDate) }}
 {{- end }}
@@ -128,7 +124,15 @@
     "snakeScoreLabel" (i18n "terminal_snake_score_label")
     "snakeBestLabel" (i18n "terminal_snake_best_label")
     "snakeGameOverPrefix" (i18n "terminal_snake_gameover_prefix")
-    "snakeQuit" (i18n "terminal_snake_quit")) }}
+    "snakeQuit" (i18n "terminal_snake_quit")
+    "trollTitle" (i18n "terminal_troll_title")
+    "trollOk" (i18n "terminal_troll_ok")
+    "trollMsgs" (split (i18n "terminal_troll_msgs") "\n")
+    "trollCrash" (split (i18n "terminal_troll_crash") "\n")
+    "trollPct" (i18n "terminal_troll_pct")
+    "trollReboot" (i18n "terminal_troll_reboot")
+    "trollSkip" (i18n "terminal_troll_skip")
+    "trollDone" (split (i18n "terminal_troll_done") "\n")) }}
 <script type="application/json" id="terminal-data">{{ $termData | jsonify | safeJS }}</script>
 
 {{/* Medium'dan cekilen yazilarda asil kaynak Medium'u gosterir (yinelenen icerik SEO cezasini onler) */}}
