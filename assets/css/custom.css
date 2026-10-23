@@ -977,6 +977,9 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
 .blog-post__content strong { color: var(--text-primary); font-weight: 600; }
 .blog-post__content a { color: var(--accent-blue) !important; text-decoration: underline; text-underline-offset: 3px; }
 .blog-post__content a:hover { color: var(--accent-green) !important; }
+/* example/fake domains un-linked by sync_medium.py: link colour, not clickable */
+.blog-post__content .blog-domain,
+.blog-post__content .blog-domain strong { color: var(--accent-blue) !important; }
 .blog-post__content ul,
 .blog-post__content ol { color: var(--text-secondary); margin: 0 0 1.4rem; padding-left: 1.4rem; }
 .blog-post__content li { margin-bottom: .55rem; }

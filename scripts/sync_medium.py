@@ -63,7 +63,25 @@ def clean_html(body):
     body = re.sub(r'([?&])source=rss[^"&\']*', r"\1", body)
     body = re.sub(r'[?&](?=["\'])', "", body)
     body = re.sub(r"(<pre[^>]*>)(.*?)(</pre>)", pre_newlines, body, flags=re.S | re.I)
+    body = unlink_domains(body)
     return body.strip()
+
+
+# Medium yazida gecen ciplak alan adlarini (apple.com, shopeko.com) otomatik
+# linke cevirir. Ornek/sahte adreslere tiklanmasin diye bunlar duz metne cevrilir;
+# yalnizca buradaki alan adlari link olarak kalir.
+KEEP_LINK_HOSTS = {"erenonder.com"}
+
+
+def unlink_domains(body):
+    def repl(m):
+        text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+        if not re.fullmatch(r"[\w.-]+\.[a-z]{2,}/?", text, re.I):
+            return m.group(0)  # aciklamali link (Kaynaklar vb.): dokunma
+        if text.lower().rstrip("/").removeprefix("www.") in KEEP_LINK_HOSTS:
+            return m.group(0)
+        return '<span class="blog-domain">' + m.group(1) + "</span>"
+    return re.sub(r"<a\s[^>]*>((?:(?!</a>).)*)</a>", repl, body, flags=re.S | re.I)
 
 
 def pre_newlines(m):
