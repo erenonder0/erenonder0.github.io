@@ -1,4 +1,13 @@
 certifications:
+  - name: "Certified Junior SOC Analyst"
+    issuer: "CyberExam"
+    logo: "/images/certifications/cyberexam.png"
+    logo_style: "plate"
+    icon: ""
+    date: "October 2026"
+    date_tr: "Ekim 2026"
+    sort_date: "2026-10-04"
+    credential_url: "https://certs.cyberexam.io/verify/0f11ec4e-d21b-4bc1-b938-b7a210eef140"
   # A multi-course track rather than a single exam: "courses" makes the card
   # expandable instead of adding seven near-identical cards to the grid.
   - name: "Splunk Core Training Series"
