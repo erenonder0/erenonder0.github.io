@@ -62,7 +62,18 @@ def clean_html(body):
     # Link ve gorsellerdeki ?source=rss------ parametreleri
     body = re.sub(r'([?&])source=rss[^"&\']*', r"\1", body)
     body = re.sub(r'[?&](?=["\'])', "", body)
+    body = re.sub(r"(<pre[^>]*>)(.*?)(</pre>)", pre_newlines, body, flags=re.S | re.I)
     return body.strip()
+
+
+def pre_newlines(m):
+    """Medium kod bloklarinda (ASCII tablolar) satirlari <br> ile ayirir; temanin
+    br kurali bunlari yutup tabloyu tek satira indiriyordu. <br> gercek satir
+    sonuna cevrilir. Tamamen bos satir Hugo'nun ham HTML blogunu bitirecegi icin
+    bos satirlara bolunmez bosluk (U+00A0) konur."""
+    inner = re.sub(r"<br\s*/?>", "\n", m.group(2), flags=re.I)
+    inner = "\n".join(line if line.strip() else " " for line in inner.split("\n"))
+    return m.group(1) + inner + m.group(3)
 
 
 def first_image(body):

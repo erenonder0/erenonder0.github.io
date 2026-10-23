@@ -1004,7 +1004,10 @@ html[data-bs-theme="dark"] .footer p, .footer p { color: var(--text-muted) !impo
   font-family: var(--font-mono); font-size: .78rem; line-height: 1.5;
   color: var(--accent-green); margin: 1.8rem 0;
 }
-.blog-post__content pre br { display: none; }
+/* sync_medium.py turns <br> inside <pre> into real newlines; should one slip
+   through, undo the theme's `br { content: ""; display: block }`, which
+   swallows the line break and collapses the table onto a single line */
+.blog-post__content pre br { content: normal; display: inline; margin: 0; font-size: inherit; }
 
 .blog-post__foot { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .blog-post__nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
